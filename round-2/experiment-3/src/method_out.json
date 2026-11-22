@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "method_name": "barometric boiling-point formula test (reference grid only)",
+    "description": "No verified measured records (0 accepted sites); only the model-only structural term on a 100 m grid is reported.",
+    "accepted_sites": 0,
+    "underpowered": true
+  },
+  "datasets": [
+    {
+      "dataset": "reference_grid_model_only_0_4000m",
+      "examples": [
+        {
+          "input": "Site elevation 0 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.000 K",
+          "metadata_elevation_m": "0",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0000"
+        },
+        {
+          "input": "Site elevation 100 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.000 K",
+          "metadata_elevation_m": "100",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0004"
+        },
+        {
+          "input": "Site elevation 200 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.001 K",
+          "metadata_elevation_m": "200",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0015"
+        },
+        {
+          "input": "Site elevation 300 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.003 K",
+          "metadata_elevation_m": "300",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0034"
+        },
+        {
+          "input": "Site elevation 400 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.006 K",
+          "metadata_elevation_m": "400",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0060"
+        },
+        {
+          "input": "Site elevation 500 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.009 K",
+          "metadata_elevation_m": "500",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0093"
+        },
+        {
+          "input": "Site elevation 600 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.013 K",
+          "metadata_elevation_m": "600",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0134"
+        },
+        {
+          "input": "Site elevation 700 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.018 K",
+          "metadata_elevation_m": "700",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0183"
+        },
+        {
+          "input": "Site elevation 800 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.024 K",
+          "metadata_elevation_m": "800",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0239"
+        },
+        {
+          "input": "Site elevation 900 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.030 K",
+          "metadata_elevation_m": "900",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0302"
+        },
+        {
+          "input": "Site elevation 1000 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.037 K",
+          "metadata_elevation_m": "1000",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0373"
+        },
+        {
+          "input": "Site elevation 1100 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.045 K",
+          "metadata_elevation_m": "1100",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0451"
+        },
+        {
+          "input": "Site elevation 1200 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.054 K",
+          "metadata_elevation_m": "1200",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0536"
+        },
+        {
+          "input": "Site elevation 1300 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.063 K",
+          "metadata_elevation_m": "1300",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0629"
+        },
+        {
+          "input": "Site elevation 1400 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.073 K",
+          "metadata_elevation_m": "1400",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0729"
+        },
+        {
+          "input": "Site elevation 1500 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.084 K",
+          "metadata_elevation_m": "1500",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0836"
+        },
+        {
+          "input": "Site elevation 1600 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.095 K",
+          "metadata_elevation_m": "1600",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.0951"
+        },
+        {
+          "input": "Site elevation 1700 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.107 K",
+          "metadata_elevation_m": "1700",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1073"
+        },
+        {
+          "input": "Site elevation 1800 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.120 K",
+          "metadata_elevation_m": "1800",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1203"
+        },
+        {
+          "input": "Site elevation 1900 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.134 K",
+          "metadata_elevation_m": "1900",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1339"
+        },
+        {
+          "input": "Site elevation 2000 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.148 K",
+          "metadata_elevation_m": "2000",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1483"
+        },
+        {
+          "input": "Site elevation 2100 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.163 K",
+          "metadata_elevation_m": "2100",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1635"
+        },
+        {
+          "input": "Site elevation 2200 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.179 K",
+          "metadata_elevation_m": "2200",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1793"
+        },
+        {
+          "input": "Site elevation 2300 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.196 K",
+          "metadata_elevation_m": "2300",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.1959"
+        },
+        {
+          "input": "Site elevation 2400 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.213 K",
+          "metadata_elevation_m": "2400",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.2132"
+        },
+        {
+          "input": "Site elevation 2500 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.231 K",
+          "metadata_elevation_m": "2500",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.2313"
+        },
+        {
+          "input": "Site elevation 2600 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.250 K",
+          "metadata_elevation_m": "2600",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.2500"
+        },
+        {
+          "input": "Site elevation 2700 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.269 K",
+          "metadata_elevation_m": "2700",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.2695"
+        },
+        {
+          "input": "Site elevation 2800 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.290 K",
+          "metadata_elevation_m": "2800",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.2897"
+        },
+        {
+          "input": "Site elevation 2900 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.311 K",
+          "metadata_elevation_m": "2900",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.3106"
+        },
+        {
+          "input": "Site elevation 3000 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.332 K",
+          "metadata_elevation_m": "3000",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.3322"
+        },
+        {
+          "input": "Site elevation 3100 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.355 K",
+          "metadata_elevation_m": "3100",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.3546"
+        },
+        {
+          "input": "Site elevation 3200 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.378 K",
+          "metadata_elevation_m": "3200",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.3777"
+        },
+        {
+          "input": "Site elevation 3300 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.401 K",
+          "metadata_elevation_m": "3300",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.4015"
+        },
+        {
+          "input": "Site elevation 3400 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.426 K",
+          "metadata_elevation_m": "3400",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.4260"
+        },
+        {
+          "input": "Site elevation 3500 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.451 K",
+          "metadata_elevation_m": "3500",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.4512"
+        },
+        {
+          "input": "Site elevation 3600 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.477 K",
+          "metadata_elevation_m": "3600",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.4772"
+        },
+        {
+          "input": "Site elevation 3700 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.504 K",
+          "metadata_elevation_m": "3700",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.5038"
+        },
+        {
+          "input": "Site elevation 3800 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.531 K",
+          "metadata_elevation_m": "3800",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.5312"
+        },
+        {
+          "input": "Site elevation 3900 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.559 K",
+          "metadata_elevation_m": "3900",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.5593"
+        },
+        {
+          "input": "Site elevation 4000 m, standard atmosphere (US 1976), model-only reference grid",
+          "output": "Structural term s = Tb(isothermal) - Tb(lapse-rate) = 0.588 K",
+          "metadata_elevation_m": "4000",
+          "metadata_label": "model-only; not validation; no measured records",
+          "predict_isothermal_minus_lapse_K": "0.5881"
+        }
+      ]
+    }
+  ]
+}

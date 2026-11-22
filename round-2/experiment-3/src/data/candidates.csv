@@ -1,0 +1,7 @@
+id,source_url,type,elevation_given,station_pressure_given,boiling_temp_given,uncertainty_given,status,reason
+C01,https://www.engineeringtoolbox.com/boiling-points-water-altitude-d_1344.html,handbook/calculator table,yes,no,yes,no,dropped,equation-derived (steam-table calculation; no measured origin stated)
+C02,https://whiz.tools/en/specialty-tools/altitude-boiling-point-calculator,calculator table,yes,yes (computed),yes (computed),no,dropped,equation-derived
+C03,https://www.compoundchem.com/wp-content/uploads/2016/03/The-Boiling-Point-of-Water-at-Different-Elevations.pdf,infographic PDF,yes,no,yes,no,dropped,equation-derived; no station pressure
+C04,https://chem.libretexts.org/Courses/Mount_Royal_University/Chem_1201/Unit_5%3A_Intermolecular_Forces/5.5%3A_Vapor_Pressure,textbook table (Denver 633 mmHg),yes,yes,yes,no,dropped,provenance not stated as measurement; no barometer uncertainty
+C05,https://ucfoodsafety.ucdavis.edu/sites/g/files/dgvnsk7366/files/inline-files/234958_1.pdf,extension-service empirical formula,no,no,no,no,dropped,empirical formula fit; no measured records
+C06,https://www.wemjournal.org/article/S1080-6032(17)30238-7/fulltext,history essay (Lankford and Fox 2017),unknown,unknown,unknown,unknown,dropped,secondary history essay not checked for measured records with all four fields; not verified

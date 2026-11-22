@@ -1,0 +1,59 @@
+{
+  "title": "Testing barometric boiling-point formulas against measured records",
+  "accepted_sites": 0,
+  "min_sites_for_test": 15,
+  "underpowered": true,
+  "sites_json_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "holdout_rule": "sort by elevation then id; holdout = every 3rd site",
+  "constants": {
+    "R": 8.314462618,
+    "M_air": 0.0289644,
+    "g": 9.80665,
+    "T0": 288.15,
+    "P0": 101325.0,
+    "L": 0.0065,
+    "H_iso_m": 8434.6603105082,
+    "exponent_lapse": 5.255785959221189,
+    "dTb_dp_1atm_K_per_kPa": 0.27651263909490353
+  },
+  "saturation_checks": {
+    "nbp_psat_Pa": 101323.9302326589,
+    "triple_psat_Pa": 611.6570697405119,
+    "max_round_trip_error_K": 3.702780304593034e-10,
+    "iapws_cross_check": {
+      "available": true,
+      "package": "iapws 1.5.5 (IAPWS97 psat)",
+      "n_temperatures": 10,
+      "max_temperature_difference_K": 0.0019570356823805923
+    }
+  },
+  "all_sites_stats": {
+    "n": 0
+  },
+  "holdout_stats": {
+    "n": 0
+  },
+  "bootstrap_rms_r_meas": {
+    "status": "no sites"
+  },
+  "bootstrap_rms_r_lapse": {
+    "status": "no sites"
+  },
+  "claim_verdicts": {
+    "status": "UNDERPOWERED",
+    "claim_A": "UNDERPOWERED: untested",
+    "claim_B": "UNDERPOWERED: untested",
+    "claim_C": "UNDERPOWERED: untested"
+  },
+  "reference_grid_structural_model_only": {
+    "label": "model-only reference-grid structural term; not validation",
+    "at_3000_m_K": 0.33224149800594205,
+    "at_4000_m_K": 0.5880916720013829,
+    "positive_above_0m": true,
+    "increasing_with_altitude": true,
+    "earlier_screen_expected_3000_K": 0.33,
+    "earlier_screen_expected_4000_K": 0.59,
+    "matches_earlier_screen_within_0p05K": true
+  },
+  "cross_check_with_dataset_artifact": "not performed (dataset artifact site list not present at declared path)"
+}

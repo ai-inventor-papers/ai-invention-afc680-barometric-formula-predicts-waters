@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "method_name": "barometric boiling-point formulas, model-only comparison",
+    "description": "Two barometric formulas compared on a 100 m grid, 0-4000 m. No verified measured records (0 accepted sites); a test against measurements is UNDERPOWERED and untested.",
+    "methods": [
+      "isothermal barometric formula",
+      "lapse-rate barometric formula"
+    ],
+    "accepted_sites": 0,
+    "underpowered": true,
+    "source_code": "method.py"
+  },
+  "datasets": [
+    {
+      "dataset": "standard_atmosphere_grid_0_4000m_model_only",
+      "examples": [
+        {
+          "input": "Site elevation 0 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.974 C; lapse-rate 99.974 C",
+          "metadata_elevation_m": "0",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.9743",
+          "predict_lapse_rate_barometric_Tb_C": "99.9743"
+        },
+        {
+          "input": "Site elevation 100 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.642 C; lapse-rate 99.642 C",
+          "metadata_elevation_m": "100",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.6425",
+          "predict_lapse_rate_barometric_Tb_C": "99.6421"
+        },
+        {
+          "input": "Site elevation 200 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.311 C; lapse-rate 99.310 C",
+          "metadata_elevation_m": "200",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.3113",
+          "predict_lapse_rate_barometric_Tb_C": "99.3098"
+        }
+      ]
+    }
+  ]
+}

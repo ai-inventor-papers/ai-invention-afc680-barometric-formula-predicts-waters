@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "method_name": "barometric boiling-point formulas, model-only comparison",
+    "description": "Two barometric formulas compared on a 100 m grid, 0-4000 m. No verified measured records (0 accepted sites); a test against measurements is UNDERPOWERED and untested.",
+    "methods": [
+      "isothermal barometric formula",
+      "lapse-rate barometric formula"
+    ],
+    "accepted_sites": 0,
+    "underpowered": true,
+    "source_code": "method.py"
+  },
+  "datasets": [
+    {
+      "dataset": "standard_atmosphere_grid_0_4000m_model_only",
+      "examples": [
+        {
+          "input": "Site elevation 0 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.974 C; lapse-rate 99.974 C",
+          "metadata_elevation_m": "0",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.9743",
+          "predict_lapse_rate_barometric_Tb_C": "99.9743"
+        },
+        {
+          "input": "Site elevation 100 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.642 C; lapse-rate 99.642 C",
+          "metadata_elevation_m": "100",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.6425",
+          "predict_lapse_rate_barometric_Tb_C": "99.6421"
+        },
+        {
+          "input": "Site elevation 200 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 99.311 C; lapse-rate 99.310 C",
+          "metadata_elevation_m": "200",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "99.3113",
+          "predict_lapse_rate_barometric_Tb_C": "99.3098"
+        },
+        {
+          "input": "Site elevation 300 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 98.981 C; lapse-rate 98.977 C",
+          "metadata_elevation_m": "300",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "98.9808",
+          "predict_lapse_rate_barometric_Tb_C": "98.9774"
+        },
+        {
+          "input": "Site elevation 400 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 98.651 C; lapse-rate 98.645 C",
+          "metadata_elevation_m": "400",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "98.6510",
+          "predict_lapse_rate_barometric_Tb_C": "98.6450"
+        },
+        {
+          "input": "Site elevation 500 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 98.322 C; lapse-rate 98.313 C",
+          "metadata_elevation_m": "500",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "98.3219",
+          "predict_lapse_rate_barometric_Tb_C": "98.3125"
+        },
+        {
+          "input": "Site elevation 600 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 97.993 C; lapse-rate 97.980 C",
+          "metadata_elevation_m": "600",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "97.9934",
+          "predict_lapse_rate_barometric_Tb_C": "97.9799"
+        },
+        {
+          "input": "Site elevation 700 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 97.666 C; lapse-rate 97.647 C",
+          "metadata_elevation_m": "700",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "97.6656",
+          "predict_lapse_rate_barometric_Tb_C": "97.6473"
+        },
+        {
+          "input": "Site elevation 800 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 97.338 C; lapse-rate 97.315 C",
+          "metadata_elevation_m": "800",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "97.3384",
+          "predict_lapse_rate_barometric_Tb_C": "97.3145"
+        },
+        {
+          "input": "Site elevation 900 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 97.012 C; lapse-rate 96.982 C",
+          "metadata_elevation_m": "900",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "97.0119",
+          "predict_lapse_rate_barometric_Tb_C": "96.9817"
+        },
+        {
+          "input": "Site elevation 1000 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 96.686 C; lapse-rate 96.649 C",
+          "metadata_elevation_m": "1000",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "96.6861",
+          "predict_lapse_rate_barometric_Tb_C": "96.6488"
+        },
+        {
+          "input": "Site elevation 1100 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 96.361 C; lapse-rate 96.316 C",
+          "metadata_elevation_m": "1100",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "96.3609",
+          "predict_lapse_rate_barometric_Tb_C": "96.3158"
+        },
+        {
+          "input": "Site elevation 1200 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 96.036 C; lapse-rate 95.983 C",
+          "metadata_elevation_m": "1200",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "96.0364",
+          "predict_lapse_rate_barometric_Tb_C": "95.9828"
+        },
+        {
+          "input": "Site elevation 1300 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 95.713 C; lapse-rate 95.650 C",
+          "metadata_elevation_m": "1300",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "95.7125",
+          "predict_lapse_rate_barometric_Tb_C": "95.6496"
+        },
+        {
+          "input": "Site elevation 1400 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 95.389 C; lapse-rate 95.316 C",
+          "metadata_elevation_m": "1400",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "95.3893",
+          "predict_lapse_rate_barometric_Tb_C": "95.3164"
+        },
+        {
+          "input": "Site elevation 1500 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 95.067 C; lapse-rate 94.983 C",
+          "metadata_elevation_m": "1500",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "95.0667",
+          "predict_lapse_rate_barometric_Tb_C": "94.9831"
+        },
+        {
+          "input": "Site elevation 1600 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 94.745 C; lapse-rate 94.650 C",
+          "metadata_elevation_m": "1600",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "94.7448",
+          "predict_lapse_rate_barometric_Tb_C": "94.6497"
+        },
+        {
+          "input": "Site elevation 1700 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 94.424 C; lapse-rate 94.316 C",
+          "metadata_elevation_m": "1700",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "94.4235",
+          "predict_lapse_rate_barometric_Tb_C": "94.3162"
+        },
+        {
+          "input": "Site elevation 1800 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 94.103 C; lapse-rate 93.983 C",
+          "metadata_elevation_m": "1800",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "94.1029",
+          "predict_lapse_rate_barometric_Tb_C": "93.9826"
+        },
+        {
+          "input": "Site elevation 1900 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 93.783 C; lapse-rate 93.649 C",
+          "metadata_elevation_m": "1900",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "93.7829",
+          "predict_lapse_rate_barometric_Tb_C": "93.6489"
+        },
+        {
+          "input": "Site elevation 2000 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 93.464 C; lapse-rate 93.315 C",
+          "metadata_elevation_m": "2000",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "93.4635",
+          "predict_lapse_rate_barometric_Tb_C": "93.3152"
+        },
+        {
+          "input": "Site elevation 2100 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 93.145 C; lapse-rate 92.981 C",
+          "metadata_elevation_m": "2100",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "93.1448",
+          "predict_lapse_rate_barometric_Tb_C": "92.9813"
+        },
+        {
+          "input": "Site elevation 2200 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 92.827 C; lapse-rate 92.647 C",
+          "metadata_elevation_m": "2200",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "92.8267",
+          "predict_lapse_rate_barometric_Tb_C": "92.6474"
+        },
+        {
+          "input": "Site elevation 2300 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 92.509 C; lapse-rate 92.313 C",
+          "metadata_elevation_m": "2300",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "92.5092",
+          "predict_lapse_rate_barometric_Tb_C": "92.3133"
+        },
+        {
+          "input": "Site elevation 2400 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 92.192 C; lapse-rate 91.979 C",
+          "metadata_elevation_m": "2400",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "92.1924",
+          "predict_lapse_rate_barometric_Tb_C": "91.9792"
+        },
+        {
+          "input": "Site elevation 2500 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 91.876 C; lapse-rate 91.645 C",
+          "metadata_elevation_m": "2500",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "91.8762",
+          "predict_lapse_rate_barometric_Tb_C": "91.6450"
+        },
+        {
+          "input": "Site elevation 2600 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 91.561 C; lapse-rate 91.311 C",
+          "metadata_elevation_m": "2600",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "91.5606",
+          "predict_lapse_rate_barometric_Tb_C": "91.3106"
+        },
+        {
+          "input": "Site elevation 2700 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 91.246 C; lapse-rate 90.976 C",
+          "metadata_elevation_m": "2700",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "91.2457",
+          "predict_lapse_rate_barometric_Tb_C": "90.9762"
+        },
+        {
+          "input": "Site elevation 2800 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 90.931 C; lapse-rate 90.642 C",
+          "metadata_elevation_m": "2800",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "90.9314",
+          "predict_lapse_rate_barometric_Tb_C": "90.6417"
+        },
+        {
+          "input": "Site elevation 2900 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 90.618 C; lapse-rate 90.307 C",
+          "metadata_elevation_m": "2900",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "90.6177",
+          "predict_lapse_rate_barometric_Tb_C": "90.3071"
+        },
+        {
+          "input": "Site elevation 3000 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 90.305 C; lapse-rate 89.972 C",
+          "metadata_elevation_m": "3000",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "90.3046",
+          "predict_lapse_rate_barometric_Tb_C": "89.9723"
+        },
+        {
+          "input": "Site elevation 3100 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 89.992 C; lapse-rate 89.638 C",
+          "metadata_elevation_m": "3100",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "89.9921",
+          "predict_lapse_rate_barometric_Tb_C": "89.6375"
+        },
+        {
+          "input": "Site elevation 3200 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 89.680 C; lapse-rate 89.303 C",
+          "metadata_elevation_m": "3200",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "89.6803",
+          "predict_lapse_rate_barometric_Tb_C": "89.3026"
+        },
+        {
+          "input": "Site elevation 3300 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 89.369 C; lapse-rate 88.968 C",
+          "metadata_elevation_m": "3300",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "89.3690",
+          "predict_lapse_rate_barometric_Tb_C": "88.9675"
+        },
+        {
+          "input": "Site elevation 3400 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 89.058 C; lapse-rate 88.632 C",
+          "metadata_elevation_m": "3400",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "89.0584",
+          "predict_lapse_rate_barometric_Tb_C": "88.6324"
+        },
+        {
+          "input": "Site elevation 3500 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 88.748 C; lapse-rate 88.297 C",
+          "metadata_elevation_m": "3500",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "88.7484",
+          "predict_lapse_rate_barometric_Tb_C": "88.2972"
+        },
+        {
+          "input": "Site elevation 3600 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 88.439 C; lapse-rate 87.962 C",
+          "metadata_elevation_m": "3600",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "88.4390",
+          "predict_lapse_rate_barometric_Tb_C": "87.9618"
+        },
+        {
+          "input": "Site elevation 3700 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 88.130 C; lapse-rate 87.626 C",
+          "metadata_elevation_m": "3700",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "88.1302",
+          "predict_lapse_rate_barometric_Tb_C": "87.6263"
+        },
+        {
+          "input": "Site elevation 3800 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 87.822 C; lapse-rate 87.291 C",
+          "metadata_elevation_m": "3800",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "87.8220",
+          "predict_lapse_rate_barometric_Tb_C": "87.2908"
+        },
+        {
+          "input": "Site elevation 3900 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 87.514 C; lapse-rate 86.955 C",
+          "metadata_elevation_m": "3900",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "87.5144",
+          "predict_lapse_rate_barometric_Tb_C": "86.9551"
+        },
+        {
+          "input": "Site elevation 4000 m (standard atmosphere, model-only grid)",
+          "output": "Isothermal 87.207 C; lapse-rate 86.619 C",
+          "metadata_elevation_m": "4000",
+          "metadata_label": "model-only; no measured observation; not validation",
+          "predict_isothermal_barometric_Tb_C": "87.2074",
+          "predict_lapse_rate_barometric_Tb_C": "86.6193"
+        }
+      ]
+    }
+  ]
+}
