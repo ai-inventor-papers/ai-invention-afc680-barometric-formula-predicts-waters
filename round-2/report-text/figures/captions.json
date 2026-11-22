@@ -1,0 +1,10 @@
+{
+  "fig2": {
+    "title": "Boiling-point RMS error by route and split",
+    "caption": "RMS error of three closed-form routes against the IAPWS-IF97 saturation reference, from Table 6. Dark bars: held-out points, 0 to 2,950 m (60 points). Light bars: fit-range points, 2,950 to 4,000 m (21 points). The Antoine refit has the lowest held-out RMS (0.061 K), but its fit-range RMS is 0.030 K because the fit sees those points. Both routes based on Clausius-Clapeyron have larger errors in the fit range than in the held-out range."
+  },
+  "fig1": {
+    "title": "Structural term versus altitude",
+    "caption": "Structural term (isothermal minus lapse-rate boiling temperature, K) against altitude from 0 to 4,000 m. Nine points at 500 m steps, taken from the reference-grid experiment; the line joins them and is not a fit. The term is 0.33 K at 3,000 m and 0.59 K at 4,000 m. It is a model-structure term against the standard-atmosphere reference, not a comparison with measured boiling points."
+  }
+}
