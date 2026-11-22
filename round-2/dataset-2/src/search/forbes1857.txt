@@ -1,0 +1,126 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://doi.org/10.1017/s0080456800032075
+Type: HTML
+Length: 51928 chars (truncated)
+
+--- Content ---
+
+Skip to main content  [ Accessibility help ](/core/accessibility)
+
+## Login Alert
+
+Cancel
+
+[Log in](/core/login?ref=/core/journals/earth-and-environmental-science-transactions-of-royal-society-of-edinburgh/article/xivfurther-experiments-and-remarks-on-the-measurement-of-heights-by-the-boiling-point-of-water/F9D3626B48CD342E7EFB73398647E60A)
+
+×
+
+×
+
+[](https://www.cambridge.org/academic)
+
+[](https://www.cambridge.org/academic)
+
+[](/core/shopping-cart)
+
+Discover Content 
+
+Products and Services 
+
+[Register](https://www.cambridge.org/core/register)
+
+[Log In](/core/login)
+
+[ (0) Cart ](/core/shopping-cart)
+
+[ Logo for Cambridge Core from Cambridge University Press. Click to return to homepage. ](/core/ "Cambridge Core homepage")
+
+Search
+
+[ Logo for Cambridge Core from Cambridge University Press. Click to return to homepage. ](/core/ "Cambridge Core homepage")
+
+* * *
+
+  * Browse
+
+  * Services
+
+  * Open research
+
+
+
+
+Institution Login
+
+Search
+
+Menu links
+
+  1. Browse
+     1. Subjects
+        1. Subjects (A-D)
+           1. [Anthropology](/core/browse-subjects/anthropology)
+           2. [Archaeology](/core/browse-subjects/archaeology)
+           3. [Area Studies](/core/browse-subjects/area-studies)
+           4. [Art](/core/browse-subjects/art)
+           5. [Chemistry](/core/browse-subjects/chemistry)
+           6. [Classical Studies](/core/browse-subjects/classical-studies)
+           7. [Computer Science](/core/browse-subjects/computer-science)
+           8. [Drama, Theatre, Performance Studies](/core/browse-subjects/drama-and-theatre)
+        2. Subjects (E-K)
+           1. [Earth and Environmental Science](/core/browse-subjects/earth-and-environmental-sciences)
+           2. [Economics](/core/browse-subjects/economics)
+           3. [Education](/core/browse-subjects/education)
+           4. [Engineering](/core/browse-subjects/engineering)
+           5. [English Language Teaching – Resources for Teachers](/core/browse-subjects/english-language-teaching-resources-for-teachers)
+           6. [Film, Media, Mass Communication](/core/browse-subjects/film-media-mass-ommunication)
+           7. [General Science](/core/browse-subjects/general-science)
+           8. [Geography](/core/browse-subjects/geography)
+           9. [History](/core/browse-subjects/history)
+        3. Subjects (L-O)
+           1. [Language and Linguistics](/core/browse-subjects/language-and-linguistics)
+           2. [Law](/core/browse-subjects/law)
+           3. [Life Sciences](/core/browse-subjects/life-sciences)
+           4. [Literature](/core/browse-subjects/literature)
+           5. [Management](/core/browse-subjects/management)
+           6. [Materials Science](/core/browse-subjects/materials-science)
+           7. [Mathematics](/core/browse-subjects/mathematics)
+           8. [Medicine](/core/browse-subjects/medicine)
+           9. [Music](/core/browse-subjects/music)
+           10. [Nutrition](/core/browse-subjects/nutrition)
+        4. Subjects (P-Z)
+           1. [Philosophy](/core/browse-subjects/philosophy)
+           2. [Physics and Astronomy](/core/browse-subjects/physics)
+           3. [Politics and International Relations](/core/browse-subjects/politics-and-international-relations)
+           4. [Psychiatry](/core/browse-subjects/psychiatry)
+           5. [Psychology](/core/browse-subjects/psychology)
+           6. [Religion](/core/browse-subjects/religion)
+           7. [Social Science Research Methods](/core/browse-subjects/social-science-research-methods)
+           8. [Sociology](/core/browse-subjects/sociology)
+           9. [Statistics and Probability](/core/browse-subjects/statistics-and-probability)
+     2. Open access
+        1. All open access publishing
+           1. [Open access](/core/publications/open-access)
+           2. [Open access journals](/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           3. [Research open journals](/core/publications/open-access/research-open?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           4. [Journals containing open access](/core/publications/open-access/hybrid-open-access-journals?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           5. [Open access articles](/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=JOURNAL_ARTICLE)
+           6. [Open access books](/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=BOOK&sort=canonical.date:desc)
+           7. [Open access Elements](/core/publications/elements/published-elements?aggs%5BopenAccess%5D%5Bfilters%5D=7275BA1E84CA769210167A6A66523B47&aggs%5BproductTypes%5D%5Bfilters%5D=ELEMENT&searchWithinIds=ECFD8F5C64F47F3F5A3D395C15B7C493)
+     3. Journals
+        1. Explore
+           1. [All journal subjects](/core/publications/journals)
+           2. [Search journals](/core/publications/journals)
+        2. Open access
+           1. [Open access journals](/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           2. [Research open journals](/core/publications/open-access/research-open?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           3. [Journals containing open access](/core/publications/open-access/hybrid-open-access-journals?aggs\[productTypes\]\[filters\]=JOURNAL&statuses=PUBLISHED&sort=titleSort:asc)
+           4. [Open access articles](/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=JOURNAL_ARTICLE)
+        3. Collections
+           1. [Cambridge Forum](/core/publications/collections/cambridge-forum)
+           2. [Cambridge Law Reports Collection](/core/publications/collections/cambridge-law-reports-collection)
+           3. [Cambridge Prisms](/core/publications/collections/cambridge-prisms)
+           4. [Research Directions](/core/publications/collections/research-directions)
+     4. Books
+     

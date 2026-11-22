@@ -1,0 +1,111 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://ucfoodsafety.ucdavis.edu/sites/g/files/dgvnsk7366/files/inline-files/234958_1.pdf
+Type: PDF
+Length: 7269 chars (truncated)
+
+--- Content ---
+
+CALIBRATING THERMOMETERS IN BOILING WATER:
+Boiling Point / Atmospheric Pressure / Altitude Tables
+O. Peter Snyder, Jr., Ph.D.
+Hospitality Institute of Technology and Management
+670 Transfer Road, Suite 21A
+St. Paul, Minnesota 55114 USA
+In some literature that I received from Taylor a few days ago, I saw that the calibration point that they 
+use for the standard grade bimetallic coil thermometers is 100F.  These thermometers list for $8.80 in 
+their catalog.  The Taylor superior grade bimetallic coil thermometers are calibrated at 3 points:  0F, 
+100F, and 200F.  They list for $17.50 in the catalog. 
+This prompted me to call the head of engineering at Taylor to ask what happens if the standard grade 
+instruments are calibrated at 32F in slush ice.  To calibrate at 100F (mid-scale on the thermometer) 
+requires a high-precision water bath and high-precision thermometer.  I was told that it would not be 
+accurate at any temperature except 32F.  The bimetallic coil thermometer can be trusted about +/-20F 
+from a set point.  So, at 150F, the bimetallic coil thermometer that had been recalibrated in slush ice 
+would have an unknown accuracy, but would not be any better than +/-2%, or approximately 4.4F. 
+The same is true for the superior grade thermometer with factory 3-point calibration.  As soon as one 
+would calibrate it in the field at 32F in slush ice, one would have no idea of the accuracy at 150F. 
+The chief engineer continuing by saying that one could guess at it by calibrating at 32F in slush ice 
+(with the ice crushed in small pieces, and the water slightly below the top level of the ice).  Water 
+with ice cubes or larger chunks of ice will not be at 32F.  It will be at 34 to 35F, probably.  He 
+believed that there are many problems allowing workers to calibrate the bimetallic coil thermometers. 
+At the high end of the scale, one could use the boiling point of water. This led me to examine the 
+problem of accurate calibration at the boiling point.  A lot of people talk about calibrating with boiling 
+water. 
+There are two factors that must be considered for accurate calibration at the boiling point.  First is 
+altitude at which the thermometer is to be calibrated.  For example, at sea level, water boils at 212F. 
+However, for every 500 feet above sea level, water boils about at 0.9F less.  At 1,000 feet, then, water 
+boils at about 210.2; at 2,000 feet, about 208.4; at 3,000 feet, about 206.6, etc. 
+In addition to this correction factor, one must correct for barometric pressure.  At a 0-feet altitude, if 
+the barometric pressure is 29.921 inches of mercury, water boils at 212F.  If the barometer is at 29.0, 
+the water boils at 1.53F less than the 212F boiling point, with the altitude factor already considered.  
+If the pressure is at 30.8 inches of mercury, one must allow for an increase in boiling of 1.43F. 
+Below are some calculation tables for these factors.  These tables provide correction for altitude and 
+barometric pressure if one wishes to use the boiling point method of calibration. 
+To be sure that this is not a unique problem with Taylor thermometers only, I spoke with Cooper 
+Instruments.  The head of engineering, Gary Sawicki, said that they do exactly the same type of 
+calibration with their bimetallic coil thermometers--calibrate them about mid-scale (100F).  This way, 
+they can get their stated accuracy over the 0-220F range.  The same problem exists, then, with the 
+Cooper bimetallic coil thermometers.  If one calibrates a bimetallic coil thermometer at 32F, one 
+could be 2% off, easily, at 150F, which would mean 4.4F. 
+Page 1 of 3
+Boiling Point / Atmospheric Pressure / Altitude
+2/16/2016
+http://hi-tm.com/Documents/Calib-boil.html
+
+While one may say that these are trivial differences, there is also the problem that the coil measures 
+temperature over an approximate 3-inch distance up the stem of the thermometer.  In a steam table 
+pan, this can be 100F.  Also, the thermometers are quite easily put out of adjustment because of rough 
+handling. 
+It is also a scientific fact that if one is off the desired pasteurization temperature by 3F, the time will 
+change by a factor of 100%.  That is, at 155F, pasteurization time is 15 seconds, but at 152F, the time 
+is 30 seconds for the same 5D destruction of Salmonella in hamburger. 
+None of this correction information is in the FDA Food Code, and never has been.  As far as the FDA 
+and USDA are concerned, the bimetallic coil thermometer is a highly accurate device and considered 
+to be more than sufficient to measure the pasteurization temperatures of thin foods such as 
+hamburgers and chicken breasts.  The USDA shows this thermometer on the package labels for raw 
+meat and poultry. 
+When our government cannot even provide correct information about what thermometers to use to 
+assure that we do not overcook or undercook our food--and when local inspectors are not given the 
+money by their administrators to buy correct thermometers--we have no chance of serving safe food 
+in the U.S.  If we do not get correct information from the government, cooks should not held 
+responsible if they prepare unsafe food.  That would be the government's fault for telling us that we 
+can 
+use the bimetallic coil thermometer. 
+To calculate the boiling point of water at a location on any specific day use the following equation:
+Boiling point of water = Boiling point at specified altitude (Table 1) r boiling point barometric correction (Table 2).
+In the tables, the following equations have been used:
+Pressure (in. Hg) = 29.921* (1-6.8753*0.000001 * altitude, ft.)^5.2559
+Boiling point = 49.161 * Ln (in. Hg) + 44.932
+TABLE 1
+Changes in 
+Standard 
+Temperature and 
+Pressure (in Hg) as a 
+Function of Altitude
+ (Ref. 1)
+TABLE 2
+Boiling Point as a 
+Function of 
+Barometric Pressure
+ (Ref. 2)
+Altitude (ft.)
+Pressure
+(in. Hg)
+Boiling pt.
+(q F)
+Pressure
+(in. Hg)
+Boiling pt. 
+(q F)
+Boiling pt.
+[added or 
+reduced]
+(q F)
+-500
+30.466
+212.9
+27.6
+208.04
+-3.96
+0
+29.92

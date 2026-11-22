@@ -1,0 +1,54 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://search.r-project.org/CRAN/refmans/alr4/html/Forbes.html
+Type: HTML
+Length: 929 chars
+
+--- Content ---
+
+Forbes {alr4}| R Documentation  
+---|---  
+  
+## Forbes' data
+
+### Description
+
+The data consists of 17 pairs of numbers corresponding to observed boiling point and corrected barometric pressure, at locations in the Alps. 
+
+### Format
+
+This data frame contains three columns. The first two columns are identical to the data set named forbes in the MASS package. 
+
+bp
+    
+
+Adjusted boiling point of water in degrees F. 
+
+pres
+    
+
+Atmospheric pressure, in inches of Mercury 
+
+lpres
+    
+
+100 times log10(pres), rounded to two decimals
+
+### Source
+
+Forbes, J. (1857). Further experiments and remarks on the measurement of heights and boiling point of water. _Transactions of the Royal Society of Edinburgh_ , 21, 235-243.
+
+### References
+
+Weisberg, S. (2014). _Applied Linear Regression_ , 4th edition. Hoboken NJ: Wiley.
+
+### Examples
+    
+    
+    head(Forbes)
+    
+
+* * *
+
+[Package _alr4_ version 1.0.6 [Index](00Index.html)]
+

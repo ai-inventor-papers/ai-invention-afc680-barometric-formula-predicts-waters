@@ -1,0 +1,69 @@
+Search: forbes.csv boiling point pressure 17 observations Alps dataset  [general via exa]
+Found: 5 results
+
+1. Sample Data: Water Boiling Points in the Alps
+   https://datarepository.wolframcloud.com/resources/Sample-Data-Water-Boiling-Points-in-the-Alps
+   Sample Data: Water Boiling Points in the Alps | Wolfram Data Repository
+
+# Sample Data: Water Boiling Points in the Alps
+
+ Data on boiling points of water in the Alps 
+
+ Originator: A. C. Atkinson 
+
+(...
+
+2. R: Forbes' data on air pressure in the Alps and the boiling...
+   https://search.r-project.org/CRAN/refmans/fsdaR/html/forbes.html
+   R: Forbes' data on air pressure in the Alps and the boiling...
+
+## Forbes' data on air pressure in the Alps and the boiling point of water (Weisberg, 1985).
+
+### Description
+
+A data set on air pressur...
+
+3. forbes dataset in SMPracticals | R Observatory
+   https://r-observatory.thecoatlessprofessor.com/datasets/SMPracticals/forbes
+   forbes dataset in SMPracticals | R Observatory
+
+Atmospheric Pressure and Boiling Point in the Alps
+
+Bundled with SMPracticals · exported, loads via data()
+
+Class data.frame
+
+Dimensions 17 × 2
+
+Missing...
+
+4. Forbes Data - Machine Gnostics
+   https://docs.machinegnostics.com/v0.0/datasets/forbes_data/
+   Forbes Data - Machine Gnostics
+
+# make_forbes_check_data: Forbes Dataset (1857)¶
+
+The `make_forbes_check_data` function retrieves Forbes' historic dataset on boiling points measured in the Alps. This ...
+
+5. Forbes dataset in alr4 | R Observatory
+   https://r-observatory.thecoatlessprofessor.com/datasets/alr4/Forbes
+   Forbes dataset in alr4 | R Observatory
+
+Forbes' data
+
+Bundled with alr4 · exported, loads via data()
+
+Class data.frame
+
+Dimensions 17 × 3
+
+Missing 0
+
+Format
+
+rda · gzip
+
+version 2 · 387 B
+
+File data/F...
+

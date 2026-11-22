@@ -1,0 +1,35 @@
+Search: boiling point pressure relation water empirical data mountain  [scholarly via openalex]
+Found: 8 results
+
+1. Boil, boil, toil and trouble : the trouble with boil water advisories in British Columbia
+   https://doi.org/10.14288/1.0071731
+   cIRcle (University of British Columbia) · 2011 · cited by 12...
+
+2. Prediction of pore water pressure buildup and liquefaction of sands during earthquakes by the Cyclic Strain Method
+   https://doi.org/10.6028/nbs.bss.138
+   1982 · cited by 604...
+
+3. Under Pressure from the Empirical Data: Does Externalism Rest on a Mistaken Psychological Theory?
+   https://doi.org/10.57709/1059761
+   Digital Archive @ GSU · 2007 · cited by 0...
+
+4. NANOTECHNOLOGY FOR ADVANCED NUCLEAR THERMAL-HYDRAULICS AND SAFETY: BOILING AND CONDENSATION
+   https://doi.org/10.5516/net.2011.43.3.217
+   Nuclear Engineering and Technology · 2011 · cited by 63...
+
+5. Numerical studies of rock-gas flow in Yucca Mountain; Yucca Mountain Site Characterization Project
+   https://doi.org/10.2172/138372
+   OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information) · 1992 · cited by 3...
+
+6. From the Boiling Point to the Glass Transition: Reorientational Dynamics as Revealed by Dynamic Light Scattering
+   https://openalex.org/W968781636
+   EPub Bayreuth (University of Bayreuth) · 2015 · cited by 1...
+
+7. Estimation of Above Ground Biomass in a Tropical Mountain Forest in Southern Ecuador Using Airborne LiDAR Data
+   https://doi.org/10.3390/rs10050660
+   Remote Sensing · 2018 · cited by 44...
+
+8. Qualification of Thermodynamic Data for Geochemical Modeling of Mineral-Water Interactions in Dilute Systems
+   https://doi.org/10.2172/850412
+   OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information) · 2004 · cited by 162...
+

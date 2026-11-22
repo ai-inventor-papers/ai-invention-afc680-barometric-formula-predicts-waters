@@ -1,0 +1,11 @@
+[project]
+name = "measured-boiling-point-records"
+version = "0.1.0"
+description = "Source search and standardized reference table for water boiling points by altitude (Tier A count: 0)"
+requires-python = "==3.12.*"
+# data.py uses only the Python standard library, so there are no third-party pins.
+# Verified: Python 3.12.14 on the build machine. No .venv was created (pip freeze has nothing to list).
+dependencies = []
+
+[tool.uv]
+package = false

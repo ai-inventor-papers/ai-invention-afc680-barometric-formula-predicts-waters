@@ -1,0 +1,83 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://archive.org/stream/transactionsofro21royal/transactionsofro21royal_djvu.txt
+Type: HTML
+Pattern: Heights by the Boiling|Inches|Altitude (222 matches in 2139541 chars)
+
+--- Content ---
+
+54316:... 3, and 4 were in active operation, and 
+    large blocks of the mineral lay around the mouths of these pits. The quality of 
+    the mineral extracted from each appeared to the eye nearly similar; the blocks 
+    varying in thickness, from 1 foot 4 inches to 1 foot 11 inches. 
+    
+    VOL. XXI. PART 1. Cc 
+    
+    
+    8 , DR TRAILL ON THE TORBANEHILL MINERAL. 
+    
+    
+    I descended into No. 2, which was wrought by a small steam-engine. The 
+    depth of the shaft was 17 fathoms. From the bottom of the shaft, a dr...
+--
+55114:...ce, as it is technically termed, is to lie at full length in a truck, and to be leisurely 
+    let down the incline. In descending, the succession of the strata are :— 
+    
+    _ 1. A thick roof of sandstone. 
+    
+    2. Faeks, a crumbling shale=4 inches in thickness. This bed in No. 3 is want- 
+    ing; but it forms the roof in No. 4. ; 
+    
+    3. Cement, a mixture of shale and a poor ironstone=3 inches. 
+    
+    4. Bitumenite, which in this pit at the face=1 foot 4 inches in thickness. 
+    
+    5. Fine Ironstone, from 2 inches to 4 inch. 
+    
+    6. Bituminous Shale, often containing tabular masses of good ironstone= 
+    2 inches. 
+    
+    7. An inferior coal=7 inches. These four last-mentioned beds are all raised 
+    
+    with the Bitumenite, and together measure 2 feet 3 inches in thickness. 
+    
+    8. Coal, much mixed with shale, here called foul coal, about 2 feet 4 inches. 
+    
+    9. Fire-clay. 
+    
+    These notices will sufficiently shew the position of the Bitumenite, &c., which 
+    has nothing peculiar in its situation in the earth to distinguish it from any other 
+    mineral occurring in a coal-field. It se...
+--
+60561:...10 DR TRAILL ON THE TORBANEHILL MINERAL. 
+    
+    
+    a. Yielded 27°5 residue, and 72°4 per cent. was dissipated. 
+    b= wig Qikd ee 7 Vomuae, > 
+    ci re eo BL ee Ls 
+    
+    One hundred grains of Bitumenite afforded by distillation 60°5 cubic inches 
+    of inflammable gas, which is equivalent to rather more than 274 cubic feet per 
+    cwt.; and this gas had a far greater illuminating power than the best coal gas I 
+    have ever examined. I considered it in this respect to approach nearer to ...
+--
+66343:...12 DR TRAILL ON THE TORBANEHILL MINERAL. 
+    
+    
+    Composition. 
+    
+    
+    A specimen of the darkest colour, from pit No. 3, afforded of— 
+    Volatile matter = 84°1 per cent. 
+    Solid residue =15°9 _,, 
+    100 grains afforded 60°5 cubic inches of a dense inflammable gas. 
+    
+    
+    Besides these, the quantity of paraffine appeared considerable. 
+    The solid residue consisted chiefly of silica and alumina, with traces of lime, 
+    and oxide of iron. 
+    
+    
+    Geological Charact...
+--
+[210 more matches not shown]

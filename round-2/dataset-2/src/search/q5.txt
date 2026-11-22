@@ -1,0 +1,84 @@
+Search: NOAA ISD hourly station pressure data  [general via exa]
+Found: 8 results
+
+1. NOAA NCEI Global Hourly - NCEI Search, Discovery, & Data Access
+   https://www.ncei.noaa.gov/access/search/datasets/global-hourly/
+   NCEI Search, Discovery, & Data Access
+
+##### Contact Us
+
+- Email: ncei.info@noaa.gov 
+- Phone: (828) 271-4800 (18282714800)...
+
+2. Global Hourly - Integrated Surface Database (ISD) | National Centers for Environmental Information (NCEI)
+   https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database
+   Global Hourly - Integrated Surface Database (ISD) | National Centers for Environmental Information (NCEI)
+
+Current Impact: Many access portals, interactive maps, and data folders are currently unavail...
+
+3. Order Data | Archive Information Request System | National Climatic Data Center (NCDC)
+   https://www.ncei.noaa.gov/has/HAS.FileAppRouter?datasetname=3505v2&outdest=FILE&subqueryby=STATION
+   Order Data | Archive Information Request System | National Climatic Data Center (NCDC)
+
+# Integrated Surface Hourly Database (ISH/ISD) Ver2
+
+Select Station(s) 007005-99999 (2012 - 2012) 007011-99999 (...
+
+4. NOAA Integrated Surface Database (ISD) - Registry of Open Data on AWS
+   https://registry.opendata.aws/noaa-isd/
+   NOAA Integrated Surface Database (ISD) - Registry of Open Data on AWS
+
+# NOAA Integrated Surface Database (ISD)
+
+ agriculture climate meteorological weather 
+
+### Description
+
+The Integrated Surface D...
+
+5. FEDERAL CLIMATE COMPLEX DATA DOCUMENTATION FOR INTEGRATED SURFACE DATA (ISD) January 12, 2018
+   https://www.ncei.noaa.gov/data/global-hourly/doc/isd-format-document.pdf
+   FEDERAL CLIMATE COMPLEX 
+DATA DOCUMENTATION 
+FOR 
+INTEGRATED SURFACE DATA 
+(ISD) 
+January 12, 2018 
+NOAA - National Centers for Environmental Information 
+US Air Force - 14th Weather Squadron 
+151 Pat...
+
+6. NOAA Integrated Surface Data (ISD) - Microsoft Open Source
+   https://microsoft.github.io/AIforEarthDataSets/data/noaa-isd.html
+   NOAA Integrated Surface Data (ISD) | AIforEarthDataSets
+
+# NOAA Integrated Surface Data (ISD)
+
+## Overview
+
+The NOAA Integrated Surface Database (ISD) is a global database that consists of hourly and ...
+
+7. ISD - Earth2Studio
+   https://nvidia.github.io/earth2studio/main/modules/generated/data/dataframe/ISD/
+   ISD - Earth2Studio
+
+# `ISD`¶
+
+NA NOAA
+
+Import path: `earth2studio.data.ISD`
+
+## Documentation¶
+
+NOAA's Integrated Surface Database (ISD) is a global database that consists of hourly and synoptic surfa...
+
+8. Integrated Surface Global Hourly Data
+   https://catalog.data.gov/dataset/integrated-surface-global-hourly-data-f6180
+   # Integrated Surface Global Hourly Data
+
+Published: 2016-01-01. Dataset. 2 citations.
+
+## Abstract
+
+integrated surface data isd is digital data set dsi 3505 archived at the national climatic data cent...
+

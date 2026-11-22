@@ -1,0 +1,45 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/forbes.html
+Type: HTML
+Length: 577 chars
+
+--- Content ---
+
+forbes {MASS}| R Documentation  
+---|---  
+  
+##  Forbes' Data on Boiling Points in the Alps 
+
+### Description
+
+A data frame with 17 observations on boiling point of water and barometric pressure in inches of mercury. 
+
+### Usage
+    
+    
+    forbes
+    
+
+### Format
+
+`bp`
+    
+
+boiling point (degrees Farenheit). 
+
+`pres`
+    
+
+barometric pressure in inches of mercury. 
+
+### Source
+
+A. C. Atkinson (1985) _Plots, Transformations and Regression._ Oxford. 
+
+S. Weisberg (1980) _Applied Linear Regression._ Wiley. 
+
+* * *
+
+[Package _MASS_ version 7.3-65 [Index](00Index.html)]
+

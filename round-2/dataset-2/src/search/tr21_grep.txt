@@ -1,0 +1,100 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://archive.org/stream/transactionsofro21royal/transactionsofro21royal_djvu.txt
+Type: HTML
+Pattern: boiling point|Forbes (85 matches in 2139541 chars)
+
+--- Content ---
+
+11463:...bstances. 
+    Part III. By Tuomas Anprrson, M.D., Regius Professor of Che- 
+    mistry in the University of Glasgow, : 3 
+    
+    
+    PART II. (1854-5.) 
+    
+    
+    XIV. Further Experiments and Remarks on the Measurement of Heights by 
+    the Boiling Point of Water. By James D. Forzzs, D.C.L., F.R.S., 
+    Sec. R.S.Ed., &., Professor of Natural Philosophy in the Univer- 
+    sity of Edinburgh. (With a Plate.) 
+    
+    
+    XV. Some Miscellaneous Remarks on the Salmonide. By Joun Davy, M.D., 
+    F.R....
+--
+401872:... 
+    the new scale from the temperature of freezing wuter, and temperatures centigrade of ReGNnauLt’s 
+    standard air thermometer, which shows no greater discrepance than a few hundredths of a degree, at 
+    temperatures between the freezing and boiling points, and, through a range of 300° above the freezing 
+    point, so close an agreement that it may be considered as perfect for most practical purposes. The 
+    form of assumption given below in the text as the foundation of the new thermometric syste...
+--
+404644:...tance or substances, 
+    the difference of these temperatures is to be called unity, or any number of units 
+    or degrees, as may be found convenient. The particular convention is, that the 
+    difference of temperatures between the freezing and boiling points of water under 
+    standard atmospheric pressure shall be called 100 degrees. The determination 
+    of the absolute temperatures of the fixed points is then to be effected by means 
+    of observations indicating the economy of a perfect thermo-d...
+--
+405581:...ith the plan proposed 
+    in Part IV.t+ of the present series. The best results, as regards this determina- 
+    tion, which we have yet been able to obtain is, that the temperature of freezing 
+    water is 273°7 on the absolute scale; that of the boiling point being consequently 
+    373°7. Farther details regarding the new thermometric system will be found in 
+    
+    
+    * On the Changes of Temperature occasioned by the Rarefaction and Condensation of Air. See 
+    Proceedings of the Royal Society, Ju...
+--
+688831:...c with aniline and toluidine. It was further 
+    remarked, that the phenomena observed seemed to indicate that the members of 
+    this series present in Dippel’s oil, did not terminate with lutidine, but that bases 
+    of higher atomic weight and boiling point manifestly existed in it. The object of 
+    the present paper is to show that this statement was well founded, by giving a 
+    description of another member of the series, and further to define their true con- 
+    stitution. 
+    
+    On pursuing the distillation of the different fractions of basic products obtained 
+    by the process described in the second part of this investigation, and distilling at 
+    temperatures above 305°, which is about the boiling point of lutidine, it was found 
+    that, when converted into platinum salts, the percentage of platinum gradually 
+    
+    
+    diminished as the boiling pointrose. Taking advantage of the well-known empirical 
+    VOL. XXI. PART I. 3 N 
+    
+    
+    220 DR T. ANDERSON ON THE PRODUCTS OF THE 
+    
+    
+    law that the boiling points of homologous substances rise by 34° of Fahrenheit 
+    for every addition of C, H, to the atom, and from which the boiling points of 
+    pyridine, picoline, and lutidine do not greatly differ, I directed my attention to 
+    
+    
+    the portion of mixed bases boiling about 340°, in which it was reasonable to ex- 
+    
+    
+    pect that the next base of the series should b...
+--
+691393:... the oxalate of the other base in a state of purity. 
+    But this expectation was not confirmed by experiment; for neither from the por- 
+    tion boiling about 340°, nor even from that collected at 360°, and corresponding, 
+    therefore, with the boiling point of pure aniline, could the slightest trace of crys- 
+    tallized oxalate of aniline be obtained, although both fractions gave the reaction 
+    of that base in the most powerful manner. The experiment was varied in every 
+    possible way, by the u...
+--
+694914:...ling 
+    at about 320°, and hence to contain a large quantity of lutidine; and it was only 
+    the very last portion which gave a platinum salt corresponding with theory. It 
+    | was clear that a large quantity of lutidine had been retained at a boiling point 
+    above that which naturally belonged to it, by the presence of aniline, and that 
+    | substance being destroyed, it came over at its natural boiling point. The higher 
+    fractions of the oil containing aniline were therefore treated in a similar manner, 
+    and the undecomposed bases, which amounted to from a half to two-thirds of the 
+    - original quantity acted on by nitric acid, were submitted...
+--
+[73 more matches not shown]

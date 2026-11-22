@@ -1,0 +1,70 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://datarepository.wolframcloud.com/resources/Sample-Data-Water-Boiling-Points-in-the-Alps
+Type: HTML
+Length: 6733 chars (truncated)
+
+--- Content ---
+
+  * [Wolfram.com](https://www.wolfram.com/)
+  * [WolframAlpha.com](https://www.wolframalpha.com/)
+  * [WolframCloud.com](https://www.wolframcloud.com/)
+
+
+
+# [ Wolfram Data Repository Immediate Computable Access to Curated Contributed Data](https://datarepository.wolframcloud.com/)
+
+## Primary Navigation
+
+  * Categories
+
+    * [Agriculture](https://datarepository.wolframcloud.com/category/Agriculture/)
+    * [Astronomy](https://datarepository.wolframcloud.com/category/Astronomy/)
+    * [Chemistry](https://datarepository.wolframcloud.com/category/Chemistry/)
+    * [Computational Universe](https://datarepository.wolframcloud.com/category/Computational-Universe/)
+    * [Computer Systems](https://datarepository.wolframcloud.com/category/Computer-Systems/)
+    * [Culture](https://datarepository.wolframcloud.com/category/Culture/)
+    * [Demographics](https://datarepository.wolframcloud.com/category/Demographics/)
+    * [Earth Science](https://datarepository.wolframcloud.com/category/Earth-Science/)
+    * [Economics](https://datarepository.wolframcloud.com/category/Economics/)
+    * [Education](https://datarepository.wolframcloud.com/category/Education/)
+    * [Engineering](https://datarepository.wolframcloud.com/category/Engineering/)
+    * [Geography](https://datarepository.wolframcloud.com/category/Geography/)
+    * [Geometry Data](https://datarepository.wolframcloud.com/category/Geometry-Data/)
+    * [Government](https://datarepository.wolframcloud.com/category/Government/)
+    * [Graphics](https://datarepository.wolframcloud.com/category/Graphics/)
+    * [Health](https://datarepository.wolframcloud.com/category/Health/)
+    * [Healthcare](https://datarepository.wolframcloud.com/category/Healthcare/)
+    * [History](https://datarepository.wolframcloud.com/category/History/)
+    * [Human Activities](https://datarepository.wolframcloud.com/category/Human-Activities/)
+    * [Images](https://datarepository.wolframcloud.com/category/Images/)
+    * [Language](https://datarepository.wolframcloud.com/category/Language/)
+    * [Life Science](https://datarepository.wolframcloud.com/category/Life-Science/)
+    * [Machine Learning](https://datarepository.wolframcloud.com/category/Machine-Learning/)
+    * [Manufacturing](https://datarepository.wolframcloud.com/category/Manufacturing/)
+    * [Mathematics](https://datarepository.wolframcloud.com/category/Mathematics/)
+    * [Medicine](https://datarepository.wolframcloud.com/category/Medicine/)
+    * [Meteorology](https://datarepository.wolframcloud.com/category/Meteorology/)
+    * [Physical Sciences](https://datarepository.wolframcloud.com/category/Physical-Sciences/)
+    * [Politics](https://datarepository.wolframcloud.com/category/Politics/)
+    * [Reference](https://datarepository.wolframcloud.com/category/Reference/)
+    * [Social Media](https://datarepository.wolframcloud.com/category/Social-Media/)
+    * [Sociology](https://datarepository.wolframcloud.com/category/Sociology/)
+    * [Statistics](https://datarepository.wolframcloud.com/category/Statistics/)
+    * [Text & Literature](https://datarepository.wolframcloud.com/category/Text-Literature/)
+    * [Transportation](https://datarepository.wolframcloud.com/category/Transportation/)
+
+    * [ Random Resource](https://datarepository.wolframcloud.com/random)
+    * [ Alphabetical List](https://datarepository.wolframcloud.com/all)
+
+  * Content Types
+
+    * [Audio](https://datarepository.wolframcloud.com/type/Audio/)
+    * [Entity Store](https://datarepository.wolframcloud.com/type/Entity-Store/)
+    * [Geospatial Data](https://datarepository.wolframcloud.com/type/Geospatial-Data/)
+    * [Graphs](https://datarepository.wolframcloud.com/type/Graphs/)
+    * [Image](https://datarepository.wolframcloud.com/type/Image/)
+    * [Numerical Data](https://datarepository.wolframcloud.com/type/Numerical-Data/)
+    * [Text](https://datarepository.wolframcloud.com/type/Text/)
+    * [Time Series](https://datarepository.wolframcloud.com/type/Time-Series/)
+   

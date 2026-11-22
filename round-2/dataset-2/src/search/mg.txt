@@ -1,0 +1,125 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://docs.machinegnostics.com/v0.0/datasets/forbes_data/
+Type: HTML
+Length: 13164 chars (truncated)
+
+--- Content ---
+
+Skip to content 
+
+**Welcome to Machine Gnostics!** _Released a new version! 🎈 Follow us for more updates._
+
+[ ](https://github.com/MachineGnostics/machinegnostics "Machine Gnostics on GitHub") [ ](https://discord.gg/WMMUaeJe2X "Join us on Discord") [ ](https://www.linkedin.com/company/109036022/ "Machine Gnostics on LinkedIn") [ ](https://pypi.org/project/machinegnostics/ "Machine Gnostics on PyPI") [ ](https://www.instagram.com/machinegnostics/ "Machine Gnostics on Instagram") [ ](https://www.youtube.com/@MachineGnostics "Machine Gnostics on YouTube")
+
+[ ](../.. "Machine Gnostics")
+
+Machine Gnostics 
+
+Forbes Data 
+
+Initializing search 
+
+
+
+
+[ Machine Gnostics  ](https://github.com/MachineGnostics/machinegnostics "Go to repository")
+
+  * [ Home ](https://machinegnostics.com/)
+  * [ Introduction ](../..)
+  * [ Installation ](../../installation/)
+  * [ Tutorials ](../../tutorials/overview/)
+  * [ Data Analysis ](../../da/da_models/)
+  * [ Machine Learning ](../../models/ml_models/)
+  * [ Deep Learning ](../../magnet/magnet/)
+  * [ Metrics ](../../metrics/metrics/)
+  * [ References ](../../ref/references/)
+  * [ Contact ](../../contact/)
+
+
+
+[ ](../.. "Machine Gnostics") Machine Gnostics 
+
+[ Machine Gnostics  ](https://github.com/MachineGnostics/machinegnostics "Go to repository")
+
+  * [ Home  ](https://machinegnostics.com/)
+  * Introduction  Introduction 
+    * [ Welcome  ](../..)
+    * [ History  ](../../stories/history/)
+    * Learn  Learn 
+      * [ Concept  ](../../mg/concepts/)
+      * [ Principles  ](../../mg/principles/)
+      * [ Distributions Functions  ](../../mg/gdf/)
+      * [ Architecture  ](../../mg/architecture/)
+      * [ Glossary  ](../../mg/mg_arguments/)
+  * Installation  Installation 
+    * [ Installation  ](../../installation/)
+    * [ Quick Start  ](../../tutorials/overview/)
+    * [ Tutorials Library  ](../../tutorials/tutorials/)
+  * Tutorials  Tutorials 
+    * [ Quick Start  ](../../tutorials/overview/)
+    * [ Tutorials Library  ](../../tutorials/tutorials/)
+  * Data Analysis  Data Analysis 
+    * [ Overview  ](../../da/da_models/)
+    * Distributions Functions  Distributions Functions 
+      * [ EGDF  ](../../da/egdf/)
+      * [ ELDF  ](../../da/eldf/)
+      * [ QGDF  ](../../da/qgdf/)
+      * [ QLDF  ](../../da/qldf/)
+    * Data Analysis  Data Analysis 
+      * [ Cluster Analysis  ](../../da/cluster_analysis/)
+      * [ Interval Analysis  ](../../da/interval_analysis/)
+      * [ Data Homogeneity  ](../../da/homogeneity/)
+      * [ Data Scedasticity  ](../../da/scedasticity/)
+      * [ Data Membership  ](../../da/membership/)
+      * [ Data Interval  ](../../da/data_interval/)
+      * [ Data Cluster  ](../../da/data_cluster/)
+    * Datasets  Datasets 
+      * [ Animal Data  ](../animal_data/)
+      * [ Anscombe Quartet  ](../anscombe_data/)
+      * [ Classification Data  ](../cls_data/)
+      * Forbes Data  [ Forbes Data  ](./) Table of contents 
+        * Overview 
+        * Returns 
+        * Example Usage 
+      * [ Linnerud Data  ](../linnerud_data/)
+      * [ Longley Data  ](../longley_data/)
+      * [ MtCars Data  ](../mtcars_data/)
+      * [ Moon Data  ](../moon_data/)
+      * [ Puromycin Data  ](../puromycin_data/)
+      * [ Regression Data  ](../reg_data/)
+      * [ Stackloss Data  ](../stackloss_data/)
+      * [ Starwars Data  ](../starwars_data/)
+  * Machine Learning  Machine Learning 
+    * [ Overview  ](../../models/ml_models/)
+    * Regressors  Regressors 
+      * [ Linear Regressor  ](../../models/reg/lin_reg/)
+      * [ Polynomial Regressor  ](../../models/reg/poly_reg/)
+      * [ Logistic Regressor  ](../../models/cls/log_reg/)
+      * [ Decision Tree Regressor  ](../../models/cart/dt_reg/)
+      * [ Random Forest Regressor  ](../../models/cart/rf_reg/)
+      * [ Gnostic Boosting Regressor  ](../../models/cart/gb_reg/)
+    * Classifiers  Classifiers 
+      * [ Multi Class Classifier  ](../../models/cls/multi_class/)
+      * [ Decision Tree Classifier  ](../../models/cart/dt_cls/)
+      * [ Random Forest Classifier  ](../../models/cart/rf_cls/)
+      * [ Gnostic Boosting Classifier  ](../../models/cart/gb_cls/)
+    * Clustering  Clustering 
+      * [ KMeans Clustering  ](../../models/cluster/kmeans/)
+      * [ Estimating Local Clustering  ](../../models/cluster/glc/)
+    * Forecasting  Forecasting 
+      * [ Auto Regressor  ](../../models/forc/ar/)
+      * [ ARIMA  ](../../models/forc/arima/)
+      * [ SARIMA  ](../../models/forc/sarima/)
+    * Utils  Utils 
+      * [ Cross Validation  ](../../models/sup/cross_val/)
+      * [ Train Test Split  ](../../models/sup/train_test_split/)
+    * Mlflow Integration  Mlflow Integration 
+      * [ Mlflow Tracking  ](../../models/sup/mlflow/)
+  * Deep Learning  Deep Learning 
+    * [ Overview  ](../../magnet/magnet/)
+    * Activations  Activations 
+      * [ Activation Layers  ](../../magnet/activations/)
+      * [ ReLU  ](../../magnet/activations/relu/)
+      * [ Sigmoid  ](../../magnet/activations/sigmoid/)
+      * [ Tanh  ](../.

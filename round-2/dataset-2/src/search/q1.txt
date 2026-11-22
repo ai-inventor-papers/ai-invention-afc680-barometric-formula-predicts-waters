@@ -1,0 +1,53 @@
+Search: boiling point of water measured at altitude station pressure  [general via exa]
+Found: 7 results
+
+1. Boiling Point at Altitude Calculator
+   https://tttkmbb.com/weather/boiling-point-altitude.md
+   # Boiling Point at Altitude Calculator
+
+> Computes the boiling point of water at a given altitude by taking the ISA pressure at that altitude (or a measured station pressure) and solving the Antoine e...
+
+2. Boiling Point of Water vs Pressure and Altitude
+   https://engineerunderground.com/reference/boiling-point-of-water-vs-pressure-altitude/
+   Boiling Point of Water vs Pressure and Altitude
+
+# Boiling Point of Water vs Pressure and Altitude
+
+Boiling point of water at altitudes from sea level to Everest and at pressures from 1 kPa to 1.5 MPa...
+
+3. Boiling water temperature in °C, as a function of altitude from -500 m to 12400 m
+   https://www.deleze.name/marcel/en/physique/TemperaturesEbullition/table_temperature-en.html
+   Boiling water temperature in °C, as a function of altitude from -500 m to 12400 m
+
+# Boiling temperature of water in °C
+
+## depending on altitude, from -500 m to 12400 m
+
+Numerical table based on the ...
+
+4. Boiling Point / Atmospheric Pressure / Altitude
+   https://ucfoodsafety.ucdavis.edu/sites/g/files/dgvnsk7366/files/inline-files/234958_1.pdf
+   CALIBRATING THERMOMETERS IN BOILING WATER: Boiling Point / Atmospheric Pressure / Altitude Tables O. Peter Snyder, Jr., Ph.D. Hospitality Institute of Technology and Management 670 Transfer Road, Suit...
+
+5. Boiling Point of Water by Altitude: Chart in °F and °C
+   https://sciencequest.in/boiling-point-of-water-by-altitude/
+   Boiling Point of Water by Altitude: Chart in °F and °C
+
+# Boiling point of water by altitude
+
+ Every 500 ft from sea level to 15,000 ft and every 250 m to 5,000 m, with the summit of Everest, computed...
+
+6. Boiling point of water by altitude: computed from the standard atmosphere and the Antoine equation | Taste the Route
+   https://tastetheroute.com/lab/boiling-point-by-altitude
+   Boiling point of water by altitude: computed from the standard atmosphere and the Antoine equation | Taste the Route
+
+# Boiling point of water by altitude: computed from the standard atmosphere and th...
+
+7. Boiling Point at Altitude Calculator
+   https://freetoolcabin.com/boiling-point-altitude-calculator/
+   Boiling Point at Altitude Calculator
+
+# Boiling Point at Altitude Calculator
+
+Enter your elevation, or the actual barometric pressure, to see the temperature at which water boils in °C and °F. Useful ...
+

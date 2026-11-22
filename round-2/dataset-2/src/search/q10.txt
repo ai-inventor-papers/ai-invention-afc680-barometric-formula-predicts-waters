@@ -1,0 +1,91 @@
+Search: Forbes experiments boiling point of water in the Alps barometric pressure 1843 full text  [general via exa]
+Found: 7 results
+
+1. XXIX.—On the Determination of Heights, by the Boiling Point of Water
+   https://doi.org/10.1017/s008045680003009x
+   # XXIX.—On the Determination of Heights, by the Boiling Point of Water
+
+Transactions of the Royal Society of Edinburgh. Published: 1844-01-01. 0 citations.
+
+## Abstract
+
+It was observed by Fahrenheit,...
+
+2. 3. On the Determination of Heights by the Temperature of Boiling Water
+   https://doi.org/10.1017/s0370164600039626
+   # 3. On the Determination of Heights by the Temperature of Boiling Water
+
+Proceedings of the Royal Society of Edinburgh. Published: 1845-01-01. 0 citations.
+
+## Abstract
+
+The investigations in this pa...
+
+3. 1. Farther Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water
+   https://doi.org/10.1017/s0370164600028054
+   # 1. Farther Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water
+
+Proceedings of the Royal Society of Edinburgh. Published: 1857-01-01. 0 citations.
+
+## Abstract
+
+This ...
+
+4. Travels through the Alps of Savoy and other parts of the Pennine Chain
+   http://www.kouroo.info/kouroo/transclusions/18/43/1843_AlpsOfSavoy.pdf
+   Pll "--- N (]) Q. CT '<
+
+-rv It. l!!"'lI..
+
+## GrRAVELS
+
+THROUGH
+
+## THE ALPS OF SAVOY
+
+AIID
+
+OTHER PARTS OF THE PENNINE CHAIN
+
+WITH OBSERVATIONS ON THE PHENOMENA OF
+
+GLACIERS.
+
+BY
+
+JAMES D. FORBES, F...
+
+5. Travels Through the Alps of Savoy, and Other Parts of the Pennine Chain; With Observations on the Phenomena of Glaciers
+   https://doi.org/10.2307/1798139
+   # Travels Through the Alps of Savoy, and Other Parts of the Pennine Chain; With Observations on the Phenomena of Glaciers
+
+Journal of the Royal Geographical Society of London. Published: 1843-01-01. 3...
+
+6. R: Forbes' data
+   https://search.r-project.org/CRAN/refmans/alr4/html/Forbes.html
+   R: Forbes' data
+
+### Description
+
+The data consists of 17 pairs of numbers corresponding to observed boiling point and corrected barometric pressure, at locations in the Alps. 
+
+### Format
+
+This data ...
+
+7. R: Forbes' Data on Boiling Points in the Alps
+   https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/forbes.html
+   R: Forbes' Data on Boiling Points in the Alps
+
+### Description
+
+A data frame with 17 observations on boiling point of water and barometric pressure in inches of mercury. 
+
+### Usage
+
+```R
+forbes
+
+```
+...
+

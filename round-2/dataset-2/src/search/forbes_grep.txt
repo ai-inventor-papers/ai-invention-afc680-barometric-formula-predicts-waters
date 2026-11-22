@@ -1,0 +1,113 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://doi.org/10.1017/s0080456800032075
+Type: HTML
+Pattern: barometer|Boiling point|Fahrenheit|Mont|Col\.|feet (16 matches in 51928 chars)
+
+--- Content ---
+
+6295:...(/core/publications/open-access/listing?aggs\[productTypes\]\[filters\]=BOOK&sort=canonical.date:desc)
+           3. [New books](/core/publications/books/listing?aggs\[productDate\]\[filters\]=Last+3+months&aggs\[productTypes\]\[filters\]=BOOK&sort=canonical.date:desc)
+           4. [Flip it Open](/core/publications/collections/flip-it-open)
+        2. Collections
+           1. [Cambridge Companions](...
+--
+8188:...ECFD8F5C64F47F3F5A3D395C15B7C493)
+           4. [New Elements](/core/publications/elements/published-elements?aggs%5BproductTypes%5D%5Bfilters%5D=ELEMENT&aggs%5BproductDate%5D%5Bfilters%5D=Last%203%20months&searchWithinIds=ECFD8F5C64F47F3F5A3D395C15B7C493)
+        2. Subjects (A-E)
+           1. [Anthropology](/core/elements/subject/Anthropology/2E44A5AF2838E017617A26DD79FAEAEE)
+           2. [Archaeo...
+--
+11391:...education/)
+           2. [Title list](/highereducation/services/librarians/title-list)
+           3. [New titles](/highereducation/search?sortBy=publication_date&aggs=%24productDate%24Last%25206%2520months%3Atrue%26Last%252012%2520months%3Atrue%26Last%25203%2520years%3Atrue%26Over%25203%2520years%3Atrue%3B%3B&event=SE-AU_PREF)
+     7. Collections
+        1. Book collections
+           1. [Cambridge Companions](/core/publications/co...
+--
+33187:...ironmental-science-transactions-of-royal-society-of-edinburgh)
+
+* * *
+
+## Article contents
+
+  * Extract
+  * References
+
+
+
+# XIV.— _Further Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water_
+
+Published online by Cambridge University Press: **17 January 2013**
+
+[ James D. Forbes](/core/search?filters%5BauthorTerms%5D=James%20D.%20Forbes&eventCode=SE-AU)
+
+Show author details 
+
+* ...
+--
+34901:...you have access to this content, a full PDF is available via the 'Save PDF' action button.
+
+In 1843 I presented a paper to the Royal Society of Edinburgh, giving an account of experiments made on the boiling point of water in the Alps, under various barometric pressures. My object was twofold: first, to describe an apparatus which I considered more practically available than those previously in use; and, secon...
+--
+35413:....
+
+With reference to the second point, I became aware, some time after the publication of my paper, that Sir John Leslie had proposed to compute heights by the thermometer, assuming the change of the boiling point to be _exactly_ in proportion to the height ascended. While cheerfully conceding to Sir John Leslie priority on this point, I submit that he did not bring forward experiments to justify its practical...
+--
+36855:...or, according to the two hypotheses, will be seen in the concluding paragraph of this paper.
+
+page 238 note †
+
+page 238 note † I still retain the doubt expressed in my former paper, as to whether the boiling point can be taken correctly to represent the temperature of steam whose elasticity is that of the atmospheric pressure at the time. This doubt is confirmed by the difference of M. Regnault's and Magnus's ...
+--
+38209:..., calculated from Regnault's formula, are inserted in the figure for the sake of comparison.
+
+page 241 note †
+
+page 241 note † The entire series of Dr Hooker's observations is best represented by 548 feet for 1°, when we include the (somewhat doubtful) highest observations. This agrees almost exactly with my earlier determination.
+
+page 242 note *
+
+page 242 note * In the calculation of De Saussure's observation on Mont Blanc, in my former paper (Ed. Trans., vol. xv., p. 414), a slight mistake occurs. The depression of the boiling point should be 26°·81, instead of 26°·71, giving 545·9 feet for 1°, agreeing strikingly with the other results.
+
+page 242 note †
+
+page 242 note † It happens by a double fortunate coincidence, that the coefficient of T2, is equivalent to unity in both cases, w...
+--
+47079:... Document Service.](https://www.amazon.com/gp/help/customer/display.html/ref=kinw_myk_wl_ln?ie=UTF8&nodeId=200767340#fees)
+
+XIV.— _Further Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water_
+
+  * Volume 21, [Issue 2]()
+  * [James D. Forbes](/core/search?filters%5BauthorTerms%5D=James D. Forbes&eventCode=SE-AU) (a1)
+  * DOI: <https://doi.org/10.1017/S0080456800032075>
+
+
+
+Your Ki...
+--
+48241:...thorise Cambridge Core to connect with your Dropbox account. [Find out more about saving content to Dropbox](/core/help). 
+
+XIV.— _Further Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water_
+
+  * Volume 21, [Issue 2]()
+  * [James D. Forbes](/core/search?filters%5BauthorTerms%5D=James D. Forbes&eventCode=SE-AU) (a1)
+  * DOI: <https://doi.org/10.1017/S0080456800032075>
+
+
+
+Availab...
+--
+49205:...mbridge Core to connect with your Google Drive account. [Find out more about saving content to Google Drive](/core/help). 
+
+XIV.— _Further Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water_
+
+  * Volume 21, [Issue 2]()
+  * [James D. Forbes](/core/search?filters%5BauthorTerms%5D=James D. Forbes&eventCode=SE-AU) (a1)
+  * DOI: <https://doi.org/10.1017/S0080456800032075>
+
+
+
+Availab...
+--
+[1 more matches not shown]

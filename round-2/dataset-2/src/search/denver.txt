@@ -1,0 +1,81 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://digital.denverlibrary.org/nodes/view/1198520
+Type: HTML
+Length: 6644 chars (truncated)
+
+--- Content ---
+
+Skip to content
+
+  * [Home](https://digital.denverlibrary.org/)
+  * [Browse All ](https://digital.denverlibrary.org/nodes/browse)
+  * [Search](https://digital.denverlibrary.org/nodes/definesearch)
+  * [My History](https://digital.denverlibrary.org/pages/history)
+  *  __My Cart
+  * [Login](https://digital.denverlibrary.org/users/login)
+  * More
+
+
+
+  * [Login](https://digital.denverlibrary.org/users/login)
+  * [Register](https://digital.denverlibrary.org/users/register)
+
+
+
+1198520913cc5561d51f2296d06ed563f6de016bc67f404
+
+Open/Close Toolbox
+
+
+
+
+Format: Index Card
+
+Linked To
+
+**Collection**
+
+  * [Western History Subject Index](https://digital.denverlibrary.org/nodes/view/1135351)
+
+
+
+Map
+
+no geotags or polygons yet
+
+[ ](https://x.com/share?url=https%3A%2F%2Fdigital.denverlibrary.org%2Fnodes%2Fview%2F1198520 "Share this on X")[](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdigital.denverlibrary.org%2Fnodes%2Fview%2F1198520)[](https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdigital.denverlibrary.org%2Fnodes%2Fview%2F1198520)[](https://www.tumblr.com/share/link?url=https%3A%2F%2Fdigital.denverlibrary.org%2Fnodes%2Fview%2F1198520)[](mailto:?subject=Sharing%20Denver.%20Boiling%20point%20at%20Denver%20Public%20Library%20Digital%20Collections&body=
+
+Here's the link: https%3A%2F%2Fdigital.denverlibrary.org%2Fnodes%2Fview%2F1198520&X-Mailer=RECOLLECTshare)
+
+Tools
+
+Full size thumbnailFit to screenFit to widthFit to heightRotate 90 degreesZoom to 100%
+
+Show Text / TranscriptionShow keyword hitsHighlight keywords[Download](https://digital.denverlibrary.org/nodes/download/1198520)[Add to Collection](https://digital.denverlibrary.org/nodes/toggleBookmark/add:1198520)[Contact us about this](https://digital.denverlibrary.org/messages/create/1198520)Citation for this item
+
+[ ](https://www.denverlibrary.org/)
+
+## [Digital Collections](/)
+
+Welcome [Guest](https://digital.denverlibrary.org/users/login)
+
+[Login](https://digital.denverlibrary.org/users/login)
+
+[About](/pages/about) [Purchasing Images](https://history.denverlibrary.org/image-pricing-and-sizes) [Getting Started](/pages/getting-started) [Contact Us](https://history.denverlibrary.org/contact-us)
+
+__
+
+[ Denver Public Library Digital Collections ]()
+
+__
+
+__     __
+
+# Denver. Boiling point
+
+Expand/collapse
+
+Details
+
+Born-Digital or AnalogAnalogTranscriptDenver. Boiling point Boiling point in Denver, 202.5° F. barometric pressure 24.708 in. A2g.1:90l _2 p.46$ (Dots.) Boiling point at above press 202.5° F. S 1 1.7 693 p.158 (S & E) S 1 1.7 7120 p.144 0Collection[Western History Subject Index](https://digital.denverlibrary.org/nodes/view/1135351)Related Material[Western History Subject Index Abbreviations](https://history.denverlibrary.org/research-tool/western-history-subject-index-abbreviations "Western History Subject Index Abbreviations")Type of Material[Index Card](https://digital.denverlibrary.org/nodes/search/?meta=eyI3MDYiOlsiSW5kZXggQ2FyZCJdLCI2ODIiOlsiSW5kZXggQ2FyZCJdLCI2NzciOlsiSW5kZXggQ2Fy

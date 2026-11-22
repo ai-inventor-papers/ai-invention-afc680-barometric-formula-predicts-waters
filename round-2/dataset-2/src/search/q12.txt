@@ -1,0 +1,35 @@
+Search: boiling point of water measured at elevation with barometer reading table observations  [scholarly via openalex]
+Found: 8 results
+
+1. Mercury barometers and manometers
+   https://doi.org/10.6028/nbs.mono.8
+   1960 · cited by 43...
+
+2. VIII.—On the Elevation of the Boiling Points of Aqueous Solutions of Electrolytes
+   https://doi.org/10.1017/s0080456800011686
+   Transactions of the Royal Society of Edinburgh · 1906 · cited by 5...
+
+3. Barometers and the measurement of atmospheric pressure. A pamphlet of information respecting the theory and construction of barometers in general, with summary of instructions for the care and use of the standard Weather bureau instruments.
+   https://doi.org/10.5962/bhl.title.38102
+   U.S. Government Printing Office eBooks · 1941 · cited by 1...
+
+4. XIX.— On a Mode of Taking the Density of Vapour of Volatile Liquids, at Temperatures below the Boiling Point
+   https://doi.org/10.1017/s0080456800031367
+   Transactions of the Royal Society of Edinburgh · 1861 · cited by 5...
+
+5. Temperature and Pressure Observations by Tommaso Temanza from 1751 to 1769 in Venice, Italy
+   https://doi.org/10.3390/cli13100217
+   Climate · 2025 · cited by 1...
+
+6. A Study of the Molecular Lowering of the Freezing-Point of Water Produced by Concentrated Solutions of Electrolytes
+   https://doi.org/10.1103/physrevseriesi.18.146
+   Physical Review · 1904 · cited by 6...
+
+7. Experimental investigation of boiling heat transfer to R-134a refrigerant
+   https://doi.org/10.14288/1.0080993
+   cIRcle (University of British Columbia) · 2009 · cited by 0...
+
+8. Early instrumental meteorological observations in Switzerland: 1708–1873
+   https://doi.org/10.5194/essd-12-1179-2020
+   Earth system science data · 2020 · cited by 67...
+

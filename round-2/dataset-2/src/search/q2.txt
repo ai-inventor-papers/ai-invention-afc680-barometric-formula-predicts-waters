@@ -1,0 +1,35 @@
+Search: water boiling temperature versus altitude measurements  [scholarly via openalex]
+Found: 8 results
+
+1. IV. On the measurement of altitudes by means of the temperature at which water boils: To the editors of the Philosophical Magazine and Journal
+   https://doi.org/10.1080/14786446308643413
+   The London Edinburgh and Dublin Philosophical Magazine and Journal of Science · 1863 · cited by 0...
+
+2. Ground temperature measurements
+   https://doi.org/10.3133/pp1203
+   USGS professional paper · 1981 · cited by 17...
+
+3. A PRELIMINARY STUDY OF BOILING BURNOUT HEAT FLUXES FOR WATER IN VORTEX FLOW
+   https://doi.org/10.2172/4306809
+   OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information) · 1958 · cited by 15...
+
+4. Postvolcanic Aerosols: Measurements of Altitude and Particle Sizes with Twilight-Sky Polarimetry
+   https://doi.org/10.1134/s0010952521020076
+   Cosmic Research · 2021 · cited by 2...
+
+5. Altitude affects the quality of the water-extractable organic matter (WEOM) from rhizosphere and bulk soil in European beech forests
+   https://doi.org/10.1016/j.geoderma.2017.04.015
+   Geoderma · 2017 · cited by 71...
+
+6. Water boiling at low pressure: dynamics of growth and bursting of bubbles in a plate-type evaporator.
+   https://doi.org/10.18462/iir.gl.2020.1059
+   HAL · 2020 · cited by 0...
+
+7. XIV.—Further Experiments and Remarks on the Measurement of Heights by the Boiling Point of Water
+   https://doi.org/10.1017/s0080456800032075
+   Transactions of the Royal Society of Edinburgh · 1857 · cited by 11...
+
+8. The multiscale boiling investigation on-board the International Space Station: An overview
+   https://doi.org/10.1016/j.applthermaleng.2021.117932
+   Applied Thermal Engineering · 2022 · cited by 71...
+

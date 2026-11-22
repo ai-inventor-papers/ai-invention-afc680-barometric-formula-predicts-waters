@@ -1,0 +1,343 @@
+/Volumes/aii-s20011/.claude/skills/.ability_client_venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+URL: https://archive.org/stream/transactionsofro21royal/transactionsofro21royal_djvu.txt
+Type: HTML
+Pattern: Hospice|Simplon|Grimsel|Col de|Mont Blanc|St\. Bernard|Bernard|Furca|Col du|Pennine|Table|Height in feet|Boiling point of water|Barometer (252 matches in 2139541 chars)
+
+--- Content ---
+
+8967:...in the University of 
+    
+    
+    Edinburgh, 
+    
+    
+    On a New Hygrometer or Dew-Point Instrument. By A. CoNNELL, Esq., 
+    F.R.S.E., Professor of Chemistry in the University of St Andrews, 
+    
+    
+    . On the Action of the Halogen Compounds of Ethyl and Amyl on some 
+    
+    
+    Vegetable Alkaloids. By Mr Henry How, Assistant to Professor 
+    ANDERSON, Glasgow University, : : ; 
+    
+    
+    - On a General Method of Substituting Iodine for Hydrogen in Organic 
+    
+    
+    Compounds, and on the Properties of Iodopyromeconic Acid. By Mr 
+    James F. Brown, Assistant to Dr ANDERSo...
+--
+10779:... in the University of Glasgow, 
+    
+    
+    X. An Investigation into the Structure of the Torbanehill Mineral, and of 
+    various kinds of Coal. By Joun Hucues Bennett, M.D., F.R.S.E., 
+    Professor of Physiology in the reins of Bainburgh as 
+    Two Plates.) - 
+    
+    
+    XI. On certain Vegetable Organisms found in Coal from Fordel. By Joun 
+    Hurton Batrour, M.D., F.L.S., Professor of Medicine and Botany 
+    in the University of Edinburgh, 
+    
+    
+    XII. Researches on some of the Crystalline Constituents of Opium. Second 
+    Series. By TuHomas ANDERSON, M.D., Regius Professor of C...
+--
+11463:...ducts of the Destructive Distillation of Animal Substances. 
+    Part III. By Tuomas Anprrson, M.D., Regius Professor of Che- 
+    mistry in the University of Glasgow, : 3 
+    
+    
+    PART II. (1854-5.) 
+    
+    
+    XIV. Further Experiments and Remarks on the Measurement of Heights by 
+    the Boiling Point of Water. By James D. Forzzs, D.C.L., F.R.S., 
+    Sec. R.S.Ed., &., Professor of Natural Philosophy in the Univer- 
+    sity of Edinburgh. (With a Plate.) 
+    
+    
+    XV. Some Miscellaneous Remarks on the Salmonide. By Joun Davy, M.D., 
+    F.R.S. Lond. & Edin., Inspector-General of Army Hospitals, 
+   ...
+--
+22557:...apers on the Mechanical Action of Heat. 
+    
+    
+    Dr THOMAS ANDERSON, for his papers on the Crys- 
+    talline Constituents of Opium, and on the Products 
+    of the Destructive Distillation of Animal Substances. 
+    
+    
+    * A Silver Medal, bearing the head of Napier on one side, and a suitable inscription on the other, was at 
+    the same time awarded to Mr Joun Atuan Broun, under whose immediate direction these Observations were 
+    
+    
+    made. 
+    
+    
+    eevee path . 
+    
+    
+    ke } ‘ p figifiva a) ' el fey ; 
+    , 4 me ae, THD il! ; ) teeet 
+    y ; iis) i 
+    
+    
+  ...
+--
+27885:...inary Fellow, to the purport below.* This recom- 
+    mendation shall be delivered to the Secretary, and by him laid before the Council, 
+    and shall afterwards be printed in the circulars for three Ordinary Meetings of 
+    the Society, previous to the day of the election, and shall lie upon the table during 
+    that time. 
+    
+    
+    X 
+    
+    
+    Honorary Fellows shall not be subject to any contribution. This class shall 
+    
+    
+    * « A, B.,a gentleman well skilled in several branches of Science (or Polite Literature as the 
+    ‘* case may be), being to my knowledge desirous’ of b...
+--
+44774:... ova are mature and detached from the ovaries, and 
+    when, by their volume, they distend and press on every part of the peritonzeal 
+    sac, but necessarily with most effect where there is least resistance, viz., close to 
+    the anus, the very spot where the aperture is to be formed with a suitable struc- 
+    ture for their exit. How ill adapted is this for the required effect, according to 
+    the supposition of impregnation of the ova before exclusion? Moreover, as re- 
+    gards the male fish, we see the same inaptitude exhibited in the conformation of 
+    its generative organs. They ar...
+--
+47681:...ime of their spawning, I have been assured of the fact from their own 
+    observations; but this is very different from the act of copulation as performed 
+    in other classes of animals in which impregnation is effected before the expulsion 
+    of the ova; but though so dissimilar, perfectly suitable to the end required, and 
+    quite in accordance, as we have proof in the artificial process, with the neces- 
+    sary requirements. 
+    
+    It is an axiom that nature does nothing in vain; it is not less true that na- 
+    ture is perfect in her works, as regards the adaptation of means to end...
+--
+48362:...llustrated than in 
+    the generative system of organs, diversiform and varied as they are in the several 
+    classes of animals. Consistently, then, were the mode of impregnation that 
+    which has been asserted, we may be sure that an organization,—an apparatus 
+    would have been provided suitable to it. Also, as I think consistently with the 
+    hypothesis, we might expect occasionally to find ova in the cavity of the abdo- 
+    men, bearing marks, if they had been impregnated there, of incipient develop- 
+    ment, according to the analogy of extra uterine foetal growth sometimes witnesse...
+--
+61801:... of yielding olefiant gas, or what has been 
+    termed Bicarburetted Hydrogene ; for their atomic constitution seems to be nearly 
+    similar —C4+H4, or some multiple of these. This substance has been manufac- 
+    tured in large quantities from Bitumenite by Mr Youne, as the specimen on the 
+    table will shew. 
+    
+    By distillation, too, petroleum may be obtained from it, especially if the mi- 
+    neral be first allowed to imbibe as much water as it can absorb; and this pro- 
+    duct is more abundant, more than is yielded by any coal. The fixed residue of the 
+    combustion of Bitumenite consists chiefly of silex and alumina, with traces of 
+    lime and oxide of iron. 
+    
+    Bitumenite occasionally contains casts of vegetable remains, especially of 
+    large Stigmarie. A very magnificent specimen of Stigmaria in Bitumenite, as 
+    thick as the human body, has been deposited by Dr Curistison in the University 
+    Museum. In examining the structure of thin slices by the microscope, I per- 
+    ceived where the organisms occurred some traces of vegetable structure; but in 
+    other portions of the mineral I was unable to perceive the least trace of organic 
+    structure. In several specimens, in the hands of Mr Sanperson the lapidary, I 
+    was also unable to see real organic structure; but observed numerous globules of 
+    a pale yellowish mat...
+--
+66963:... 16 to 24 inches, in the coal for- 
+    mation at Torbanehill and Boghead, in Linlithgowshire, in contact with shales and 
+    clay ironstone, with an inclination of about 7°, dipping to the north. It occa- 
+    sionally contains casts and impressions of large Stigmariz, and other fossil vege- 
+    tables, which are also found in the accompanying shales. 
+    
+    
+    Note.—Since the above paper was written, I have learnt that an important de- 
+    cision of the question, “* Whether this mineral be, or be not, a coal?” has occurred 
+    in Germany. 
+    
+    About the very time when the case of GI...
+--
+74885:...h wide. It must effect its purpose of exhausting in as 
+    perfect a manner as an instrument of that size can accomplish. FG isa clamp of 
+    brass, capable of being attached by the screw horizontally to a window-sill in the 
+    position which it occupies in the figure, or vertically to a common table, the holding 
+    surfaces which come in contact with the body grasped being well roughened. 
+    The syringe screws into this clamp at K by a projecting screw soldered to the 
+    former, when the clamp is screwed to a window-sill, as in the case when an ob- 
+    servation is made at an open window; or this projecting screw is inserted at L, 
+    when the clamp is fastened to a table, as is done when the experiment is made in 
+    a room. In both cases the syringe itself occupies a horizontal position, and 
+    the bottle and thermometer, of course, a vertical one; the projecting screw K 
+    should be so constructed as to cause the syringe to incline with the bottle a little 
+...
+--
+75973:...EW HYGROMETER OR DEW POINT INSTRUMENT. Ee 
+    
+    
+    syringe may be counteracted, and any trace of it which should pass or be con- 
+    densed in the syringe shall run back into the bottle. 
+    
+    Let us suppose the instrument fixed at an open window on the sill. We, of 
+    course, note the barometer and the temperature of the external air at the time; 
+    and it is convenient, if a wet bulb thermometer happens to be at the window, to 
+    observe the amount of the cold of evaporation at the time, because it gives an 
+    idea of the point near which the dew point may be expected, although, of...
+--
+91829:...instrument described in this paper is rather in the opposite 
+    direction, and that its usual indications are a very little too low, but that this de- 
+    viation is less on an average than 1°, and therefore quite within such limits as 
+    fully to justify reliance on its results. The following table contains the observa- 
+    tions; those by Dauron’s method being stated at the actually observed dew point, 
+    and the others in excess or deficiency, with reference to DaLTon. 
+    
+    
+    24.) 26.| 28.| 29.| 30. 
+    
+    
+    1854, March} 11.} 12.) 13.) 14.| 15.) 16.| 17.| 18.| 19.] 20.] 21....
+--
+93399:..., I may appeal to the opinion of 
+    Protessor James Forzes, 2d Report on Meteorology to British Association, 1832; and to Dr Tuom- 
+    SoNn’s opinion, there referred to. It is unnecessary to say that I had previously compared the ther- 
+    ™mometers, and that I made allowance in the comparative table drawn up, for a slight difference ob- 
+    served in their indications. 
+    
+    
+    22 PROFESSOR CONNELL ON A 
+    
+    
+    it with every care, I then obtained a result in excess, and therefore am inclined 
+    to think, that the tendency of that instrument is so decidedly in excess, although 
+...
+--
+100723:... as those made in a warm room, I have found the results 
+    quite satisfactory. See also note, p. 9, 
+    
+    
+    * As window sills are often inclined and uneven, one or two little wedges of wood may be 
+    employed to produce steadiness of attachment. Pieces of wood may be used to prevent fine tables 
+    from receiving injury, in attaching the clamp to them. 
+    
+    + Zehnterband, s. 135. 
+    
+    
+    VOL. XXI. PART I. G 
+    
+    
+    24 PROFESSOR CONNELL ON A 
+    
+    
+    When the air is very moist, and there is little difference between the tem- 
+    perature of the air and the point...
+--
+101738:... that 
+    will be necessary will be to have some fixture attached to a tree or gate-post, or 
+    inserted in the ground, to which the clamp may be secured. 
+    
+    Messrs Kemp have undertaken to prepare the apparatus with clamp, bottles 
+    for ether, &c. &c., packed conveniently in a small portable case; and any one 
+    who may procure it from them, or from any other instrument-maker, ought, of 
+    course, to take care that all the particulars mentioned in the foregoing observa- 
+    tions are rigidly complied with. Insufficient or careless workmanship is quite 
+    incompatible with succes...
+--
+104339:...cations of DAnreL’s hy- 
+    erometer are quite accurate, and ought to be taken as the general standard of com- 
+    parison, according to which the accuracy of all other dew point instruments, and 
+    
+    
+    NEW HYGROMETER OR DEW POINT INSTRUMENT. 25 
+    
+    
+    of all dew point formule and tables of factors is to be determined. The grounds 
+    of my dissent from such a view have been already given. 
+    
+    There is a slight modification of the manner of applying the ivory intercepting 
+    portion, by placing it as an ivory collar in the neck of the bottle at the point 
+    P, instead o...
+--
+107407:... 
+    { f 
+    . i J x, 
+    ca . ) f 
+    f e ae my oN 
+    i 5 a Wy aD oe 
+    i : pe on 
+    * Ban) - ‘ Ab 
+    a. a a : 
+    , ‘ r ies 
+    ’ = - ae Re i 
+    : . ce a peat ? 
+    fe ‘ aw 
+    
+    
+    Cari 
+    
+    
+    IV.—On the Action of the Halogen Compounds of Ethyl and Anyl on some Vegetable 
+    Alkaloids. By My Henry How, Assistant to Professor ANDERSON, Glasgow 
+    University. 
+    
+    
+    (Read 1st May 1854.) 
+    
+    
+    Tue memoir which I have now the honour of presenting to the Society contains 
+    part of a continued investigation, of which the first results were publishe...
+--
+108708:...    most prominent alkaloids of opium, new salts are produced, in which the basic 
+    molecules appear to assimilate by their chemical characters to the hypothetical 
+    metal ammonium, or its oxide rather; so that, in the system of Hormann, these 
+    peculiar results of natural, and as yet inimitable agencies, would take rank among 
+    the nitryle bases. I say as yet inimitable, because it appeared that although one 
+    of the new salts possessed precisely the same centesimal composition as the cor- 
+    responding salt of codeine, the base contained in the artificial product was widely 
+    different in appearance and properties from this alkaloid; a fact which seems to...
+--
+113441:...f silver, 
+    
+    
+    which gives a percentage of iodine of 27:02, and 27:21 is the theoretical calcula- 
+    tion corresponding to the anhydrous hydriodate of papaverine, whose formula is 
+    C,, H,, NO, HI. 
+    
+    
+    * Trans. Roy. Soc. Hdin., vol. xxi., part i. 
+    
+    
+    ON SOME VEGETABLE ALKALOIDS. 29 
+    
+    
+    I shall shew presently, from an analysis and description of the base obtained 
+    from this salt, that there can be no doubt of its real nature; so that, under these 
+    circumstances, papaverine behaves in a manner similar to that shewn before* to 
+    be the case wh...
+--
+119380:...monia a precipitate easily to be recognised as narcotine, by its characters and 
+    chemical reactions; and in order fully to substantiate the nature of the base, 
+    the hydriodate was converted into a platinum salt in the following manner :— 
+    
+    
+    * Loc. cit. 
+    
+    
+    ON SOME VEGETABLE ALKALOIDS. 31 
+    
+    
+    An aqueous solution was treated successively with nitrate of silver and hydro- 
+    chloric acid, and bichloride of platinum was finally added to the clear fluid, care 
+    being taken to operate with dilute liquids and in the cold, as the platinum com- 
+    pound of na...
+--
+[227 more matches not shown]
