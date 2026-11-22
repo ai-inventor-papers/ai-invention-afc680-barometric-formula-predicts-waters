@@ -1,0 +1,13 @@
+[project]
+name = "boiling-point-altitude-reference-dataset"
+version = "0.1.0"
+description = "Boiling point of water vs elevation: equation-derived reference grid, schema check, and barometric-formula comparison."
+requires-python = "==3.12.*"
+# The data build (build_dataset.py, data.py) is standard-library only.
+dependencies = []
+
+[project.optional-dependencies]
+# Used only to validate full_data_out.json against schema/ and exp_sel_data_out.json.
+validate = [
+    "jsonschema==4.25.1",
+]

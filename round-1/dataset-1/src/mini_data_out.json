@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "description": "Boiling temperature of water vs elevation; equation-derived reference grid. No measured sites verified; measured_site_count = 0.",
+    "holdout_rule": "Predefined: hold out measured sites in the Americas above 1000 m. Empty in this release.",
+    "measured_site_count": 0
+  },
+  "datasets": [
+    {
+      "dataset": "boiling_point_altitude_reference_grid",
+      "examples": [
+        {
+          "input": "{\"elevation_m\": 0.0}",
+          "output": "100.0",
+          "metadata_site_id": "REF-0000m",
+          "metadata_evidence_type": "equation_derived",
+          "metadata_split": "reference",
+          "metadata_altitude_band": "0-500 m",
+          "metadata_boiling_temp_uncertainty_C": 0.05,
+          "metadata_formula_boiling_C": 100.01,
+          "metadata_formula_residual_C": 0.01,
+          "metadata_source_citation": "Boiling water temperature in degrees C as a function of altitude (barometric levelling model), deleze.name, https://www.deleze.name/marcel/en/physique/TemperaturesEbullition/table_temperature-en.html, accessed 2026-11-21",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"elevation_m\": 100.0}",
+          "output": "99.7",
+          "metadata_site_id": "REF-0100m",
+          "metadata_evidence_type": "equation_derived",
+          "metadata_split": "reference",
+          "metadata_altitude_band": "0-500 m",
+          "metadata_boiling_temp_uncertainty_C": 0.05,
+          "metadata_formula_boiling_C": 99.68,
+          "metadata_formula_residual_C": -0.02,
+          "metadata_source_citation": "Boiling water temperature in degrees C as a function of altitude (barometric levelling model), deleze.name, https://www.deleze.name/marcel/en/physique/TemperaturesEbullition/table_temperature-en.html, accessed 2026-11-21",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"elevation_m\": 200.0}",
+          "output": "99.3",
+          "metadata_site_id": "REF-0200m",
+          "metadata_evidence_type": "equation_derived",
+          "metadata_split": "reference",
+          "metadata_altitude_band": "0-500 m",
+          "metadata_boiling_temp_uncertainty_C": 0.05,
+          "metadata_formula_boiling_C": 99.36,
+          "metadata_formula_residual_C": 0.06,
+          "metadata_source_citation": "Boiling water temperature in degrees C as a function of altitude (barometric levelling model), deleze.name, https://www.deleze.name/marcel/en/physique/TemperaturesEbullition/table_temperature-en.html, accessed 2026-11-21",
+          "metadata_row_index": 2
+        }
+      ]
+    }
+  ]
+}

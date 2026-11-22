@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Boiling point vs altitude record",
+  "type": "object",
+  "required": [
+    "site_id", "site_name", "elevation_m", "boiling_temp_C", "evidence_type",
+    "source_citation", "split", "measurement_method", "formula_pressure_kPa",
+    "formula_boiling_C", "formula_residual_C", "altitude_band"
+  ],
+  "properties": {
+    "site_id": {"type": "string"},
+    "site_name": {"type": "string"},
+    "country": {"type": ["string", "null"]},
+    "latitude": {"type": ["number", "null"], "minimum": -90, "maximum": 90},
+    "longitude": {"type": ["number", "null"], "minimum": -180, "maximum": 180},
+    "elevation_m": {"type": "number", "minimum": 0, "maximum": 4000},
+    "elevation_uncertainty_m": {"type": ["number", "null"], "minimum": 0},
+    "station_pressure_kPa": {"type": ["number", "null"], "minimum": 50, "maximum": 102},
+    "pressure_source": {"type": ["string", "null"]},
+    "pressure_date": {"type": ["string", "null"]},
+    "boiling_temp_C": {"type": "number", "minimum": 60, "maximum": 101},
+    "boiling_temp_uncertainty_C": {"type": ["number", "null"], "minimum": 0},
+    "thermometer_description": {"type": ["string", "null"]},
+    "measurement_method": {"type": "string"},
+    "evidence_type": {"enum": ["measured", "equation_derived"]},
+    "source_citation": {"type": "string", "minLength": 1},
+    "split": {"enum": ["dev", "holdout", "reference"]},
+    "drop_reason": {"type": ["string", "null"]},
+    "altitude_band": {"type": "string"},
+    "formula_pressure_kPa": {"type": "number", "minimum": 50, "maximum": 102},
+    "formula_boiling_C": {"type": "number"},
+    "formula_residual_C": {"type": "number"}
+  },
+  "additionalProperties": false
+}

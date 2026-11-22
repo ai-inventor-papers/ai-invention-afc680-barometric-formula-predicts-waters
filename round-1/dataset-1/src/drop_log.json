@@ -1,0 +1,34 @@
+[
+  {
+    "candidate": "Correlation between Barometric Pressure and the Boiling Point of Water in Pakistan (Bhutto, Eur. J. Phys. Sci. 2024, doi:10.47672/ejps.2059)",
+    "reason": "Desk study that collects already-published data. Site-level records could not be read: the DOI page and the journal full text were not retrievable (HTTP 403), so no record was extracted or verified."
+  },
+  {
+    "candidate": "Pressure on the boiling point (Harrison and Marlow, Weather 2020, doi:10.1002/wea.3693)",
+    "reason": "Full text not retrievable (HTTP 403). No measured record was verified."
+  },
+  {
+    "candidate": "Methods for Computing the Boiling Temperature of Water at Varying Pressures (Miller, BAMS 2016, doi:10.1175/bams-d-16-0174.1)",
+    "reason": "Full text not retrievable (HTTP 403). It is a methods paper for computed values, so it is not measured field evidence in any case."
+  },
+  {
+    "candidate": "La Paz boiling point blog (tastetheroute.com, water boils at 88 C)",
+    "reason": "Secondary blog with no station pressure, no thermometer, and no primary citation. Not used."
+  },
+  {
+    "candidate": "NCHFP canning table, Temperatures at which Water Boils at Different Elevations (nchfp.uga.edu)",
+    "reason": "Only the page header was retrieved within the budget. It is a derived reference table, not measured evidence. Not used as a data source in this release."
+  },
+  {
+    "candidate": "Keenan-Keyes / Hilsenrath steam tables (NBS Circular 564, 1955) and CRC Handbook pressure table",
+    "reason": "Identified (NIST publication page, PDF at nvlpubs.nist.gov) but not fetched within the budget. Not used in this release; listed as a next step."
+  },
+  {
+    "candidate": "NOAA GHCN-Daily PRES element (station pressure)",
+    "reason": "Documentation located (ncei.noaa.gov GHCND_documentation.pdf) but no site was matched to a boiling record, so no station-pressure lookup was made."
+  },
+  {
+    "candidate": "Measured-site records (plan Step 3 target 25 sites, minimum 15)",
+    "reason": "Zero verified. No independent measured site with elevation, thermometer, and boiling temperature was confirmed in accessible sources. Nothing was padded from equation-derived rows."
+  }
+]
