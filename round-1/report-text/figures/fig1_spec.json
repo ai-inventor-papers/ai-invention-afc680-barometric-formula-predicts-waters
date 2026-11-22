@@ -1,0 +1,14 @@
+{
+  "type": "line",
+  "title": "Structural term versus altitude",
+  "xlabel": "Altitude (m)",
+  "ylabel": "Structural term (K)",
+  "aspect": "16:9",
+  "series": [
+    {
+      "label": "Structural term",
+      "x": [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000],
+      "values": [0.0, 0.009342, 0.037271, 0.083651, 0.148352, 0.231254, 0.332247, 0.451227, 0.588101]
+    }
+  ]
+}

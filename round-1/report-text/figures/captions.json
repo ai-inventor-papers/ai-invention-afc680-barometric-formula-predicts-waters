@@ -1,0 +1,6 @@
+{
+  "fig1": {
+    "title": "Structural term versus altitude",
+    "caption": "Structural term (isothermal minus lapse-rate boiling temperature, K) against altitude from 0 to 4,000 m. Nine points at 500 m steps, taken from the reference-grid experiment; the line joins them and is not a fit. The term is 0.33 K at 3,000 m and 0.59 K at 4,000 m. It is a model-structure term against the standard-atmosphere reference, not a comparison with measured boiling points."
+  }
+}
