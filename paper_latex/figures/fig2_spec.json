@@ -1,0 +1,15 @@
+{
+  "type": "bar",
+  "title": "Structural term against the 0.5 K target",
+  "xlabel": "Altitude (m)",
+  "ylabel": "Isothermal minus lapse-rate boiling temp. (K)",
+  "aspect": "16:9",
+  "ylim": [0, 0.7],
+  "annotate": true,
+  "fmt": ".3f",
+  "categories": ["1000 m", "2000 m", "3000 m", "4000 m"],
+  "series": [
+    {"label": "Structural term", "values": [0.03727121, 0.14835199, 0.33224707, 0.58810133]}
+  ],
+  "color_map": {"Structural term": "#0173B2"}
+}

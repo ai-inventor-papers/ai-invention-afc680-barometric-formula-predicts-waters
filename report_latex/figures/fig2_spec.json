@@ -1,0 +1,22 @@
+{
+  "type": "barh",
+  "xlabel": "RMS error (K)",
+  "ylabel": "Vapour-pressure route",
+  "aspect": "16:9",
+  "xlim": [0, 0.25],
+  "categories": [
+    "Constant-L Clausius-Clapeyron",
+    "Temp.-dependent-L Clausius-Clapeyron",
+    "Antoine refit"
+  ],
+  "series": [
+    {
+      "label": "Held-out, 0-2950 m (60 pts)",
+      "values": [0.10777978, 0.08279387, 0.06126225]
+    },
+    {
+      "label": "Fit range, 2950-4000 m (21 pts)",
+      "values": [0.23954092, 0.15867028, 0.02958015]
+    }
+  ]
+}

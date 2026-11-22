@@ -1,0 +1,76 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, booktabs, longtable, xcolor}
+\geometry{margin=0.9in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+\title{An Isothermal Barometric Formula Exceeds a 0.5 K Structural Target at 4000 m: A Reference-Only Screen}
+\author{Executive summary of the internal research report}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Headline}
+
+On a shared reference grid from 0 to 4,000 m, coupled to the IAPWS-IF97 saturation curve, the isothermal barometric form has a structural term of \textbf{0.588101\,K} at 4,000 m against the lapse-rate form. That is 0.088\,K above the 0.5\,K structural target set in the hypothesis. The source is gen\_art\_\allowbreak{}experiment\_1 (round 1), and gen\_art\_\allowbreak{}experiment\_3 (round 2) reproduces it at 0.588092\,K. The scope is a reference-only, model-to-reference screen. No measured boiling record was verified, no interval is reported, and the term bounds only the model's own structural error.
+
+\emph{Conflict with the round record:} the round record grades this result as weak or null, not as exploratory evidence. Its 0.5\,K target is a constant of the hypothesis, so the term measures the two formulas under the chosen reference, not a measured residual. The round record therefore does not count the exceedance as an empirical finding.
+
+\section{Goal}
+
+The run asks how well a simple barometric formula, coupled to the water saturation curve, predicts the boiling point of water at altitude compared with published measurements. The hypothesis predicts agreement with measured boiling temperatures to about $\pm 0.3$\,$^\circ$C with station pressure, and to about $\pm 0.6$\,$^\circ$C from altitude alone, from sea level to 4,000 m. The measured comparison is the question the run was set. It has not been run. The full internal report runs to 20 pages.
+
+\section{What was tried}
+
+\begin{itemize}
+\item \textbf{Round 1.} Three artifacts. A 41-row reference table of boiling temperature (gen\_art\_\allowbreak{}dataset\_1), built from a web table and containing no measured rows. A reference-grid screen of the isothermal and lapse-rate forms (gen\_art\_\allowbreak{}experiment\_1). A screen of three closed-form vapour-pressure routes against the IAPWS-IF97 curve (gen\_art\_\allowbreak{}experiment\_2). The reviewer gave a score of 3, not blocking, and objected that the measured comparison was never made.
+\item \textbf{Round 2.} Three artifacts. A search for measured boiling records, which found none (gen\_art\_\allowbreak{}dataset\_2). A test of the barometric chain against measured records, which accepted zero sites and reported every claim as underpowered (gen\_art\_\allowbreak{}experiment\_3). A re-screen of the closed-form routes with a held-out Antoine split and a Clapeyron check (gen\_art\_\allowbreak{}experiment\_4). The reviewer gave a score of 3, not blocking.
+\end{itemize}
+
+\section{Key results}
+
+Each value is read from the named artifact's output files. The grade is the one the round record gives.
+
+\begin{longtable}{p{4.4cm}p{3.6cm}p{2.7cm}p{4.6cm}}
+\toprule
+Result & Value & Source (round) & Grade and meaning \\
+\midrule
+\endhead
+Isothermal minus lapse-rate structural term, 3,000 m & 0.332247\,K & gen\_art\_\allowbreak{}experiment\_1 (1); 0.332241\,K in gen\_art\_\allowbreak{}experiment\_3 (2) & Model-only; not validation \\
+Structural term, 4,000 m & 0.588101\,K, 0.088\,K above target & gen\_art\_\allowbreak{}experiment\_1 (1); 0.588092\,K in gen\_art\_\allowbreak{}experiment\_3 (2) & Model-only; target missed \\
+Isothermal form, max and RMS error against reference & 0.588101\,K at 4,000 m; RMS 0.268641\,K & gen\_art\_\allowbreak{}experiment\_1 (1) & Model-only; margin to 0.6\,K is 0.011899\,K, not a test of that bound \\
+Held-out RMS, Antoine refit & 0.061262\,K & gen\_art\_\allowbreak{}experiment\_4 (2) & Provisional: fit-window dependent, and the iteration 1 figure of 0.0042\,K did not reproduce (0.035756\,K) \\
+Held-out RMS, temperature-dependent-latent-heat Clausius--Clapeyron & 0.082794\,K & gen\_art\_\allowbreak{}experiment\_4 (2) & Provisional, same evaluation set as the Antoine row \\
+Held-out RMS, constant-latent-heat Clausius--Clapeyron & 0.107780\,K; 0.279825\,K max at 4,000 m & gen\_art\_\allowbreak{}experiment\_4 (2) & Provisional; 0.2780\,K in round 1 \\
+Clapeyron residual, ideal vapour, max & 1.6261\,\% & gen\_art\_\allowbreak{}experiment\_4 (2) & Fails the 1\,\% tolerance \\
+Clapeyron residual, IAPWS-95 derivative, Z$_\mathrm{v}$-corrected & 0.0625\,\% & gen\_art\_\allowbreak{}experiment\_4 (2) & Holds; largely an identity, with the Antoine-derivative row (0.9204\,\%) carrying the test \\
+Measured boiling records accepted & 0 sites; all claims underpowered & gen\_art\_\allowbreak{}experiment\_3 (2) & Measured comparison untested \\
+\bottomrule
+\end{longtable}
+
+\section{What failed}
+
+\begin{itemize}
+\item \textbf{Measured records.} No verified record with station pressure, elevation and thermometer uncertainty was found in either round. Three publications could not be read because of HTTP 403 responses. The Forbes (1857) table was not transcribed. NOAA GHCN-Daily and the NIST steam-table PDF were not reached in round 2.
+\item \textbf{Clapeyron at 1\,\%.} The ideal-vapour check failed in round 1. Round 2 showed that compressibility removes the failure, but the round record calls the corrected check an identity.
+\item \textbf{Antoine 0.0042\,K.} The round 1 figure is in-sample, and it did not reproduce in round 2 (0.035756\,K). The fit window changed between the rounds, which is one candidate explanation. It was not tested.
+\item \textbf{Provenance and framing.} The reference table was first described as equation-derived. It is a web table, and the round 1 wording was withdrawn in round 2. The round 2 sensitivity fit gives a held-out RMS of 0.092436\,K on a different evaluation set, so it does not show a reversal of the ranking.
+\end{itemize}
+
+\section{Open questions}
+
+\begin{itemize}
+\item Do measured boiling records with station pressure and elevation exist in a form that can be verified? The Forbes table, the NOAA station pressure series and the NIST steam tables are the untried leads.
+\item Does the predicted-minus-observed residual meet the 0.3\,K and 0.6\,K claims? This cannot be answered until measured sites are accepted.
+\item Is the Antoine ranking stable under the fit window? The iteration 1 window was never re-run.
+\item Which published results are the nearest neighbours of each positive claim? No scholarly search was run in either round.
+\end{itemize}
+
+\end{document}

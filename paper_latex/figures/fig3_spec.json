@@ -1,0 +1,34 @@
+{
+  "type": "bar",
+  "title": "Held-out error of three vapour-pressure routes",
+  "aspect": "4:3",
+  "xlabel": "Vapour-pressure route",
+  "ylabel": "Error against IAPWS-IF97 (K)",
+  "ylim": [
+    0,
+    0.22
+  ],
+  "categories": [
+    "Constant\nlatent heat",
+    "Temp.-dependent\nlatent heat",
+    "Antoine refit\n(273–363 K)"
+  ],
+  "series": [
+    {
+      "label": "Held-out RMS (K)",
+      "values": [
+        0.10777978,
+        0.08279387,
+        0.06126225
+      ]
+    },
+    {
+      "label": "Held-out max absolute (K)",
+      "values": [
+        0.19407456,
+        0.13741345,
+        0.08562469
+      ]
+    }
+  ]
+}
