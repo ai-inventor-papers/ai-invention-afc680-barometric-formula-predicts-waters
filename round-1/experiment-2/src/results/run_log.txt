@@ -1,0 +1,16 @@
+warning: `VIRTUAL_ENV=/opt/aii/venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+2026-11-21 17:07:49,699 INFO Building latent-heat table from IF97 enthalpies
+2026-11-21 17:07:49,752 INFO Lv at 373.124 K = 40651.6 J/mol (anchor 40660.0); grid mean = 42892.1 J/mol
+2026-11-21 17:07:49,752 INFO Fitting Antoine equation
+2026-11-21 17:07:49,762 INFO Antoine A=7.125207 B=1689.0362 C=229.9526 residual RMS 6.006 Pa
+2026-11-21 17:07:49,972 INFO CHECK 1_reference pass=True
+2026-11-21 17:07:49,972 INFO CHECK 2_atmosphere pass=True
+2026-11-21 17:07:49,972 INFO CHECK 3_clapeyron_consistency pass=False
+2026-11-21 17:07:49,972 INFO CHECK 4_method_single_point_h0 pass=True
+2026-11-21 17:07:49,972 INFO CHECK 5_antoine_fit pass=True
+2026-11-21 17:07:49,972 INFO Computing reference and methods on 81 altitudes
+2026-11-21 17:07:50,064 INFO a_constant_latent_heat                   max|e|=0.2780 K  RMS=0.1521 K  bias=-0.1286 K  e(4000)=-0.2780 K  at h=4000  survive=True
+2026-11-21 17:07:50,064 INFO b_temperature_dependent_latent_heat      max|e|=0.1773 K  RMS=0.1082 K  bias=-0.0951 K  e(4000)=-0.1773 K  at h=4000  survive=True
+2026-11-21 17:07:50,064 INFO c_antoine                                max|e|=0.0042 K  RMS=0.0022 K  bias=+0.0006 K  e(4000)=+0.0031 K  at h=0  survive=True
+2026-11-21 17:07:50,064 INFO sens_a_gridmean_latent_heat_not_ranked   max|e|=0.4069 K  RMS=0.2473 K  bias=+0.2167 K  e(4000)=+0.4069 K  at h=4000  survive=True
+2026-11-21 17:07:50,067 INFO Done. Ranking among survivors: ['c_antoine', 'b_temperature_dependent_latent_heat', 'a_constant_latent_heat']

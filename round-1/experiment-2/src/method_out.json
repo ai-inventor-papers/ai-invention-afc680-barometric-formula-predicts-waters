@@ -1,0 +1,881 @@
+{
+ "metadata": {
+  "experiment": "screening of vapour-pressure shortcuts for water boiling temperature",
+  "reference": "IAPWS-IF97 saturation pressure (region 4) via iapws package 1.5.5",
+  "atmosphere": {
+   "model": "U.S. Standard Atmosphere 1976 troposphere",
+   "T0_K": 288.15,
+   "p0_Pa": 101325.0,
+   "lapse_K_per_m": 0.0065,
+   "exponent": 5.255785959221189
+  },
+  "grid": {
+   "altitudes_m": "0 to 4000 step 50 (81 points)",
+   "n": 81
+  },
+  "anchor": {
+   "T_K": 373.124,
+   "p_Pa": 101325.0,
+   "Lv_J_per_mol": 40660.0
+  },
+  "survival_rule": "max|e| <= 0.6 K",
+  "ranking_rule": "rms_error_K ascending among survivors",
+  "ranking": [
+   "c_antoine",
+   "b_temperature_dependent_latent_heat",
+   "a_constant_latent_heat"
+  ],
+  "method_metrics": {
+   "a_constant_latent_heat": {
+    "max_abs_error_K": 0.27795709899811527,
+    "rms_error_K": 0.15214787209809202,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": -0.12861554447381268,
+    "error_at_4000m_K": -0.27795709899811527,
+    "survives_0.6K": true
+   },
+   "b_temperature_dependent_latent_heat": {
+    "max_abs_error_K": 0.17732695457243608,
+    "rms_error_K": 0.1082158327873536,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": -0.09505650580797885,
+    "error_at_4000m_K": -0.17732695457243608,
+    "survives_0.6K": true
+   },
+   "c_antoine": {
+    "max_abs_error_K": 0.004155178632345269,
+    "rms_error_K": 0.0022472178986158425,
+    "altitude_of_max_m": 0.0,
+    "bias_K": 0.0005769258255217783,
+    "error_at_4000m_K": 0.0031417745000226205,
+    "survives_0.6K": true
+   },
+   "sens_a_gridmean_latent_heat_not_ranked": {
+    "max_abs_error_K": 0.4068562341577149,
+    "rms_error_K": 0.2473179123535481,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": 0.21671352364859964,
+    "error_at_4000m_K": 0.4068562341577149,
+    "survives_0.6K": true
+   }
+  },
+  "reference_unit": "K; output is the IAPWS-IF97 reference boiling temperature"
+ },
+ "datasets": [
+  {
+   "dataset": "U.S. Standard Atmosphere 1976 altitude grid, 0-4000 m (IAPWS-IF97 reference)",
+   "examples": [
+    {
+     "input": "Predict the boiling temperature of water at 0 m altitude, where the pressure is 101325.0000 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "373.1243000005",
+     "metadata_altitude_m": 0.0,
+     "metadata_p_std_Pa": 101325.0,
+     "predict_a_constant_latent_heat": "373.1240000000 (error -0.0003000005 K)",
+     "predict_b_temperature_dependent_latent_heat": "373.1240000000 (error -0.0003000005 K)",
+     "predict_c_antoine": "373.1201448218 (error -0.0041551786 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "373.1240000000 (error -0.0003000005 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 50 m altitude, where the pressure is 100725.7932 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.9582034269",
+     "metadata_altitude_m": 50.0,
+     "metadata_p_std_Pa": 100725.79320374859,
+     "predict_a_constant_latent_heat": "372.9552187793 (error -0.0029846476 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.9552005824 (error -0.0030028445 K)",
+     "predict_c_antoine": "372.9542247852 (error -0.0039786417 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.9639983719 (error +0.0057949450 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 100 m altitude, where the pressure is 100129.4590 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.7920888305",
+     "metadata_altitude_m": 100.0,
+     "metadata_p_std_Pa": 100129.45896134156,
+     "predict_a_constant_latent_heat": "372.7863997549 (error -0.0056890756 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.7863966801 (error -0.0056921504 K)",
+     "predict_c_antoine": "372.7882843758 (error -0.0038044547 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.8039533708 (error +0.0118645403 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 150 m altitude, where the pressure is 99535.9867 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.6259560951",
+     "metadata_altitude_m": 150.0,
+     "metadata_p_std_Pa": 99535.98672586336,
+     "predict_a_constant_latent_heat": "372.6175428063 (error -0.0084132888 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.6175881307 (error -0.0083679645 K)",
+     "predict_c_antoine": "372.6223234839 (error -0.0036326113 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.6438648768 (error +0.0179087817 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 200 m altitude, where the pressure is 98945.3660 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.4598051045",
+     "metadata_altitude_m": 200.0,
+     "metadata_p_std_Pa": 98945.36597725902,
+     "predict_a_constant_latent_heat": "372.4486478127 (error -0.0111572919 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.4487747717 (error -0.0110303328 K)",
+     "predict_c_antoine": "372.4563419995 (error -0.0034631050 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.4837327698 (error +0.0239276653 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 250 m altitude, where the pressure is 98357.5862 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.2936357420",
+     "metadata_altitude_m": 250.0,
+     "metadata_p_std_Pa": 98357.58622229597,
+     "predict_a_constant_latent_heat": "372.2797146529 (error -0.0139210891 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.2799564646 (error -0.0136792774 K)",
+     "predict_c_antoine": "372.2903398125 (error -0.0032959295 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.3235569292 (error +0.0299211873 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 300 m altitude, where the pressure is 97772.6370 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.1274478904",
+     "metadata_altitude_m": 300.0,
+     "metadata_p_std_Pa": 97772.63699452602,
+     "predict_a_constant_latent_heat": "372.1107432053 (error -0.0167046851 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.1111330353 (error -0.0163148551 K)",
+     "predict_c_antoine": "372.1243168121 (error -0.0031310783 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.1633372342 (error +0.0358893438 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 350 m altitude, where the pressure is 97190.5079 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.9612414325",
+     "metadata_altitude_m": 350.0,
+     "metadata_p_std_Pa": 97190.50785424716,
+     "predict_a_constant_latent_heat": "371.9417333482 (error -0.0195080843 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.9423043076 (error -0.0189371249 K)",
+     "predict_c_antoine": "371.9582728877 (error -0.0029685448 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.0030735636 (error +0.0418321311 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 400 m altitude, where the pressure is 96611.1884 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.7950162504",
+     "metadata_altitude_m": 400.0,
+     "metadata_p_std_Pa": 96611.18838846544,
+     "predict_a_constant_latent_heat": "371.7726849593 (error -0.0223312911 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.7734701181 (error -0.0215461324 K)",
+     "predict_c_antoine": "371.7922079280 (error -0.0028083225 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.8427657956 (error +0.0477495452 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 450 m altitude, where the pressure is 96034.6682 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.6287722262",
+     "metadata_altitude_m": 450.0,
+     "metadata_p_std_Pa": 96034.6682108572,
+     "predict_a_constant_latent_heat": "371.6035979159 (error -0.0251743102 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.6046303109 (error -0.0241419152 K)",
+     "predict_c_antoine": "371.6261218215 (error -0.0026504047 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.6824138084 (error +0.0536415822 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 500 m altitude, where the pressure is 95460.9370 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.4625092413",
+     "metadata_altitude_m": 500.0,
+     "metadata_p_std_Pa": 95460.9369617305,
+     "predict_a_constant_latent_heat": "371.4344720952 (error -0.0280371460 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.4357847434 (error -0.0267244978 K)",
+     "predict_c_antoine": "371.4600144565 (error -0.0024947847 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.5220174796 (error +0.0595082384 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 550 m altitude, where the pressure is 94889.9843 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.2962271769",
+     "metadata_altitude_m": 550.0,
+     "metadata_p_std_Pa": 94889.98430798743,
+     "predict_a_constant_latent_heat": "371.2653073739 (error -0.0309198030 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.2669332227 (error -0.0292939543 K)",
+     "predict_c_antoine": "371.2938857210 (error -0.0023414559 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.3615766866 (error +0.0653495097 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 600 m altitude, where the pressure is 94321.7999 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "371.1299259140",
+     "metadata_altitude_m": 600.0,
+     "metadata_p_std_Pa": 94321.79994308593,
+     "predict_a_constant_latent_heat": "371.0961036282 (error -0.0338222858 K)",
+     "predict_b_temperature_dependent_latent_heat": "371.0980755845 (error -0.0318503295 K)",
+     "predict_c_antoine": "371.1277355026 (error -0.0021904115 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.2010913064 (error +0.0711653923 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 650 m altitude, where the pressure is 93756.3736 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.9636053331",
+     "metadata_altitude_m": 650.0,
+     "metadata_p_std_Pa": 93756.37358700181,
+     "predict_a_constant_latent_heat": "370.9268607343 (error -0.0367445988 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.9292116645 (error -0.0343936686 K)",
+     "predict_c_antoine": "370.9615636886 (error -0.0020416445 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "371.0405612154 (error +0.0769558823 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 700 m altitude, where the pressure is 93193.6950 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.7972653143",
+     "metadata_altitude_m": 700.0,
+     "metadata_p_std_Pa": 93193.69498619062,
+     "predict_a_constant_latent_heat": "370.7575785676 (error -0.0396867467 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.7603413219 (error -0.0369239924 K)",
+     "predict_c_antoine": "370.7953701660 (error -0.0018951483 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.8799862899 (error +0.0827209756 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 750 m altitude, where the pressure is 92633.7539 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.6309057374",
+     "metadata_altitude_m": 750.0,
+     "metadata_p_std_Pa": 92633.75391354976,
+     "predict_a_constant_latent_heat": "370.5882570035 (error -0.0426487338 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.5914643794 (error -0.0394413579 K)",
+     "predict_c_antoine": "370.6291548216 (error -0.0017509158 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.7193664058 (error +0.0884606684 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 800 m altitude, where the pressure is 92076.5402 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.4645264818",
+     "metadata_altitude_m": 800.0,
+     "metadata_p_std_Pa": 92076.54016838042,
+     "predict_a_constant_latent_heat": "370.4188959169 (error -0.0456305649 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.4225806604 (error -0.0419458214 K)",
+     "predict_c_antoine": "370.4629175418 (error -0.0016089400 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.5587014386 (error +0.0941749567 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 850 m altitude, where the pressure is 91522.0436 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.2981274267",
+     "metadata_altitude_m": 850.0,
+     "metadata_p_std_Pa": 91522.04357634956,
+     "predict_a_constant_latent_heat": "370.2494951823 (error -0.0486322444 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.2536899995 (error -0.0444374272 K)",
+     "predict_c_antoine": "370.2966582127 (error -0.0014692140 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.3979912633 (error +0.0998638366 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 900 m altitude, where the pressure is 90970.2540 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "370.1317084507",
+     "metadata_altitude_m": 900.0,
+     "metadata_p_std_Pa": 90970.25398945197,
+     "predict_a_constant_latent_heat": "370.0800546738 (error -0.0516537769 K)",
+     "predict_b_temperature_dependent_latent_heat": "370.0847922312 (error -0.0469162195 K)",
+     "predict_c_antoine": "370.1303767200 (error -0.0013317307 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.2372357547 (error +0.1055273040 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 950 m altitude, where the pressure is 90421.1613 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.9652694323",
+     "metadata_altitude_m": 950.0,
+     "metadata_p_std_Pa": 90421.1612859723,
+     "predict_a_constant_latent_heat": "369.9105742653 (error -0.0546951670 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.9158872240 (error -0.0493822082 K)",
+     "predict_c_antoine": "369.9640729493 (error -0.0011964830 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "370.0764347872 (error +0.1111653549 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1000 m altitude, where the pressure is 89874.7554 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.7988102493",
+     "metadata_altitude_m": 1000.0,
+     "metadata_p_std_Pa": 89874.75537044705,
+     "predict_a_constant_latent_heat": "369.7410538302 (error -0.0577564192 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.7469747774 (error -0.0518354719 K)",
+     "predict_c_antoine": "369.7977467857 (error -0.0010634636 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.9155882347 (error +0.1167779854 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1050 m altitude, where the pressure is 89331.0262 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.6323307795",
+     "metadata_altitude_m": 1050.0,
+     "metadata_p_std_Pa": 89331.02617362671,
+     "predict_a_constant_latent_heat": "369.5714932414 (error -0.0608375381 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.5780547251 (error -0.0542760544 K)",
+     "predict_c_antoine": "369.6313981141 (error -0.0009326654 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.7546959709 (error +0.1223651914 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1100 m altitude, where the pressure is 88789.9637 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.4658309001",
+     "metadata_altitude_m": 1100.0,
+     "metadata_p_std_Pa": 88789.96365243774,
+     "predict_a_constant_latent_heat": "369.4018923718 (error -0.0639385283 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.4091269006 (error -0.0567039995 K)",
+     "predict_c_antoine": "369.4650268190 (error -0.0008040811 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.5937578689 (error +0.1279269688 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1150 m altitude, where the pressure is 88251.5578 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.2993104880",
+     "metadata_altitude_m": 1150.0,
+     "metadata_p_std_Pa": 88251.55778994472,
+     "predict_a_constant_latent_heat": "369.2322510935 (error -0.0670593944 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.2401911432 (error -0.0591193448 K)",
+     "predict_c_antoine": "369.2986327845 (error -0.0006777034 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.4327738017 (error +0.1334633137 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1200 m altitude, where the pressure is 87715.7986 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "369.1327694197",
+     "metadata_altitude_m": 1200.0,
+     "metadata_p_std_Pa": 87715.79859531227,
+     "predict_a_constant_latent_heat": "369.0625692786 (error -0.0702001411 K)",
+     "predict_b_temperature_dependent_latent_heat": "369.0712473071 (error -0.0615221125 K)",
+     "predict_c_antoine": "369.1322158947 (error -0.0005535250 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.2717436416 (error +0.1389742220 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1250 m altitude, where the pressure is 87182.6761 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.9662075713",
+     "metadata_altitude_m": 1250.0,
+     "metadata_p_std_Pa": 87182.6761037675,
+     "predict_a_constant_latent_heat": "368.8928467985 (error -0.0733607728 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.9022951978 (error -0.0639123735 K)",
+     "predict_c_antoine": "368.9657760331 (error -0.0004315383 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "369.1106672608 (error +0.1444596895 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1300 m altitude, where the pressure is 86652.1804 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.7996248187",
+     "metadata_altitude_m": 1300.0,
+     "metadata_p_std_Pa": 86652.18037656171,
+     "predict_a_constant_latent_heat": "368.7230835245 (error -0.0765412943 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.7333346478 (error -0.0662901710 K)",
+     "predict_c_antoine": "368.7993130829 (error -0.0003117359 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.9495445310 (error +0.1499197123 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1350 m altitude, where the pressure is 86124.3015 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.6330210373",
+     "metadata_altitude_m": 1350.0,
+     "metadata_p_std_Pa": 86124.30150093274,
+     "predict_a_constant_latent_heat": "368.5532793272 (error -0.0797417101 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.5643654893 (error -0.0686555480 K)",
+     "predict_c_antoine": "368.6328269270 (error -0.0001941103 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.7883753234 (error +0.1553542861 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1400 m altitude, where the pressure is 85599.0296 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.4663961021",
+     "metadata_altitude_m": 1400.0,
+     "metadata_p_std_Pa": 85599.02959006703,
+     "predict_a_constant_latent_heat": "368.3834340771 (error -0.0829620249 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.3953875596 (error -0.0710085425 K)",
+     "predict_c_antoine": "368.4663174481 (error -0.0000786539 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.6271595090 (error +0.1607634069 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1450 m altitude, where the pressure is 85076.3548 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.2997498876",
+     "metadata_altitude_m": 1450.0,
+     "metadata_p_std_Pa": 85076.35478306182,
+     "predict_a_constant_latent_heat": "368.2135476442 (error -0.0862022434 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.2264007120 (error -0.0733491756 K)",
+     "predict_c_antoine": "368.2997845285 (error +0.0000346408 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.4658969582 (error +0.1661470706 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1500 m altitude, where the pressure is 84556.2672 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "368.1330822683",
+     "metadata_altitude_m": 1500.0,
+     "metadata_p_std_Pa": 84556.26724488728,
+     "predict_a_constant_latent_heat": "368.0436198982 (error -0.0894623701 K)",
+     "predict_b_temperature_dependent_latent_heat": "368.0574047512 (error -0.0756775171 K)",
+     "predict_c_antoine": "368.1332280500 (error +0.0001457817 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.3045875413 (error +0.1715052730 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1550 m altitude, where the pressure is 84038.7572 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.9663931180",
+     "metadata_altitude_m": 1550.0,
+     "metadata_p_std_Pa": 84038.75716634857,
+     "predict_a_constant_latent_heat": "367.8736507082 (error -0.0927424098 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.8883995084 (error -0.0779936096 K)",
+     "predict_c_antoine": "367.9666478943 (error +0.0002547763 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "368.1432311279 (error +0.1768380099 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1600 m altitude, where the pressure is 83523.8148 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.7996823101",
+     "metadata_altitude_m": 1600.0,
+     "metadata_p_std_Pa": 83523.81476404822,
+     "predict_a_constant_latent_heat": "367.7036399431 (error -0.0960423670 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.7193848146 (error -0.0802974955 K)",
+     "predict_c_antoine": "367.8000439427 (error +0.0003616326 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.9818275873 (error +0.1821452772 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1650 m altitude, where the pressure is 83011.4303 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.6329497179",
+     "metadata_altitude_m": 1650.0,
+     "metadata_p_std_Pa": 83011.43028034814,
+     "predict_a_constant_latent_heat": "367.5335874713 (error -0.0993622466 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.5503605007 (error -0.0825892172 K)",
+     "predict_c_antoine": "367.6334160762 (error +0.0004663582 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.8203767886 (error +0.1874270707 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1700 m altitude, where the pressure is 82501.5940 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.4661952140",
+     "metadata_altitude_m": 1700.0,
+     "metadata_p_std_Pa": 82501.59398333191,
+     "predict_a_constant_latent_heat": "367.3634931610 (error -0.1027020530 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.3813264246 (error -0.0848687894 K)",
+     "predict_c_antoine": "367.4667641753 (error +0.0005689612 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.6588786002 (error +0.1926833862 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1750 m altitude, where the pressure is 81994.2962 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.2994186709",
+     "metadata_altitude_m": 1750.0,
+     "metadata_p_std_Pa": 81994.29616676693,
+     "predict_a_constant_latent_heat": "367.1933568797 (error -0.1060617912 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.2122823918 (error -0.0871362790 K)",
+     "predict_c_antoine": "367.3000881203 (error +0.0006694494 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.4973328903 (error +0.1979142194 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1800 m altitude, where the pressure is 81489.5272 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "367.1326199604",
+     "metadata_altitude_m": 1800.0,
+     "metadata_p_std_Pa": 81489.52715006671,
+     "predict_a_constant_latent_heat": "367.0231784948 (error -0.1094414656 K)",
+     "predict_b_temperature_dependent_latent_heat": "367.0432282294 (error -0.0893917310 K)",
+     "predict_c_antoine": "367.1333877913 (error +0.0007678309 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.3357395266 (error +0.2031195662 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1850 m altitude, where the pressure is 80987.2773 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.9657989542",
+     "metadata_altitude_m": 1850.0,
+     "metadata_p_std_Pa": 80987.27727825305,
+     "predict_a_constant_latent_heat": "366.8529578730 (error -0.1128410812 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.8741637671 (error -0.0916351871 K)",
+     "predict_c_antoine": "366.9666630677 (error +0.0008641136 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.1740983765 (error +0.2082994223 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1900 m altitude, where the pressure is 80487.5369 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.7989555233",
+     "metadata_altitude_m": 1900.0,
+     "metadata_p_std_Pa": 80487.5369219183,
+     "predict_a_constant_latent_heat": "366.6826948809 (error -0.1162606424 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.7050888343 (error -0.0938666890 K)",
+     "predict_c_antoine": "366.7999138290 (error +0.0009583057 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "367.0124093067 (error +0.2134537834 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 1950 m altitude, where the pressure is 79990.2965 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.6320895386",
+     "metadata_altitude_m": 1950.0,
+     "metadata_p_std_Pa": 79990.29647718763,
+     "predict_a_constant_latent_heat": "366.5123893845 (error -0.1197001541 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.5360032698 (error -0.0960862688 K)",
+     "predict_c_antoine": "366.6331399539 (error +0.0010504153 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.8506721840 (error +0.2185826454 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2000 m altitude, where the pressure is 79495.5464 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.4652008706",
+     "metadata_altitude_m": 2000.0,
+     "metadata_p_std_Pa": 79495.5463656812,
+     "predict_a_constant_latent_heat": "366.3420412495 (error -0.1231596211 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.3669069119 (error -0.0982939587 K)",
+     "predict_c_antoine": "366.4663413212 (error +0.0011404506 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.6888868743 (error +0.2236860038 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2050 m altitude, where the pressure is 79003.2770 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.2982893890",
+     "metadata_altitude_m": 2050.0,
+     "metadata_p_std_Pa": 79003.27703447673,
+     "predict_a_constant_latent_heat": "366.1716503411 (error -0.1266390480 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.1977995699 (error -0.1004898191 K)",
+     "predict_c_antoine": "366.2995178089 (error +0.0012284199 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.5270532434 (error +0.2287638543 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2100 m altitude, where the pressure is 78513.4790 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "366.1313549637",
+     "metadata_altitude_m": 2100.0,
+     "metadata_p_std_Pa": 78513.47895607135,
+     "predict_a_constant_latent_heat": "366.0012165241 (error -0.1301384396 K)",
+     "predict_b_temperature_dependent_latent_heat": "366.0286810724 (error -0.1026738913 K)",
+     "predict_c_antoine": "366.1326692951 (error +0.0013143314 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.3651711565 (error +0.2338161928 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2150 m altitude, where the pressure is 78026.1426 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.9643974637",
+     "metadata_altitude_m": 2150.0,
+     "metadata_p_std_Pa": 78026.14262834423,
+     "predict_a_constant_latent_heat": "365.8307396630 (error -0.1336578007 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.8595512473 (error -0.1048462164 K)",
+     "predict_c_antoine": "365.9657956573 (error +0.0013981936 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.2032404784 (error +0.2388430147 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2200 m altitude, where the pressure is 77541.2586 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.7974167578",
+     "metadata_altitude_m": 2200.0,
+     "metadata_p_std_Pa": 77541.2585745188,
+     "predict_a_constant_latent_heat": "365.6602196218 (error -0.1371971360 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.6904099225 (error -0.1070068354 K)",
+     "predict_c_antoine": "365.7988967727 (error +0.0014800148 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "366.0412610737 (error +0.2438443158 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2250 m altitude, where the pressure is 77058.8173 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.6304127145",
+     "metadata_altitude_m": 2250.0,
+     "metadata_p_std_Pa": 77058.81734312505,
+     "predict_a_constant_latent_heat": "365.4896562642 (error -0.1407564503 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.5212569347 (error -0.1091557798 K)",
+     "predict_c_antoine": "365.6319725180 (error +0.0015598036 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.8792328062 (error +0.2488200917 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2300 m altitude, where the pressure is 76578.8095 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.4633852016",
+     "metadata_altitude_m": 2300.0,
+     "metadata_p_std_Pa": 76578.80950796187,
+     "predict_a_constant_latent_heat": "365.3190494532 (error -0.1443357484 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.3520921189 (error -0.1112930827 K)",
+     "predict_c_antoine": "365.4650227699 (error +0.0016375683 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.7171555397 (error +0.2537703381 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2350 m altitude, where the pressure is 76101.2257 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.2963340868",
+     "metadata_altitude_m": 2350.0,
+     "metadata_p_std_Pa": 76101.2256680594,
+     "predict_a_constant_latent_heat": "365.1483990517 (error -0.1479350352 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.1829152848 (error -0.1134188021 K)",
+     "predict_c_antoine": "365.2980474045 (error +0.0017133177 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.5550291373 (error +0.2586950505 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2400 m altitude, where the pressure is 75626.0564 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "365.1292592373",
+     "metadata_altitude_m": 2400.0,
+     "metadata_p_std_Pa": 75626.05644764144,
+     "predict_a_constant_latent_heat": "364.9777049220 (error -0.1515543153 K)",
+     "predict_b_temperature_dependent_latent_heat": "365.0137262590 (error -0.1155329783 K)",
+     "predict_c_antoine": "365.1310462975 (error +0.0017870602 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.3928534618 (error +0.2635942245 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2450 m altitude, where the pressure is 75153.2925 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.9621605197",
+     "metadata_altitude_m": 2450.0,
+     "metadata_p_std_Pa": 75153.29249608776,
+     "predict_a_constant_latent_heat": "364.8069669261 (error -0.1551935936 K)",
+     "predict_b_temperature_dependent_latent_heat": "364.8445248679 (error -0.1176356517 K)",
+     "predict_c_antoine": "364.9640193244 (error +0.0018588047 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.2306283754 (error +0.2684678557 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2500 m altitude, where the pressure is 74682.9245 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.7950378004",
+     "metadata_altitude_m": 2500.0,
+     "metadata_p_std_Pa": 74682.92448789645,
+     "predict_a_constant_latent_heat": "364.6361849254 (error -0.1588528750 K)",
+     "predict_b_temperature_dependent_latent_heat": "364.6753109377 (error -0.1197268627 K)",
+     "predict_c_antoine": "364.7969663602 (error +0.0019285598 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "365.0683537400 (error +0.2733159396 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2550 m altitude, where the pressure is 74214.9431 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.6278909453",
+     "metadata_altitude_m": 2550.0,
+     "metadata_p_std_Pa": 74214.94312264641,
+     "predict_a_constant_latent_heat": "364.4653587811 (error -0.1625321642 K)",
+     "predict_b_temperature_dependent_latent_heat": "364.5060842940 (error -0.1218066513 K)",
+     "predict_c_antoine": "364.6298872797 (error +0.0019963344 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.9060294171 (error +0.2781384718 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2600 m altitude, where the pressure is 73749.3391 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.4607198200",
+     "metadata_altitude_m": 2600.0,
+     "metadata_p_std_Pa": 73749.33912495968,
+     "predict_a_constant_latent_heat": "364.2944883537 (error -0.1662314662 K)",
+     "predict_b_temperature_dependent_latent_heat": "364.3368447810 (error -0.1238750390 K)",
+     "predict_c_antoine": "364.4627819572 (error +0.0020621373 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.7436552678 (error +0.2829354478 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2650 m altitude, where the pressure is 73286.1032 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.2935242894",
+     "metadata_altitude_m": 2650.0,
+     "metadata_p_std_Pa": 73286.10324446385,
+     "predict_a_constant_latent_heat": "364.1235735036 (error -0.1699507858 K)",
+     "predict_b_temperature_dependent_latent_heat": "364.1675922100 (error -0.1259320794 K)",
+     "predict_c_antoine": "364.2956502667 (error +0.0021259773 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.5812311526 (error +0.2877068632 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2700 m altitude, where the pressure is 72825.2263 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "364.1263042183",
+     "metadata_altitude_m": 2700.0,
+     "metadata_p_std_Pa": 72825.22625575459,
+     "predict_a_constant_latent_heat": "363.9526140906 (error -0.1736901278 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.9983264008 (error -0.1279778175 K)",
+     "predict_c_antoine": "364.1284920818 (error +0.0021878635 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.4187569316 (error +0.2924527133 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2750 m altitude, where the pressure is 72366.6990 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.9590594710",
+     "metadata_altitude_m": 2750.0,
+     "metadata_p_std_Pa": 72366.69895835791,
+     "predict_a_constant_latent_heat": "363.7816099739 (error -0.1774494971 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.8290471780 (error -0.1300122930 K)",
+     "predict_c_antoine": "363.9613072758 (error +0.0022478048 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.2562324647 (error +0.2971729937 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2800 m altitude, where the pressure is 71910.5122 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.7917899112",
+     "metadata_altitude_m": 2800.0,
+     "metadata_p_std_Pa": 71910.51217669276,
+     "predict_a_constant_latent_heat": "363.6105610126 (error -0.1812288986 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.6597543658 (error -0.1320355454 K)",
+     "predict_c_antoine": "363.7940957216 (error +0.0023058104 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "364.0936576109 (error +0.3018676998 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2850 m altitude, where the pressure is 71456.6568 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.6244954023",
+     "metadata_altitude_m": 2850.0,
+     "metadata_p_std_Pa": 71456.65676003351,
+     "predict_a_constant_latent_heat": "363.4394670650 (error -0.1850283373 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.4904477883 (error -0.1340476140 K)",
+     "predict_c_antoine": "363.6268572916 (error +0.0023618893 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.9310322293 (error +0.3065368270 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2900 m altitude, where the pressure is 71005.1236 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.4571758073",
+     "metadata_altitude_m": 2900.0,
+     "metadata_p_std_Pa": 71005.12358247225,
+     "predict_a_constant_latent_heat": "363.2683279894 (error -0.1888478179 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.3211272690 (error -0.1360485383 K)",
+     "predict_c_antoine": "363.4595918580 (error +0.0024160507 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.7683561782 (error +0.3111803709 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 2950 m altitude, where the pressure is 70555.9035 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.2898309887",
+     "metadata_altitude_m": 2950.0,
+     "metadata_p_std_Pa": 70555.90354288141,
+     "predict_a_constant_latent_heat": "363.0971436432 (error -0.1926873455 K)",
+     "predict_b_temperature_dependent_latent_heat": "363.1517926380 (error -0.1380383507 K)",
+     "predict_c_antoine": "363.2922992926 (error +0.0024683039 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.6056293155 (error +0.3157983267 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3000 m altitude, where the pressure is 70108.9876 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "363.1224608087",
+     "metadata_altitude_m": 3000.0,
+     "metadata_p_std_Pa": 70108.98756487625,
+     "predict_a_constant_latent_heat": "362.9259138837 (error -0.1965469250 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.9824437252 (error -0.1400170835 K)",
+     "predict_c_antoine": "363.1249794668 (error +0.0025186581 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.4428514986 (error +0.3203906899 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3050 m altitude, where the pressure is 69664.3666 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.9550651289",
+     "metadata_altitude_m": 3050.0,
+     "metadata_p_std_Pa": 69664.36659677731,
+     "predict_a_constant_latent_heat": "362.7546385676 (error -0.2004265613 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.8130803393 (error -0.1419847895 K)",
+     "predict_c_antoine": "362.9576322516 (error +0.0025671228 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.2800225847 (error +0.3249574559 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3100 m altitude, where the pressure is 69222.0316 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.7876438105",
+     "metadata_altitude_m": 3100.0,
+     "metadata_p_std_Pa": 69222.03161157298,
+     "predict_a_constant_latent_heat": "362.5833175512 (error -0.2043262593 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.6437023027 (error -0.1439415077 K)",
+     "predict_c_antoine": "362.7902575177 (error +0.0026137072 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "363.1171424304 (error +0.3294986199 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3150 m altitude, where the pressure is 68781.9736 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.6201967143",
+     "metadata_altitude_m": 3150.0,
+     "metadata_p_std_Pa": 68781.97360688202,
+     "predict_a_constant_latent_heat": "362.4119506903 (error -0.2082460240 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.4743094376 (error -0.1458872767 K)",
+     "predict_c_antoine": "362.6228551352 (error +0.0026584209 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.9542108917 (error +0.3340141773 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3200 m altitude, where the pressure is 68344.1836 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.4527237008",
+     "metadata_altitude_m": 3200.0,
+     "metadata_p_std_Pa": 68344.18360491608,
+     "predict_a_constant_latent_heat": "362.2405378403 (error -0.2121858605 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.3049015655 (error -0.1478221352 K)",
+     "predict_c_antoine": "362.4554249741 (error +0.0027012733 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.7912278243 (error +0.3385041235 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3250 m altitude, where the pressure is 67908.6527 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.2852246297",
+     "metadata_altitude_m": 3250.0,
+     "metadata_p_std_Pa": 67908.65265244227,
+     "predict_a_constant_latent_heat": "362.0690788561 (error -0.2161457736 K)",
+     "predict_b_temperature_dependent_latent_heat": "362.1354785080 (error -0.1497461217 K)",
+     "predict_c_antoine": "362.2879669038 (error +0.0027422741 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.6281930835 (error +0.3429684537 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3300 m altitude, where the pressure is 67475.3718 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "362.1176993607",
+     "metadata_altitude_m": 3300.0,
+     "metadata_p_std_Pa": 67475.37182074573,
+     "predict_a_constant_latent_heat": "361.8975735923 (error -0.2201257684 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.9660400862 (error -0.1516592745 K)",
+     "predict_c_antoine": "362.1204807936 (error +0.0027814329 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.4651065239 (error +0.3474071633 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3350 m altitude, where the pressure is 67044.3322 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.9501477526",
+     "metadata_altitude_m": 3350.0,
+     "metadata_p_std_Pa": 67044.33220559219,
+     "predict_a_constant_latent_heat": "361.7260219028 (error -0.2241258499 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.7965861207 (error -0.1535616319 K)",
+     "predict_c_antoine": "361.9529665120 (error +0.0028187593 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.3019680000 (error +0.3518202473 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3400 m altitude, where the pressure is 66615.5249 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.7825696642",
+     "metadata_altitude_m": 3400.0,
+     "metadata_p_std_Pa": 66615.52492719059,
+     "predict_a_constant_latent_heat": "361.5544236412 (error -0.2281460231 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.6271164363 (error -0.1554532279 K)",
+     "predict_c_antoine": "361.7854239274 (error +0.0028542632 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "362.1387773655 (error +0.3562077012 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3450 m altitude, where the pressure is 66188.9411 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.6149649536",
+     "metadata_altitude_m": 3450.0,
+     "metadata_p_std_Pa": 66188.94113015562,
+     "predict_a_constant_latent_heat": "361.3827786606 (error -0.2321862930 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.4576308602 (error -0.1573340934 K)",
+     "predict_c_antoine": "361.6178529078 (error +0.0028879543 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.9755344737 (error +0.3605695201 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3500 m altitude, where the pressure is 65764.5720 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.4473334783",
+     "metadata_altitude_m": 3500.0,
+     "metadata_p_std_Pa": 65764.57198347047,
+     "predict_a_constant_latent_heat": "361.2110868136 (error -0.2362466647 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.2881292003 (error -0.1592042781 K)",
+     "predict_c_antoine": "361.4502533207 (error +0.0029198424 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.8122391776 (error +0.3649056993 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3550 m altitude, where the pressure is 65342.4087 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.2796750957",
+     "metadata_altitude_m": 3550.0,
+     "metadata_p_std_Pa": 65342.40868044917,
+     "predict_a_constant_latent_heat": "361.0393479524 (error -0.2403271433 K)",
+     "predict_b_temperature_dependent_latent_heat": "361.1186112759 (error -0.1610638199 K)",
+     "predict_c_antoine": "361.2826250333 (error +0.0029499376 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.6488913296 (error +0.3692162339 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3600 m altitude, where the pressure is 64922.4424 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "361.1119896626",
+     "metadata_altitude_m": 3600.0,
+     "metadata_p_std_Pa": 64922.4424386997,
+     "predict_a_constant_latent_heat": "360.8675619288 (error -0.2444277338 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.9490769061 (error -0.1629127566 K)",
+     "predict_c_antoine": "361.1149679123 (error +0.0029782497 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.4854907816 (error +0.3735011190 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3650 m altitude, where the pressure is 64504.6645 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.9442770352",
+     "metadata_altitude_m": 3650.0,
+     "metadata_p_std_Pa": 64504.66450008599,
+     "predict_a_constant_latent_heat": "360.6957285940 (error -0.2485484412 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.7795259096 (error -0.1647511257 K)",
+     "predict_c_antoine": "360.9472818241 (error +0.0030047888 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.3220373851 (error +0.3777603499 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3700 m altitude, where the pressure is 64089.0661 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.7765370695",
+     "metadata_altitude_m": 3700.0,
+     "metadata_p_std_Pa": 64089.06613069127,
+     "predict_a_constant_latent_heat": "360.5238477987 (error -0.2526892708 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.6099581047 (error -0.1665789648 K)",
+     "predict_c_antoine": "360.7795666346 (error +0.0030295651 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "361.1585309911 (error +0.3819939216 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3750 m altitude, where the pressure is 63675.6386 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.6087696208",
+     "metadata_altitude_m": 3750.0,
+     "metadata_p_std_Pa": 63675.63862078022,
+     "predict_a_constant_latent_heat": "360.3519193932 (error -0.2568502276 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.4403733096 (error -0.1683963112 K)",
+     "predict_c_antoine": "360.6118222094 (error +0.0030525886 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.9949714500 (error +0.3862018292 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3800 m altitude, where the pressure is 63264.3733 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.4409745440",
+     "metadata_altitude_m": 3800.0,
+     "metadata_p_std_Pa": 63264.37328476189,
+     "predict_a_constant_latent_heat": "360.1799432274 (error -0.2610313167 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.2707713418 (error -0.1702032023 K)",
+     "predict_c_antoine": "360.4440484136 (error +0.0030738696 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.8313586120 (error +0.3903840679 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3850 m altitude, where the pressure is 62855.2615 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.2731516937",
+     "metadata_altitude_m": 3850.0,
+     "metadata_p_std_Pa": 62855.26146115233,
+     "predict_a_constant_latent_heat": "360.0079191505 (error -0.2652325432 K)",
+     "predict_b_temperature_dependent_latent_heat": "360.1011520186 (error -0.1719996751 K)",
+     "predict_c_antoine": "360.2762451120 (error +0.0030934183 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.6676923265 (error +0.3945406327 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3900 m altitude, where the pressure is 62448.2945 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "360.1053009239",
+     "metadata_altitude_m": 3900.0,
+     "metadata_p_std_Pa": 62448.294512537344,
+     "predict_a_constant_latent_heat": "359.8358470116 (error -0.2694539123 K)",
+     "predict_b_temperature_dependent_latent_heat": "359.9315151571 (error -0.1737857668 K)",
+     "predict_c_antoine": "360.1084121690 (error +0.0031112451 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.5039724426 (error +0.3986715187 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 3950 m altitude, where the pressure is 62043.4638 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "359.9374220880",
+     "metadata_altitude_m": 3950.0,
+     "metadata_p_std_Pa": 62043.46382553514,
+     "predict_a_constant_latent_heat": "359.6637266588 (error -0.2736954292 K)",
+     "predict_b_temperature_dependent_latent_heat": "359.7618605737 (error -0.1755615144 K)",
+     "predict_c_antoine": "359.9405494484 (error +0.0031273603 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.3401988089 (error +0.4027767208 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 4000 m altitude, where the pressure is 61640.7608 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "359.7695150392",
+     "metadata_altitude_m": 4000.0,
+     "metadata_p_std_Pa": 61640.76081075912,
+     "predict_a_constant_latent_heat": "359.4915579402 (error -0.2779570990 K)",
+     "predict_b_temperature_dependent_latent_heat": "359.5921880847 (error -0.1773269546 K)",
+     "predict_c_antoine": "359.7726568137 (error +0.0031417745 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "360.1763712734 (error +0.4068562342 K)"
+    }
+   ]
+  }
+ ]
+}

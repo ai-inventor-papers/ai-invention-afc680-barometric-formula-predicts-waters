@@ -1,0 +1,55 @@
+{
+  "1_reference": {
+    "psat_273.16_Pa": 611.6570000106653,
+    "rel_dev_from_611.657_Pa": 1.743673873948629e-11,
+    "psat_373.124_Pa": 101323.91506971118,
+    "abs_dev_from_101325_Pa": -1.0849302888236707,
+    "monotonic_273.15_373.946": true,
+    "t_ref_roundtrip_max_rel_error_20_pressures": 3.3225622582509795e-13,
+    "pass": true
+  },
+  "2_atmosphere": {
+    "p_std_0_Pa": 101325.0,
+    "p_std_4000_Pa": 61640.76081075912,
+    "rel_dev_from_61.6kPa": 0.0006617014733623083,
+    "strictly_decreasing": true,
+    "exponent_gM_over_RL": 5.255785959221189,
+    "pass": true
+  },
+  "3_clapeyron_consistency": {
+    "n_points": 50,
+    "tolerance_rel": 0.01,
+    "max_rel_deviation": 0.015929532755521777,
+    "median_rel_deviation": 0.005222081385852352,
+    "vapour_Z_at_saturation_300_to_373K": [
+      0.9982536290577553,
+      0.9974449375627018,
+      0.9963641171216628,
+      0.9949517911494395,
+      0.9931419635991339,
+      0.9908630059816156,
+      0.9880388782243867,
+      0.9845906448700026
+    ],
+    "interpretation": "Deviation from the ideal-vapour Clapeyron form is expected to follow 1/Z_v - 1 (about 1.6 percent at 373 K). This is a structural property of the ideal-vapour route, not a bug in the table.",
+    "pass": false
+  },
+  "4_method_single_point_h0": {
+    "T_a_K": 373.124,
+    "T_b_K": 373.124,
+    "T_c_K": 373.12014482184827,
+    "T_ref_K": 373.1243000004806,
+    "pass_a_b": true,
+    "c_minus_ref_K": -0.004155178632345269,
+    "pass": true
+  },
+  "5_antoine_fit": {
+    "residual_rms_Pa": 6.005763450766966,
+    "threshold_Pa": 20.0,
+    "pass": true
+  },
+  "6_sensitivity_a_anchor_identity": {
+    "a_error_at_4000m_K": -0.27795709899811527,
+    "note": "Method (a) uses the IF97 latent heat at the anchor (40.66 kJ/mol); it is not identical to the reference away from the anchor."
+  }
+}

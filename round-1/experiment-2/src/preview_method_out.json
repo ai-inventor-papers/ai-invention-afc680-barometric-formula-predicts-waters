@@ -1,0 +1,101 @@
+{
+ "metadata": {
+  "experiment": "screening of vapour-pressure shortcuts for water boiling temperature",
+  "reference": "IAPWS-IF97 saturation pressure (region 4) via iapws package 1.5.5",
+  "atmosphere": {
+   "model": "U.S. Standard Atmosphere 1976 troposphere",
+   "T0_K": 288.15,
+   "p0_Pa": 101325.0,
+   "lapse_K_per_m": 0.0065,
+   "exponent": 5.255785959221189
+  },
+  "grid": {
+   "altitudes_m": "0 to 4000 step 50 (81 points)",
+   "n": 81
+  },
+  "anchor": {
+   "T_K": 373.124,
+   "p_Pa": 101325.0,
+   "Lv_J_per_mol": 40660.0
+  },
+  "survival_rule": "max|e| <= 0.6 K",
+  "ranking_rule": "rms_error_K ascending among survivors",
+  "ranking": [
+   "c_antoine",
+   "b_temperature_dependent_latent_heat",
+   "a_constant_latent_heat"
+  ],
+  "method_metrics": {
+   "a_constant_latent_heat": {
+    "max_abs_error_K": 0.27795709899811527,
+    "rms_error_K": 0.15214787209809202,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": -0.12861554447381268,
+    "error_at_4000m_K": -0.27795709899811527,
+    "survives_0.6K": true
+   },
+   "b_temperature_dependent_latent_heat": {
+    "max_abs_error_K": 0.17732695457243608,
+    "rms_error_K": 0.1082158327873536,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": -0.09505650580797885,
+    "error_at_4000m_K": -0.17732695457243608,
+    "survives_0.6K": true
+   },
+   "c_antoine": {
+    "max_abs_error_K": 0.004155178632345269,
+    "rms_error_K": 0.0022472178986158425,
+    "altitude_of_max_m": 0.0,
+    "bias_K": 0.0005769258255217783,
+    "error_at_4000m_K": 0.0031417745000226205,
+    "survives_0.6K": true
+   },
+   "sens_a_gridmean_latent_heat_not_ranked": {
+    "max_abs_error_K": 0.4068562341577149,
+    "rms_error_K": 0.2473179123535481,
+    "altitude_of_max_m": 4000.0,
+    "bias_K": 0.21671352364859964,
+    "error_at_4000m_K": 0.4068562341577149,
+    "survives_0.6K": true
+   }
+  },
+  "reference_unit": "K; output is the IAPWS-IF97 reference boiling temperature"
+ },
+ "datasets": [
+  {
+   "dataset": "U.S. Standard Atmosphere 1976 altitude grid, 0-4000 m (IAPWS-IF97 reference)",
+   "examples": [
+    {
+     "input": "Predict the boiling temperature of water at 0 m altitude, where the pressure is 101325.0000 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "373.1243000005",
+     "metadata_altitude_m": 0.0,
+     "metadata_p_std_Pa": 101325.0,
+     "predict_a_constant_latent_heat": "373.1240000000 (error -0.0003000005 K)",
+     "predict_b_temperature_dependent_latent_heat": "373.1240000000 (error -0.0003000005 K)",
+     "predict_c_antoine": "373.1201448218 (error -0.0041551786 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "373.1240000000 (error -0.0003000005 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 50 m altitude, where the pressure is 100725.7932 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.9582034269",
+     "metadata_altitude_m": 50.0,
+     "metadata_p_std_Pa": 100725.79320374859,
+     "predict_a_constant_latent_heat": "372.9552187793 (error -0.0029846476 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.9552005824 (error -0.0030028445 K)",
+     "predict_c_antoine": "372.9542247852 (error -0.0039786417 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.9639983719 (error +0.0057949450 K)"
+    },
+    {
+     "input": "Predict the boiling temperature of water at 100 m altitude, where the pressure is 100129.4590 Pa from the U.S. Standard Atmosphere 1976 troposphere formula.",
+     "output": "372.7920888305",
+     "metadata_altitude_m": 100.0,
+     "metadata_p_std_Pa": 100129.45896134156,
+     "predict_a_constant_latent_heat": "372.7863997549 (error -0.0056890756 K)",
+     "predict_b_temperature_dependent_latent_heat": "372.7863966801 (error -0.0056921504 K)",
+     "predict_c_antoine": "372.7882843758 (error -0.0038044547 K)",
+     "predict_sens_a_gridmean_latent_heat_not_ranked": "372.8039533708 (error +0.0118645403 K)"
+    }
+   ]
+  }
+ ]
+}

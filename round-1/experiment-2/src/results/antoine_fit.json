@@ -1,0 +1,22 @@
+{
+  "fit_range_K": [
+    273.15,
+    373.15
+  ],
+  "fit_points": 101,
+  "A": 7.125206653694045,
+  "B": 1689.0361826802641,
+  "C": 229.95259534581479,
+  "initial_guess": {
+    "A": 7.19625,
+    "B": 1730.63,
+    "C": 233.426
+  },
+  "converged": true,
+  "solver_message": "`xtol` termination condition is satisfied.",
+  "residual_rms_Pa": 6.005763450766966,
+  "residual_max_abs_Pa": 15.15520428554737,
+  "residual_rms_K_after_inversion": 0.05528850387947221,
+  "residual_max_abs_K_after_inversion": 0.19223250255191715,
+  "note": "Equation log10(p_kPa) = A - B/(C + T_C), T_C = T - 273.15. Converted from NIST WebBook mmHg constants: A_kPa = 8.07131 - log10(0.133322) = 7.19625."
+}
