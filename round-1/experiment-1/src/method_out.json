@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "method_name": "barometric boiling-point formulas vs USSA reference",
+    "description": "Isothermal and lapse-rate barometric forms compared on a 0-4000 m grid."
+  },
+  "datasets": [
+    {
+      "dataset": "ussa1976_grid_0_4000m",
+      "examples": [
+        {
+          "input": "Altitude z = 0 m (geopotential). Predict the boiling point of water.",
+          "output": "99.974 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 0.0,
+          "metadata_pressure_ref_Pa": 101325.0,
+          "predict_isothermal": "99.974 C",
+          "predict_lapse_rate": "99.974 C"
+        },
+        {
+          "input": "Altitude z = 100 m (geopotential). Predict the boiling point of water.",
+          "output": "99.642 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 100.0,
+          "metadata_pressure_ref_Pa": 100129.43773880435,
+          "predict_isothermal": "99.642 C",
+          "predict_lapse_rate": "99.642 C"
+        },
+        {
+          "input": "Altitude z = 200 m (geopotential). Predict the boiling point of water.",
+          "output": "99.310 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 200.0,
+          "metadata_pressure_ref_Pa": 98945.32398666073,
+          "predict_isothermal": "99.311 C",
+          "predict_lapse_rate": "99.310 C"
+        },
+        {
+          "input": "Altitude z = 300 m (geopotential). Predict the boiling point of water.",
+          "output": "98.977 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 300.0,
+          "metadata_pressure_ref_Pa": 97772.57468459182,
+          "predict_isothermal": "98.981 C",
+          "predict_lapse_rate": "98.977 C"
+        },
+        {
+          "input": "Altitude z = 400 m (geopotential). Predict the boiling point of water.",
+          "output": "98.645 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 400.0,
+          "metadata_pressure_ref_Pa": 96611.10620221659,
+          "predict_isothermal": "98.651 C",
+          "predict_lapse_rate": "98.645 C"
+        },
+        {
+          "input": "Altitude z = 500 m (geopotential). Predict the boiling point of water.",
+          "output": "98.312 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 500.0,
+          "metadata_pressure_ref_Pa": 95460.8353365313,
+          "predict_isothermal": "98.322 C",
+          "predict_lapse_rate": "98.312 C"
+        },
+        {
+          "input": "Altitude z = 600 m (geopotential). Predict the boiling point of water.",
+          "output": "97.980 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 600.0,
+          "metadata_pressure_ref_Pa": 94321.67931069035,
+          "predict_isothermal": "97.993 C",
+          "predict_lapse_rate": "97.980 C"
+        },
+        {
+          "input": "Altitude z = 700 m (geopotential). Predict the boiling point of water.",
+          "output": "97.647 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 700.0,
+          "metadata_pressure_ref_Pa": 93193.55577278874,
+          "predict_isothermal": "97.666 C",
+          "predict_lapse_rate": "97.647 C"
+        },
+        {
+          "input": "Altitude z = 800 m (geopotential). Predict the boiling point of water.",
+          "output": "97.314 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 800.0,
+          "metadata_pressure_ref_Pa": 92076.38279464461,
+          "predict_isothermal": "97.338 C",
+          "predict_lapse_rate": "97.314 C"
+        },
+        {
+          "input": "Altitude z = 900 m (geopotential). Predict the boiling point of water.",
+          "output": "96.982 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 900.0,
+          "metadata_pressure_ref_Pa": 90970.07887058295,
+          "predict_isothermal": "97.012 C",
+          "predict_lapse_rate": "96.982 C"
+        },
+        {
+          "input": "Altitude z = 1000 m (geopotential). Predict the boiling point of water.",
+          "output": "96.649 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1000.0,
+          "metadata_pressure_ref_Pa": 89874.56291621955,
+          "predict_isothermal": "96.686 C",
+          "predict_lapse_rate": "96.649 C"
+        },
+        {
+          "input": "Altitude z = 1100 m (geopotential). Predict the boiling point of water.",
+          "output": "96.316 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1100.0,
+          "metadata_pressure_ref_Pa": 88789.75426724614,
+          "predict_isothermal": "96.361 C",
+          "predict_lapse_rate": "96.316 C"
+        },
+        {
+          "input": "Altitude z = 1200 m (geopotential). Predict the boiling point of water.",
+          "output": "95.983 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1200.0,
+          "metadata_pressure_ref_Pa": 87715.57267821583,
+          "predict_isothermal": "96.036 C",
+          "predict_lapse_rate": "95.983 C"
+        },
+        {
+          "input": "Altitude z = 1300 m (geopotential). Predict the boiling point of water.",
+          "output": "95.650 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1300.0,
+          "metadata_pressure_ref_Pa": 86651.93832132976,
+          "predict_isothermal": "95.712 C",
+          "predict_lapse_rate": "95.650 C"
+        },
+        {
+          "input": "Altitude z = 1400 m (geopotential). Predict the boiling point of water.",
+          "output": "95.316 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1400.0,
+          "metadata_pressure_ref_Pa": 85598.77178522377,
+          "predict_isothermal": "95.389 C",
+          "predict_lapse_rate": "95.316 C"
+        },
+        {
+          "input": "Altitude z = 1500 m (geopotential). Predict the boiling point of water.",
+          "output": "94.983 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1500.0,
+          "metadata_pressure_ref_Pa": 84555.99407375645,
+          "predict_isothermal": "95.067 C",
+          "predict_lapse_rate": "94.983 C"
+        },
+        {
+          "input": "Altitude z = 1600 m (geopotential). Predict the boiling point of water.",
+          "output": "94.650 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1600.0,
+          "metadata_pressure_ref_Pa": 83523.52660479755,
+          "predict_isothermal": "94.745 C",
+          "predict_lapse_rate": "94.650 C"
+        },
+        {
+          "input": "Altitude z = 1700 m (geopotential). Predict the boiling point of water.",
+          "output": "94.316 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1700.0,
+          "metadata_pressure_ref_Pa": 82501.29120901733,
+          "predict_isothermal": "94.423 C",
+          "predict_lapse_rate": "94.316 C"
+        },
+        {
+          "input": "Altitude z = 1800 m (geopotential). Predict the boiling point of water.",
+          "output": "93.982 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1800.0,
+          "metadata_pressure_ref_Pa": 81489.21012867634,
+          "predict_isothermal": "94.103 C",
+          "predict_lapse_rate": "93.982 C"
+        },
+        {
+          "input": "Altitude z = 1900 m (geopotential). Predict the boiling point of water.",
+          "output": "93.649 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 1900.0,
+          "metadata_pressure_ref_Pa": 80487.2060164162,
+          "predict_isothermal": "93.783 C",
+          "predict_lapse_rate": "93.649 C"
+        },
+        {
+          "input": "Altitude z = 2000 m (geopotential). Predict the boiling point of water.",
+          "output": "93.315 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2000.0,
+          "metadata_pressure_ref_Pa": 79495.20193405099,
+          "predict_isothermal": "93.463 C",
+          "predict_lapse_rate": "93.315 C"
+        },
+        {
+          "input": "Altitude z = 2100 m (geopotential). Predict the boiling point of water.",
+          "output": "92.981 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2100.0,
+          "metadata_pressure_ref_Pa": 78513.12135135943,
+          "predict_isothermal": "93.145 C",
+          "predict_lapse_rate": "92.981 C"
+        },
+        {
+          "input": "Altitude z = 2200 m (geopotential). Predict the boiling point of water.",
+          "output": "92.647 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2200.0,
+          "metadata_pressure_ref_Pa": 77540.88814487761,
+          "predict_isothermal": "92.827 C",
+          "predict_lapse_rate": "92.647 C"
+        },
+        {
+          "input": "Altitude z = 2300 m (geopotential). Predict the boiling point of water.",
+          "output": "92.313 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2300.0,
+          "metadata_pressure_ref_Pa": 76578.42659669266,
+          "predict_isothermal": "92.509 C",
+          "predict_lapse_rate": "92.313 C"
+        },
+        {
+          "input": "Altitude z = 2400 m (geopotential). Predict the boiling point of water.",
+          "output": "91.979 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2400.0,
+          "metadata_pressure_ref_Pa": 75625.66139323708,
+          "predict_isothermal": "92.192 C",
+          "predict_lapse_rate": "91.979 C"
+        },
+        {
+          "input": "Altitude z = 2500 m (geopotential). Predict the boiling point of water.",
+          "output": "91.645 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2500.0,
+          "metadata_pressure_ref_Pa": 74682.51762408376,
+          "predict_isothermal": "91.876 C",
+          "predict_lapse_rate": "91.645 C"
+        },
+        {
+          "input": "Altitude z = 2600 m (geopotential). Predict the boiling point of water.",
+          "output": "91.310 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2600.0,
+          "metadata_pressure_ref_Pa": 73748.92078074177,
+          "predict_isothermal": "91.560 C",
+          "predict_lapse_rate": "91.310 C"
+        },
+        {
+          "input": "Altitude z = 2700 m (geopotential). Predict the boiling point of water.",
+          "output": "90.976 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2700.0,
+          "metadata_pressure_ref_Pa": 72824.79675545287,
+          "predict_isothermal": "91.246 C",
+          "predict_lapse_rate": "90.976 C"
+        },
+        {
+          "input": "Altitude z = 2800 m (geopotential). Predict the boiling point of water.",
+          "output": "90.642 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2800.0,
+          "metadata_pressure_ref_Pa": 71910.07183998876,
+          "predict_isothermal": "90.931 C",
+          "predict_lapse_rate": "90.642 C"
+        },
+        {
+          "input": "Altitude z = 2900 m (geopotential). Predict the boiling point of water.",
+          "output": "90.307 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 2900.0,
+          "metadata_pressure_ref_Pa": 71004.67272444918,
+          "predict_isothermal": "90.618 C",
+          "predict_lapse_rate": "90.307 C"
+        },
+        {
+          "input": "Altitude z = 3000 m (geopotential). Predict the boiling point of water.",
+          "output": "89.972 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3000.0,
+          "metadata_pressure_ref_Pa": 70108.52649606044,
+          "predict_isothermal": "90.304 C",
+          "predict_lapse_rate": "89.972 C"
+        },
+        {
+          "input": "Altitude z = 3100 m (geopotential). Predict the boiling point of water.",
+          "output": "89.637 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3100.0,
+          "metadata_pressure_ref_Pa": 69221.56063797502,
+          "predict_isothermal": "89.992 C",
+          "predict_lapse_rate": "89.637 C"
+        },
+        {
+          "input": "Altitude z = 3200 m (geopotential). Predict the boiling point of water.",
+          "output": "89.302 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3200.0,
+          "metadata_pressure_ref_Pa": 68343.70302807179,
+          "predict_isothermal": "89.680 C",
+          "predict_lapse_rate": "89.302 C"
+        },
+        {
+          "input": "Altitude z = 3300 m (geopotential). Predict the boiling point of water.",
+          "output": "88.967 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3300.0,
+          "metadata_pressure_ref_Pa": 67474.8819377569,
+          "predict_isothermal": "89.369 C",
+          "predict_lapse_rate": "88.967 C"
+        },
+        {
+          "input": "Altitude z = 3400 m (geopotential). Predict the boiling point of water.",
+          "output": "88.632 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3400.0,
+          "metadata_pressure_ref_Pa": 66615.0260307655,
+          "predict_isothermal": "89.058 C",
+          "predict_lapse_rate": "88.632 C"
+        },
+        {
+          "input": "Altitude z = 3500 m (geopotential). Predict the boiling point of water.",
+          "output": "88.297 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3500.0,
+          "metadata_pressure_ref_Pa": 65764.06436196422,
+          "predict_isothermal": "88.748 C",
+          "predict_lapse_rate": "88.297 C"
+        },
+        {
+          "input": "Altitude z = 3600 m (geopotential). Predict the boiling point of water.",
+          "output": "87.962 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3600.0,
+          "metadata_pressure_ref_Pa": 64921.926376154304,
+          "predict_isothermal": "88.439 C",
+          "predict_lapse_rate": "87.962 C"
+        },
+        {
+          "input": "Altitude z = 3700 m (geopotential). Predict the boiling point of water.",
+          "output": "87.626 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3700.0,
+          "metadata_pressure_ref_Pa": 64088.54190687556,
+          "predict_isothermal": "88.130 C",
+          "predict_lapse_rate": "87.626 C"
+        },
+        {
+          "input": "Altitude z = 3800 m (geopotential). Predict the boiling point of water.",
+          "output": "87.291 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3800.0,
+          "metadata_pressure_ref_Pa": 63263.84117521116,
+          "predict_isothermal": "87.822 C",
+          "predict_lapse_rate": "87.291 C"
+        },
+        {
+          "input": "Altitude z = 3900 m (geopotential). Predict the boiling point of water.",
+          "output": "86.955 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 3900.0,
+          "metadata_pressure_ref_Pa": 62447.75478859286,
+          "predict_isothermal": "87.514 C",
+          "predict_lapse_rate": "86.955 C"
+        },
+        {
+          "input": "Altitude z = 4000 m (geopotential). Predict the boiling point of water.",
+          "output": "86.619 C (USSA 1976 pressure, Wagner-Pruss inversion)",
+          "metadata_altitude_m": 4000.0,
+          "metadata_pressure_ref_Pa": 61640.21373960736,
+          "predict_isothermal": "87.207 C",
+          "predict_lapse_rate": "86.619 C"
+        }
+      ]
+    }
+  ]
+}

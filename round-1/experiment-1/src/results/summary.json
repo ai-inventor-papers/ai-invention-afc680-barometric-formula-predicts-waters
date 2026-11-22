@@ -1,0 +1,127 @@
+{
+  "title": "Checking barometric boiling-point formulas on a grid",
+  "reference": {
+    "pressure": "USSA 1976 troposphere (p_lapse, nodes verified against tabulated values)",
+    "saturation": "Wagner-Pruss (IAPWS) equation, bisection inversion",
+    "cross_check": "iapws IF97 region 4",
+    "cross_check_max_diff_K": 0.00023621529521733464
+  },
+  "constants": {
+    "g0": 9.80665,
+    "R_air": 287.05287,
+    "T0": 288.15,
+    "L": 0.0065,
+    "p0": 101325.0
+  },
+  "scale_height_isothermal_m": 8434.509693983164,
+  "tests": [
+    {
+      "test": "T1_saturation_101325Pa",
+      "passed": true,
+      "detail": "Tb(101325 Pa) = 373.1243 K = 99.9743 C (target 373.124 K)"
+    },
+    {
+      "test": "T1b_about_100C_at_101420Pa",
+      "passed": true,
+      "detail": "Tb(101420 Pa) = 100.0006 C (target 100.00 C)"
+    },
+    {
+      "test": "T2_round_trip",
+      "passed": true,
+      "detail": "max relative error of Psat(Tb(p)) over 40-101 kPa = 4.22e-15"
+    },
+    {
+      "test": "T4a_lapse_matches_USSA_nodes",
+      "passed": true,
+      "detail": "max node deviation = 0.0073% (limit 0.2%)"
+    },
+    {
+      "test": "T4b_isothermal_exceeds_lapse_above_0",
+      "passed": true,
+      "detail": "p_iso > p_lapse at every z > 0"
+    },
+    {
+      "test": "T3_monotonic_reference",
+      "passed": true,
+      "detail": "boiling T decreases with altitude at every 100 m step"
+    },
+    {
+      "test": "T3_monotonic_isothermal",
+      "passed": true,
+      "detail": "boiling T decreases with altitude at every 100 m step"
+    },
+    {
+      "test": "T3_monotonic_lapse",
+      "passed": true,
+      "detail": "boiling T decreases with altitude at every 100 m step"
+    },
+    {
+      "test": "T5_sea_level_consistency",
+      "passed": true,
+      "detail": "T_iso(0)=373.1243 K, T_lap(0)=373.1243 K, T_ref(0)=373.1243 K, s(0)=0.000"
+    },
+    {
+      "test": "T6_structural_term_size",
+      "passed": true,
+      "detail": "s(3000 m)=0.332 K (expect ~0.3), s(4000 m)=0.588 K (expect ~0.5-0.6)"
+    },
+    {
+      "test": "T7_crosscheck_iapws",
+      "passed": true,
+      "detail": "max |difference| at 0, 2000, 4000 m = 0.00024 K (limit 0.01 K)"
+    }
+  ],
+  "tests_passed": true,
+  "t_checks": {
+    "tb_sea_K": 373.12429580541163,
+    "tb_100C_check_C": 100.00055430881037,
+    "max_roundtrip_rel": 4.218847493575595e-15,
+    "max_node_rel_dev": 7.293072978975523e-05
+  },
+  "at_altitude": {
+    "1000m": {
+      "structural_s_K": 0.03727121056112992,
+      "err_isothermal_K": 0.03727121056112992,
+      "err_lapse_K": 0.0
+    },
+    "2000m": {
+      "structural_s_K": 0.14835198627667978,
+      "err_isothermal_K": 0.14835198627667978,
+      "err_lapse_K": 0.0
+    },
+    "3000m": {
+      "structural_s_K": 0.332247073056692,
+      "err_isothermal_K": 0.332247073056692,
+      "err_lapse_K": 0.0
+    },
+    "4000m": {
+      "structural_s_K": 0.588101334928183,
+      "err_isothermal_K": 0.588101334928183,
+      "err_lapse_K": 0.0
+    }
+  },
+  "max_abs_err_isothermal": {
+    "value_K": 0.588101334928183,
+    "altitude_m": 4000.0
+  },
+  "max_abs_err_lapse": {
+    "value_K": 0.0,
+    "altitude_m": 0.0
+  },
+  "rms_err_isothermal_K": 0.26864062568166847,
+  "rms_err_lapse_K": 0.0,
+  "verdict_isothermal": {
+    "limit_K": 0.6,
+    "max_abs_err_K": 0.588101334928183,
+    "margin_K": 0.011898665071817027,
+    "label": "borderline: no pass/fail claim"
+  },
+  "verdict_lapse": {
+    "limit_K": 0.6,
+    "max_abs_err_K": 0.0,
+    "margin_K": 0.6,
+    "label": "pass"
+  },
+  "note_lapse_is_reference": "The lapse-rate form is the reference pressure model itself (USSA troposphere), so err_lapse is zero by construction and the only informative error is the isothermal form against the reference.",
+  "no_field_measurements": true
+}

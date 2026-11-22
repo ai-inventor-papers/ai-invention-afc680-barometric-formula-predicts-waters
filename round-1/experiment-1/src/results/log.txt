@@ -1,0 +1,20 @@
+2026-11-21 17:14:45.395 -08:00 | INFO     | __main__:main:129 - Starting barometric boiling-point screen (41-point grid, 0-4000 m)
+2026-11-21 17:14:45.399 -08:00 | INFO     | __main__:check:92 - PASS T1_saturation_101325Pa: Tb(101325 Pa) = 373.1243 K = 99.9743 C (target 373.124 K)
+2026-11-21 17:14:45.401 -08:00 | INFO     | __main__:check:92 - PASS T1b_about_100C_at_101420Pa: Tb(101420 Pa) = 100.0006 C (target 100.00 C)
+2026-11-21 17:14:45.402 -08:00 | INFO     | __main__:check:92 - PASS T2_round_trip: max relative error of Psat(Tb(p)) over 40-101 kPa = 4.22e-15
+2026-11-21 17:14:45.403 -08:00 | INFO     | __main__:run_tests:117 - Node check p_lapse vs USSA table: 0 m: 0.0000%, 1000 m: 0.0005%, 2000 m: 0.0073%, 3000 m: 0.0008%, 4000 m: 0.0003%
+2026-11-21 17:14:45.403 -08:00 | INFO     | __main__:check:92 - PASS T4a_lapse_matches_USSA_nodes: max node deviation = 0.0073% (limit 0.2%)
+2026-11-21 17:14:45.403 -08:00 | INFO     | __main__:check:92 - PASS T4b_isothermal_exceeds_lapse_above_0: p_iso > p_lapse at every z > 0
+2026-11-21 17:14:45.406 -08:00 | INFO     | __main__:check:92 - PASS T3_monotonic_reference: boiling T decreases with altitude at every 100 m step
+2026-11-21 17:14:45.406 -08:00 | INFO     | __main__:check:92 - PASS T3_monotonic_isothermal: boiling T decreases with altitude at every 100 m step
+2026-11-21 17:14:45.406 -08:00 | INFO     | __main__:check:92 - PASS T3_monotonic_lapse: boiling T decreases with altitude at every 100 m step
+2026-11-21 17:14:45.406 -08:00 | INFO     | __main__:check:92 - PASS T5_sea_level_consistency: T_iso(0)=373.1243 K, T_lap(0)=373.1243 K, T_ref(0)=373.1243 K, s(0)=0.000
+2026-11-21 17:14:45.406 -08:00 | INFO     | __main__:check:92 - PASS T6_structural_term_size: s(3000 m)=0.332 K (expect ~0.3), s(4000 m)=0.588 K (expect ~0.5-0.6)
+2026-11-21 17:14:45.750 -08:00 | INFO     | __main__:main:176 - Cross-check z=0 m: iapws T=373.1243 K, ours T=373.1243 K
+2026-11-21 17:14:45.750 -08:00 | INFO     | __main__:main:176 - Cross-check z=2000 m: iapws T=366.4651 K, ours T=366.4650 K
+2026-11-21 17:14:45.750 -08:00 | INFO     | __main__:main:176 - Cross-check z=4000 m: iapws T=359.7693 K, ours T=359.7691 K
+2026-11-21 17:14:45.750 -08:00 | INFO     | __main__:check:92 - PASS T7_crosscheck_iapws: max |difference| at 0, 2000, 4000 m = 0.00024 K (limit 0.01 K)
+2026-11-21 17:14:45.751 -08:00 | INFO     | __main__:main:246 - Wrote /Volumes/aii-s20005/work/run_n3CnQnOIOGY3/round-1/experiment-1/src/results/grid_values.csv
+2026-11-21 17:14:45.751 -08:00 | INFO     | __main__:main:250 - Wrote summary.json; isothermal max|err|=0.588 K at 4000 m -> borderline: no pass/fail claim; RMS=0.269 K
+2026-11-21 17:14:45.752 -08:00 | INFO     | __main__:main:272 - Wrote results/method_out.json
+2026-11-21 17:14:45.752 -08:00 | INFO     | __main__:main:273 - Done.
