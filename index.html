@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barometric Boiling Formula: Structural Error at 4000 m</title>
+<style>
+:root {
+  --ink: #1a1a1a;
+  --muted: #55555a;
+  --ground: #fbfbf9;
+  --card: #ffffff;
+  --accent: #0b5cad;
+  --hairline: #d9d9d4;
+  --measure: 70ch;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.skip-link {
+  position: absolute; left: 0.75rem; top: -4rem; z-index: 100;
+  background: var(--card); color: var(--ink); padding: 0.5rem 0.9rem;
+  border: 1px solid var(--ink);
+}
+.skip-link:focus { top: 0.75rem; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
+.layout { display: block; }
+.toc-col { display: block; }
+main { min-width: 0; }
+.prose { max-width: var(--measure); }
+
+/* Hero */
+.hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--hairline); }
+.eyebrow { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.75rem; }
+h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 1.25rem; font-weight: 700; letter-spacing: -0.01em; max-width: 22ch; }
+.tldr { font-size: 1.2rem; line-height: 1.6; max-width: var(--measure); margin: 0 0 1.75rem; }
+.tldr strong { font-weight: 700; }
+.links { display: flex; flex-wrap: wrap; gap: 0.6rem 0.75rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.links a {
+  display: inline-block; padding: 0.45rem 0.8rem; border: 1px solid var(--accent);
+  border-radius: 3px; text-decoration: none; font-size: 0.95rem; background: var(--card);
+}
+.links a:hover { background: #eef4fb; }
+.round-line { font-size: 0.95rem; color: var(--muted); margin: 0.5rem 0 0; }
+
+/* Section nav */
+.toc {
+  display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0 0 0.5rem; padding: 0.75rem 0;
+  list-style: none; border-bottom: 1px solid var(--hairline); font-size: 0.95rem;
+}
+.toc a { color: var(--ink); text-decoration: none; padding: 0.2rem 0; border-left: 3px solid transparent; padding-left: 0.4rem; }
+.toc a:hover { color: var(--accent); }
+a.active { color: var(--accent); font-weight: 600; border-left-color: var(--accent); }
+
+/* Sections */
+section { padding: 2.75rem 0 0.5rem; }
+h2 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+h3 { font-size: 1.25rem; line-height: 1.35; margin: 2rem 0 0.6rem; font-weight: 700; }
+p { margin: 0 0 1.1rem; }
+.prose ol, .prose ul { padding-left: 1.3rem; margin: 0 0 1.25rem; }
+.prose li { margin-bottom: 0.5rem; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.card { background: var(--card); border: 1px solid var(--hairline); padding: 1.25rem 1.25rem 1.1rem; border-radius: 3px; }
+.card h3 { margin: 0 0 0.45rem; font-size: 1.1rem; }
+.card p { margin: 0; font-size: 1rem; line-height: 1.6; }
+
+/* Key figure */
+.stat { border-left: 4px solid var(--accent); padding: 0.25rem 0 0.25rem 1.1rem; margin: 1.5rem 0; max-width: var(--measure); }
+.stat .big { font-size: 2.2rem; font-weight: 700; line-height: 1.1; display: block; }
+.stat .what { font-size: 1rem; color: var(--muted); }
+
+/* Results lists */
+.kv { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1.25rem; font-size: 1rem; }
+.kv th, .kv td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+.kv th { font-weight: 600; }
+.kv td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.table-wrap { overflow-x: auto; margin: 0 0 1.25rem; }
+.table-wrap table { min-width: 34rem; }
+caption { caption-side: bottom; text-align: left; font-size: 0.92rem; color: var(--muted); padding-top: 0.6rem; }
+
+.code-link { font-size: 0.95rem; margin: 0 0 1.25rem; }
+.code-link a { font-weight: 600; }
+
+/* Figures */
+figure { margin: 2rem 0; }
+.thumb {
+  display: block; width: 100%; padding: 0; margin: 0; border: 1px solid var(--hairline);
+  background: var(--card); cursor: zoom-in; border-radius: 2px;
+}
+.thumb img { width: 100%; }
+figcaption { font-size: 0.95rem; color: var(--muted); margin-top: 0.7rem; line-height: 1.55; }
+.fig-label { display: block; color: var(--ink); font-weight: 600; margin-bottom: 0.2rem; }
+.gallery figure { margin: 0 0 2.25rem; }
+.hint { font-size: 0.88rem; color: var(--muted); margin: 0.3rem 0 0; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 50; background: rgba(20, 20, 22, 0.92);
+  display: flex; align-items: center; justify-content: center; padding: 3.5rem 1rem 1rem;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 4.5rem); width: auto; height: auto; background: #fff; }
+.lb-close {
+  position: absolute; top: 0.75rem; right: 0.75rem; background: #fff; color: var(--ink);
+  border: 1px solid #fff; padding: 0.45rem 0.9rem; font: inherit; font-size: 0.95rem; cursor: pointer; border-radius: 3px;
+}
+.lb-close:focus-visible { outline-color: #fff; }
+
+/* Limitations and footer */
+.limits li { margin-bottom: 0.7rem; }
+footer { margin-top: 3rem; padding: 2rem 0 3.5rem; border-top: 1px solid var(--hairline); font-size: 0.95rem; }
+footer h2 { font-size: 1.2rem; }
+footer ul { padding-left: 1.2rem; }
+footer li { margin-bottom: 0.4rem; }
+.round-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+@media (min-width: 720px) {
+  body { font-size: 18px; }
+  h1 { font-size: 3rem; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .gallery-grid figure { margin: 0; }
+  .gallery-grid .wide { grid-column: 1 / -1; }
+}
+@media (min-width: 1000px) {
+  .layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 3rem; }
+  .toc-col nav { position: sticky; top: 1.5rem; padding-top: 3.5rem; }
+  .toc { display: flex; flex-direction: column; gap: 0.2rem; border-bottom: 0; padding: 0; }
+  .toc a { padding-left: 0.6rem; }
+  .hero { padding-top: 3.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+</style></head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="page">
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Research paper</p>
+    <h1>Barometric Boiling Formula: Structural Error at 4000 m</h1>
+    <p class="tldr"><strong>The question:</strong> how well does a simple barometric formula predict the boiling point of water at altitude, compared with published measurements? <strong>What we found:</strong> no measured boiling record could be verified, so the comparison with measurement is untested. Against the IAPWS industrial reference saturation curve, the isothermal barometric form adds a structural error of <strong>0.588 K at 4000 m</strong> relative to the lapse-rate form. That is 0.088 K above a 0.5 K structural target fixed before the calculation. It is one exploratory screen, with no interval and no measured data.</p>
+    <ul class="links" aria-label="Paper and report links">
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/paper.pdf">Read the paper (PDF)</a></li>
+      <li><a href="interactive.html">Explore the interactive demo</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/report.pdf">Read the full research report</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/exec_summary.pdf">Read the executive summary</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters">Code repository</a></li>
+    </ul>
+    <p class="round-line"><strong>Round reports:</strong> <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/round-1/report.pdf">Round 1</a> · <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/round-2/report.pdf">Round 2</a></p>
+  </div>
+</header>
+
+<div class="wrap layout">
+  <div class="toc-col">
+    <nav aria-label="Sections" data-scrollspy>
+      <ul class="toc">
+        <li><a href="#contributions">Contributions</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#figures">Figures</a></li>
+        <li><a href="#limitations">Limitations</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <section id="contributions" aria-labelledby="h-contrib">
+      <h2 id="h-contrib">Contributions</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Structural term at 4000 m</h3>
+          <p>On a shared reference grid from 0 to 4,000 m, the isothermal structural term is 0.588 K at 4,000 m, 0.088 K above the 0.5 K structural target. It is an exploratory, reference-only screen with no interval and no measured data.</p>
+        </li>
+        <li class="card">
+          <h3>Held-out route comparison</h3>
+          <p>A refitted Antoine equation has the lowest held-out RMS error of three vapour-pressure routes, at 0.061 K, against 0.083 K and 0.108 K for the two Clausius-Clapeyron routes. The ranking is provisional because its stability under a second fit range has not been tested.</p>
+        </li>
+        <li class="card">
+          <h3>Measured comparison, not tested</h3>
+          <p>Zero measured records were accepted, so no claim against published boiling points was tested. The paper states what that comparison would require.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="method" aria-labelledby="h-method">
+      <h2 id="h-method">Method</h2>
+      <div class="prose">
+        <p>The method asks one narrow question: how much does the choice of barometric model shift a boiling estimate, once the saturation equation is held fixed? Altitude goes in, and a boiling temperature comes out for each of two pressure models. Their difference is the structural term.</p>
+        <ol>
+          <li><strong>Input.</strong> An altitude <em>z</em> from 0 to 4000 m, evaluated at 100 m steps on the reference grid.</li>
+          <li><strong>Two pressure models.</strong> The isothermal model uses a single scale height, <em>p</em> = <em>p</em><sub>0</sub> exp(−<em>z</em>/<em>H</em>) with <em>H</em> = 8434.5 m. The lapse-rate model follows the troposphere relation with <em>L</em> = 0.0065 K/m and <em>T</em><sub>0</sub> = 288.15 K. Its nodes match the tabulated Standard Atmosphere values to within 0.01 percent.</li>
+          <li><strong>Pressure to boiling temperature.</strong> Each pressure is inverted to a boiling temperature <em>T</em><sub>b</sub> on the Wagner-Pruss (IAPWS-95) saturation equation by bisection, with the inverse checked by round trip. At 101325 Pa the sea-level check gives 373.1243 K.</li>
+          <li><strong>Output.</strong> The structural term <em>s</em>(<em>z</em>) = <em>T</em><sub>b,iso</sub>(<em>z</em>) − <em>T</em><sub>b,lapse</sub>(<em>z</em>). The saturation equation cancels in this difference, so the term reflects the barometric model alone.</li>
+        </ol>
+        <p>The vapour-pressure routes are compared separately. Three closed-form inversions run on a 50 m grid from 0 to 4000 m: constant-latent-heat Clausius-Clapeyron, temperature-dependent-latent-heat Clausius-Clapeyron, and a three-parameter Antoine equation. The Antoine constants are fitted on 273.15 to 363.15 K, and points from 363.15 to 373.15 K are held out.</p>
+      </div>
+      <figure>
+        <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge figure 1">
+          <img src="figures/fig1_v0.jpg" alt="Three-panel diagram. Panel a shows pressure falling with altitude on two curves, a blue isothermal curve and a grey lapse-rate curve. Panel b shows a boiling-temperature curve against pressure, with one marked point per model. Panel c shows two bars, isothermal in blue and lapse rate in grey, joined by a bracket that marks their difference.">
+        </button>
+        <figcaption><span class="fig-label">Figure 1. Overview of the decomposition</span>How a barometric boiling estimate is checked: an altitude feeds two pressure models, each pressure is inverted to a boiling temperature on the reference saturation curve, and their difference is the structural term, 0.588 K at 4000 m. This is a model-to-reference comparison, not validation against measurement. Blue marks the isothermal model, grey the lapse-rate model.</figcaption>
+      </figure>
+    </section>
+
+    <section id="results" aria-labelledby="h-results">
+      <h2 id="h-results">Results</h2>
+
+      <h3 id="h-structural">Structural term against altitude</h3>
+      <div class="prose">
+        <p>On the shared reference grid, measured against the lapse-rate form and the 0.5 K structural target, the isothermal structural term grows with altitude. The target is missed at 4000 m. The term crosses the target only between 3000 m and 4000 m. The paper treats this as a property of the model, so it holds whether or not a measured comparison is ever run.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="kv">
+          <caption>Structural term, isothermal minus lapse-rate boiling temperature, on the reference grid. Reference: IAPWS industrial formulation saturation curve (iapws 1.5.5).</caption>
+          <thead><tr><th scope="col">Altitude</th><th scope="col">Structural term</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1000 m</th><td class="num">0.037 K</td></tr>
+            <tr><th scope="row">2000 m</th><td class="num">0.148 K</td></tr>
+            <tr><th scope="row">3000 m</th><td class="num">0.332 K</td></tr>
+            <tr><th scope="row">4000 m</th><td class="num">0.588 K</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="code-link">Code for this result: <a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-1/experiment-1">Code: Checking a simple altitude formula for boiling water</a></p>
+      <figure>
+        <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge figure 2">
+          <img src="figures/fig2_v0.png" width="1300" height="732" alt="Bar chart of the isothermal minus lapse-rate boiling temperature difference at 1000, 2000, 3000 and 4000 metres. The bars rise steeply with altitude, and the 4000 m bar is the tallest.">
+        </button>
+        <figcaption><span class="fig-label">Figure 2. Structural term against the 0.5 K target</span>Model-only structural term, isothermal minus lapse-rate boiling temperature, at 1000–4000 m from the reference grid (exploratory; no measured data). The term grows from 0.037 K to 0.588 K and exceeds the 0.5 K structural target only between 3000 m (0.332 K) and 4000 m.</figcaption>
+      </figure>
+      <p class="hint">The reference is the iapws Python package, version 1.5.5, checked at the triple point and the normal boiling point. No measured boiling records enter the reference.</p>
+
+      <h3 id="h-routes">Vapour-pressure routes, held-out error</h3>
+      <div class="prose">
+        <p>On the 60 held-out points, the refitted Antoine equation has the lowest RMS error, ahead of temperature-dependent-latent-heat Clausius-Clapeyron and constant-latent-heat Clausius-Clapeyron. On the full grid, the constant-latent-heat route reaches 0.280 K at 4000 m, and the temperature-dependent route reaches 0.176 K at 4000 m. These are reference-only, exploratory estimates.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="kv">
+          <caption>Held-out errors against the IAPWS industrial formulation reference, 60 points at 0 to 2950 m.</caption>
+          <thead><tr><th scope="col">Route</th><th scope="col">Held-out RMS (K)</th><th scope="col">Held-out max (K)</th><th scope="col">Altitude of held-out max (m)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Constant-latent-heat Clausius-Clapeyron</th><td class="num">0.108</td><td class="num">0.194</td><td class="num">2950</td></tr>
+            <tr><th scope="row">Temperature-dependent-latent-heat Clausius-Clapeyron</th><td class="num">0.083</td><td class="num">0.137</td><td class="num">2950</td></tr>
+            <tr><th scope="row">Antoine refit (273.15 to 363.15 K)</th><td class="num">0.061</td><td class="num">0.086</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="code-link">Code for this result: <a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-2/experiment-4">Code: Boiling point vs altitude: formula check</a></p>
+      <figure>
+        <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge figure 3">
+          <img src="figures/fig3_v0.png" width="1300" height="975" alt="Grouped bar chart of held-out RMS and maximum absolute error for three vapour-pressure routes. The Antoine refit has the shortest bars in both groups.">
+        </button>
+        <figcaption><span class="fig-label">Figure 3. Held-out error of three vapour-pressure routes</span>Held-out RMS and maximum absolute error of three vapour-pressure routes against the IAPWS-IF97 reference, over 60 grid points at 0–2950 m. The constant and temperature-dependent latent-heat forms are Clausius–Clapeyron routes. The Antoine refit has the lowest error on both measures, but this is exploratory and provisional.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>The Antoine ranking is provisional. An in-sample RMS of 0.0042 K for the refit could not be reproduced, and repeating the fit gives 0.036 K. A sensitivity fit on 273.15 to 353.15 K has a held-out RMS of 0.092 K on a different 81-point set (353.15 to 373.15 K), so it is not ranked and cannot be set against the 60-point figures; the ranking's stability under that window is untested.</p>
+      </div>
+
+      <h3 id="h-measured">Measured comparison</h3>
+      <div class="prose">
+        <p>A measured record needed station pressure, elevation, observed boiling temperature and thermometer uncertainty, with at least 15 accepted sites for a claim. The search ran eight broad web queries and one dataset hub. Zero records met all four criteria. No predicted-minus-observed residual was computed, and the verdict on the 0.6 K total error bound is absent.</p>
+      </div>
+      <p class="code-link">Code for this result: <a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-2/experiment-3">Code: Barometric boiling-point formulas tested against measured records</a></p>
+    </section>
+
+    <section id="figures" aria-labelledby="h-figures">
+      <h2 id="h-figures">Figure gallery</h2>
+      <p class="prose">Each figure opens at full size. Press Escape, click outside the image or use the close button to return.</p>
+      <div class="gallery gallery-grid">
+        <figure class="wide">
+          <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge gallery figure 1">
+            <img src="figures/fig1_v0.jpg" alt="Three-panel diagram. Panel a shows pressure falling with altitude on two curves, a blue isothermal curve and a grey lapse-rate curve. Panel b shows a boiling-temperature curve against pressure, with one marked point per model. Panel c shows two bars, isothermal in blue and lapse rate in grey, joined by a bracket that marks their difference.">
+          </button>
+          <figcaption><span class="fig-label">Figure 1</span>How a barometric boiling estimate is checked: an altitude feeds two pressure models, each pressure is inverted to a boiling temperature on the reference saturation curve, and their difference is the structural term, 0.588 K at 4000 m. This is a model-to-reference comparison, not validation against measurement. Blue marks the isothermal model, grey the lapse-rate model.</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge gallery figure 2">
+            <img src="figures/fig2_v0.png" width="1300" height="732" alt="Bar chart of the isothermal minus lapse-rate boiling temperature difference at 1000, 2000, 3000 and 4000 metres. The bars rise steeply with altitude, and the 4000 m bar is the tallest.">
+          </button>
+          <figcaption><span class="fig-label">Figure 2</span>Model-only structural term, isothermal minus lapse-rate boiling temperature, at 1000–4000 m from the reference grid (exploratory; no measured data). The term grows from 0.037 K to 0.588 K and exceeds the 0.5 K structural target only between 3000 m (0.332 K) and 4000 m.</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="thumb" aria-haspopup="dialog" aria-label="Enlarge gallery figure 3">
+            <img src="figures/fig3_v0.png" width="1300" height="975" alt="Grouped bar chart of held-out RMS and maximum absolute error for three vapour-pressure routes. The Antoine refit has the shortest bars in both groups.">
+          </button>
+          <figcaption><span class="fig-label">Figure 3</span>Held-out RMS and maximum absolute error of three vapour-pressure routes against the IAPWS-IF97 reference, over 60 grid points at 0–2950 m. The constant and temperature-dependent latent-heat forms are Clausius–Clapeyron routes. The Antoine refit has the lowest error on both measures, but this is exploratory and provisional.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="limitations" aria-labelledby="h-limits">
+      <h2 id="h-limits">Limitations</h2>
+      <ul class="prose limits">
+        <li>The central limitation is that no measured boiling record was verified. The paper answers how the barometric formula departs from a reference equation, not how it departs from measured boiling points, which is the question asked.</li>
+        <li>The headline is a single screen on one shared reference grid, with no interval. It was not registered in advance as a test, and its 0.5 K target is a structural threshold, not a measured tolerance.</li>
+        <li>The structural term is computed on one reference pressure model. The lapse-rate form follows the Standard Atmosphere 1976 troposphere, and the primary standard document was not read directly, so its provenance is secondary. Its values agree with the tabulated nodes, so the effect on the result is small.</li>
+        <li>The Antoine ranking is provisional. Its stability under a second fit range is untested, and the in-sample value did not reproduce on repetition. The Clapeyron check is largely an identity, because the same reference equations supply its inputs. The 0.6 K total bound is untested.</li>
+        <li>The study covers one altitude range, 0 to 4000 m, and one water-only chemistry. Humidity, weather-driven pressure changes and dissolved solutes are excluded.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<div class="wrap">
+  <footer>
+    <h2>Links</h2>
+    <ul class="round-list">
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/paper.pdf">Read the paper (PDF)</a></li>
+      <li><a href="interactive.html">Explore the interactive demo</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/report.pdf">Read the full research report</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/exec_summary.pdf">Read the executive summary</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters">Code repository</a></li>
+    </ul>
+    <p><strong>Round reports:</strong> <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/round-1/report.pdf">Round 1</a> · <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/round-2/report.pdf">Round 2</a></p>
+    <p><strong>Other code folders from this run:</strong></p>
+    <ul>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-1/dataset-1">Code: Water Boiling Temperature by Elevation Reference Table</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-1/experiment-2">Code: Checking Simple Formulas for Water's Boiling Point</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters/tree/main/round-2/dataset-2">Code: Boiling-Point Source Search and Reference Rows</a></li>
+    </ul>
+  </footer>
+</div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
+  <button type="button" class="lb-close" id="lb-close">Close</button>
+  <div id="lb-body"></div>
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  var lbBody = document.getElementById('lb-body');
+  var lbClose = document.getElementById('lb-close');
+  var page = document.getElementById('page');
+  var opener = null;
+  function openLb(btn) {
+    opener = btn;
+    var src = btn.querySelector('img').getAttribute('src');
+    var alt = btn.querySelector('img').getAttribute('alt');
+    var img = document.createElement('img');
+    img.setAttribute('src', src);
+    img.setAttribute('alt', alt);
+    lbBody.appendChild(img);
+    lb.hidden = false;
+    page.setAttribute('inert', '');
+    lbClose.focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    page.removeAttribute('inert');
+    lbBody.innerHTML = '';
+    if (opener) opener.focus();
+  }
+  document.querySelectorAll('.thumb').forEach(function (b) {
+    b.addEventListener('click', function () { openLb(b); });
+  });
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); closeLb(); }
+    else if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
+  });
+})();
+</script>
+<script>
+/* aii-scroll-spy v1: paste verbatim */
+(function () {
+  var links = [], targets = [];
+  document.querySelectorAll('[data-scrollspy] a[href^="#"]').forEach(function (a) {
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) { links.push(a); targets.push(el); }
+  });
+  if (!links.length) return;
+  var queued = false;
+  function current() {
+    var view = window.innerHeight;
+    var doc = document.documentElement;
+    var atEnd = window.scrollY > 0 && view + window.scrollY >= doc.scrollHeight - 2;
+    var line = atEnd ? view - 1 : Math.min(view * 0.3, 200);
+    var best = null, bestTop = -Infinity;
+    targets.forEach(function (el) {
+      var top = el.getBoundingClientRect().top;
+      if (top <= line && top > bestTop) { best = el; bestTop = top; }
+    });
+    return best;
+  }
+  function update() {
+    queued = false;
+    var el = current();
+    links.forEach(function (a, i) {
+      var on = targets[i] === el;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current', 'location');
+      else a.removeAttribute('aria-current');
+    });
+  }
+  function schedule() {
+    if (!queued) { queued = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule);
+  if (window.ResizeObserver) new ResizeObserver(schedule).observe(document.body);
+  update();
+})();
+</script>
+</body></html>

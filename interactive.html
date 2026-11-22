@@ -1,0 +1,1015 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barometric Boiling Formula: Structural Error at 4000 m. Interactive companion</title>
+<link rel="icon" href="data:,">
+<style>
+:root {
+  --ink: #1b1b1b;
+  --muted: #5c5c5c;
+  --ground: #ffffff;
+  --panel: #f5f6f8;
+  --hairline: #d9dce1;
+  --accent: #0b5cad;
+  --blue: #0072B2;
+  --orange: #B35806;
+  --green: #009E73;
+  --amber: #E69F00;
+  --grey: #7a7a7a;
+  --grid: #e6e8ec;
+  --focus: #0b5cad;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+main, header, footer, nav { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 0.6rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 0.8rem; }
+h3 { font-size: 1.2rem; line-height: 1.3; margin: 1.6rem 0 0.5rem; }
+h4 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+p { margin: 0 0 1rem; max-width: 70ch; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 3px;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 8px; background: #fff; color: var(--ink);
+  padding: 10px 14px; border: 2px solid var(--accent); z-index: 100;
+}
+.skip-link:focus { left: 8px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* header */
+.hero { padding: 2.6rem 0 1.8rem; border-bottom: 1px solid var(--hairline); }
+.kicker { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.6rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 1.2rem 0 0; }
+.btn {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px;
+  border: 2px solid var(--accent); border-radius: 6px; text-decoration: none;
+  color: var(--accent); background: #fff; font-weight: 600; font-size: 0.98rem;
+}
+.btn.primary { background: var(--accent); color: #fff; }
+.btn:hover { text-decoration: underline; }
+
+/* section nav */
+.sectnav { background: #fff; border-bottom: 1px solid var(--hairline); }
+.sectnav ol { list-style: none; margin: 0; padding: 8px 0; display: flex; gap: 6px; overflow-x: auto; }
+.sectnav a {
+  display: inline-block; padding: 6px 10px; min-height: 40px; line-height: 28px;
+  color: var(--ink); text-decoration: none; border-radius: 4px; white-space: nowrap; font-size: 0.95rem;
+}
+.sectnav a[aria-current="true"] { background: var(--accent); color: #fff; }
+
+section.block { padding: 2.2rem 0 1.4rem; border-bottom: 1px solid var(--hairline); scroll-margin-top: 64px; }
+.question { font-size: 1.05rem; color: var(--ink); background: var(--panel); padding: 12px 14px; border-left: 4px solid var(--accent); max-width: none; }
+.takeaway { font-size: 1.08rem; font-weight: 600; margin: 1rem 0 0; padding: 10px 0 0; border-top: 1px solid var(--hairline); max-width: none; }
+.answer { font-size: 1.05rem; max-width: 70ch; }
+.bignum { font-size: 2.6rem; font-weight: 700; line-height: 1.1; color: var(--blue); font-variant-numeric: tabular-nums; margin: 0.2rem 0 0; }
+.bignum-label { color: var(--muted); font-size: 0.98rem; margin: 0 0 0.8rem; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin: 0.8rem 0; }
+.control-group { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.control-group > span.lbl, fieldset legend { font-weight: 600; font-size: 0.98rem; }
+fieldset { border: 0; margin: 0; padding: 0; }
+fieldset legend { padding: 0; margin-bottom: 4px; }
+.radio, .check { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 4px 10px; border: 1px solid var(--hairline); border-radius: 6px; cursor: pointer; background: #fff; font-size: 0.98rem; }
+.radio input, .check input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+select, input[type="number"] {
+  min-height: 40px; font: inherit; font-size: 0.98rem; padding: 6px 10px; border: 1px solid #9aa1ab; border-radius: 6px; background: #fff; color: var(--ink);
+}
+input[type="range"] { width: min(360px, 100%); min-height: 40px; accent-color: var(--accent); }
+.val { font-variant-numeric: tabular-nums; font-weight: 700; min-width: 5.5em; display: inline-block; }
+
+.viewgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.viewgrid > *, .stepper > * { min-width: 0; }
+code { overflow-wrap: anywhere; word-break: break-word; }
+@media (min-width: 900px) { .viewgrid.two { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); } }
+.chartbox { min-width: 0; }
+.chart { display: block; width: 100%; height: auto; max-width: 100%; }
+.chart .grid { stroke: var(--grid); stroke-width: 1; }
+.chart .axis { stroke: #4a4a4a; stroke-width: 1.2; }
+.chart .tick { font-size: 14px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+.chart .axis-title { font-size: 14px; fill: var(--ink); font-weight: 600; }
+.chart .label-note { font-size: 14px; fill: var(--ink); }
+.chart .target { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 6 4; }
+.chart .hit { cursor: pointer; }
+.chart .hit:focus { outline: none; }
+.chart .dot.is-focus { stroke: #000; stroke-width: 3; }
+.chart .sel { stroke: var(--ink); stroke-width: 2; }
+.chart .bar { cursor: pointer; }
+.chart .bar.is-focus { stroke: #000; stroke-width: 3; }
+.chart .barlab { font-size: 14px; fill: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; }
+.chart .catlab { font-size: 14px; fill: var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.98rem; margin: 0 0 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 22px; height: 4px; display: inline-block; border-radius: 2px; }
+.swatch.dash { background: repeating-linear-gradient(90deg, var(--ink) 0 6px, transparent 6px 10px); height: 3px; }
+.readout {
+  min-height: 3.2em; margin: 8px 0 0; padding: 10px 12px; background: var(--panel); border-radius: 6px;
+  font-size: 1rem; line-height: 1.5; font-variant-numeric: tabular-nums; max-width: none;
+}
+.note { font-size: 0.95rem; color: var(--muted); max-width: none; }
+table { border-collapse: collapse; width: 100%; font-size: 0.97rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+th { font-weight: 600; background: var(--panel); position: sticky; top: 0; }
+.tablewrap { overflow: auto; max-width: 100%; border: 1px solid var(--hairline); border-radius: 6px; }
+.tablewrap.short { max-height: 340px; }
+td.num, th.num { text-align: right; }
+.rowbtn {
+  font: inherit; min-height: 40px; min-width: 40px; padding: 4px 8px; border: 1px solid transparent; border-radius: 4px;
+  background: transparent; color: var(--accent); text-decoration: underline; cursor: pointer; text-align: left; white-space: nowrap;
+}
+.rowbtn[aria-pressed="true"] { background: var(--accent); color: #fff; text-decoration: none; }
+tr.is-out td { color: var(--muted); }
+.detail { border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 14px; background: #fff; }
+.detail dl { display: grid; grid-template-columns: 1fr; gap: 4px 12px; margin: 0; }
+.detail dt { font-weight: 600; }
+.detail dd { margin: 0 0 8px; font-variant-numeric: tabular-nums; }
+.ba { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+@media (min-width: 620px) { .ba { grid-template-columns: 1fr 1fr; } }
+.ba > div { border: 1px solid var(--hairline); border-radius: 6px; padding: 10px 12px; }
+.ba h4 { font-size: 0.98rem; }
+.routes-key { font-size: 0.95rem; color: var(--muted); max-width: none; }
+
+/* stepper */
+.stepper { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (min-width: 860px) { .stepper { grid-template-columns: 300px minmax(0, 1fr); } }
+.pipe { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+.pipe .box { fill: #fff; stroke: #7b8390; stroke-width: 1.5; }
+.pipe .box.on { fill: var(--accent); stroke: var(--accent); }
+.pipe .bt { font-size: 15px; fill: var(--ink); font-weight: 600; }
+.pipe .bt.on { fill: #fff; }
+.pipe .bs { font-size: 13px; fill: var(--muted); }
+.pipe .bs.on { fill: #fff; }
+.pipe .arr { stroke: #7b8390; stroke-width: 2; fill: none; }
+.stepnav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0.6rem 0; }
+.stepnav button, .stepnav .marker {
+  min-height: 44px; min-width: 44px; padding: 6px 12px; font: inherit; font-size: 0.98rem; border: 2px solid var(--accent);
+  background: #fff; color: var(--accent); border-radius: 6px; cursor: pointer;
+}
+.stepnav button:disabled { border-color: #b8bec6; color: #8a919b; cursor: default; }
+.stepnav .marker[aria-current="step"] { background: var(--accent); color: #fff; }
+.stepnav .marker { border-color: #7b8390; color: var(--ink); }
+.stepnav .marker[aria-current="step"] { border-color: var(--accent); }
+.stagebody { border: 1px solid var(--hairline); border-radius: 6px; padding: 14px 16px; min-height: 12rem; }
+.stagebody dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 6px 12px; }
+.stagebody dt { font-weight: 600; }
+.stagebody dd { margin: 0 0 6px; font-variant-numeric: tabular-nums; }
+figure.method { margin: 1.4rem 0 0; }
+figure.method img { width: 100%; height: auto; display: block; border: 1px solid var(--hairline); border-radius: 6px; }
+figcaption { font-size: 0.95rem; color: var(--muted); margin-top: 6px; max-width: 70ch; }
+
+/* term tooltips */
+button.term {
+  font: inherit; color: inherit; background: none; border: 0; padding: 0 2px; margin: 0;
+  border-bottom: 1.5px dotted var(--accent); cursor: help; min-height: 24px;
+}
+#tip {
+  position: fixed; z-index: 200; max-width: min(340px, calc(100vw - 16px)); background: #fff; color: var(--ink);
+  border: 1px solid #9aa1ab; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  padding: 10px 12px; font-size: 0.95rem; line-height: 1.45; display: none;
+}
+#tip.open { display: block; }
+
+.checks { display: flex; flex-wrap: wrap; gap: 8px; }
+.failtext li { margin-bottom: 0.5rem; }
+ul.plain { padding-left: 1.2rem; max-width: 70ch; }
+ul.plain li { margin-bottom: 0.45rem; }
+
+footer.site { padding: 2rem 0 3.5rem; font-size: 0.97rem; }
+footer.site h2 { font-size: 1.25rem; margin-top: 1.6rem; }
+footer.site ul { padding-left: 1.2rem; }
+footer.site li { margin-bottom: 0.45rem; }
+dl.gloss dt { font-weight: 600; margin-top: 0.6rem; }
+dl.gloss dd { margin: 0 0 0.2rem 0; max-width: 70ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media (max-width: 520px) {
+  body { font-size: 17px; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  .bignum { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Interactive companion to the paper. Every view reads the run's output files.</p>
+    <h1>Barometric Boiling Formula: Structural Error at 4000 m</h1>
+    <p class="answer">The question: how well does a simple barometric formula predict the boiling point of water at altitude, compared with published measurements? This run could not verify any measured boiling record, so the page shows what can be tested: the formula against a reference equation, and the candidate measurements that were rejected.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/paper.pdf">Read the paper (PDF)</a>
+      <a class="btn" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/report.pdf">Read the full research report</a>
+    </div>
+  </div>
+</header>
+
+<nav class="sectnav" aria-label="Page sections">
+  <div class="wrap">
+    <ol>
+      <li><a href="#finding">The finding</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#evidence">Explore the evidence</a></li>
+      <li><a href="#try">Try it</a></li>
+      <li><a href="#fails">Where it fails</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="block" id="finding" aria-labelledby="h-finding">
+  <div class="wrap">
+    <h2 id="h-finding">The finding</h2>
+    <p class="question"><strong>Question.</strong> How much does the isothermal barometric formula change the boiling estimate, compared with the lapse-rate form that follows the standard atmosphere, and where does that change pass the 0.5 K structural target?</p>
+    <p class="answer">At 4,000 m the <button type="button" class="term" data-term="isothermal model">isothermal form</button> adds 0.588 K to the boiling estimate. That is 0.088 K above the 0.5 K <button type="button" class="term" data-term="structural target">structural target</button>. The screen compares two models with the same <button type="button" class="term" data-term="reference saturation curve">reference saturation curve</button>, so it measures the model's own structural error, not agreement with measured boiling points.</p>
+
+    <div class="viewgrid two">
+      <div class="chartbox">
+        <div class="controls">
+          <div class="control-group">
+            <label for="alt" class="lbl">Altitude</label>
+            <input type="range" id="alt" min="0" max="4000" step="100" value="4000" aria-describedby="alt-out">
+            <output id="alt-out" class="val" for="alt">4000 m</output>
+          </div>
+        </div>
+        <fieldset class="controls">
+          <legend>Show</legend>
+          <div class="control-group">
+            <label class="radio"><input type="radio" name="finding-mode" value="structural" checked> Structural term</label>
+            <label class="radio"><input type="radio" name="finding-mode" value="boiling"> Boiling temperature under each model</label>
+          </div>
+        </fieldset>
+        <div class="legend" id="finding-legend"></div>
+        <div id="finding-chart"></div>
+        <p class="readout" id="finding-readout" aria-live="polite">Select a point on the chart, or move the altitude slider.</p>
+      </div>
+      <div>
+        <p class="bignum" id="headline-num" aria-live="polite">0.588 K</p>
+        <p class="bignum-label" id="headline-label">Structural term at 4000 m</p>
+        <p class="takeaway" id="finding-take" aria-live="polite">At 4,000 m the isothermal form adds 0.588 K to the boiling estimate, 0.088 K above the 0.5 K structural target.</p>
+        <p class="note">The <button type="button" class="term" data-term="structural term">structural term</button> is the isothermal boiling temperature minus the <button type="button" class="term" data-term="lapse-rate model">lapse-rate</button> boiling temperature, computed on the same 100 m grid from 0 to 4,000 m. The target of 0.5 K was fixed before the calculation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="how" aria-labelledby="h-how">
+  <div class="wrap">
+    <h2 id="h-how">How it works</h2>
+    <p class="question"><strong>Question.</strong> What happens to one altitude, step by step, between the altitude and the structural term?</p>
+    <p class="answer">The walk-through uses the 4,000 m row of the reference grid. Move through the four stages with the buttons or the left and right arrow keys. Each stage shows the values the run recorded.</p>
+    <div class="stepper">
+      <div>
+        <svg class="pipe" id="pipe" viewBox="0 0 300 352" role="img" aria-label="Pipeline of four stages">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b8390"/></marker></defs>
+          <g id="pipe-g"></g>
+        </svg>
+      </div>
+      <div>
+        <div class="stepnav" role="group" aria-label="Stage controls">
+          <button type="button" id="st-prev">Previous stage</button>
+          <span id="st-markers" style="display:inline-flex; gap:6px; flex-wrap:wrap;"></span>
+          <button type="button" id="st-next">Next stage</button>
+        </div>
+        <p class="sr" id="stage-live" aria-live="polite"></p>
+        <div class="stagebody" id="stage-body" tabindex="-1"></div>
+      </div>
+    </div>
+    <figure class="method">
+      <img src="figures/fig1_v0.jpg" alt="Three panels. Panel a: altitude 0 to 4000 m mapped to pressure by an isothermal curve (blue, scale height 8435 m) and a lapse-rate curve (grey, 6.5 K per km). Panel b: pressure mapped to boiling temperature on the IAPWS-IF97 reference curve, with one grey and one blue point. Panel c: bars for the isothermal and lapse-rate models at 4000 m, with the difference labelled 0.588 K and the note structural term, not validation against measurement.">
+      <figcaption>How a barometric boiling estimate is checked: an altitude feeds two pressure models, each pressure is inverted to a boiling temperature on the reference saturation curve, and their difference is the structural term, 0.588 K at 4000 m. This is a model-to-reference comparison, not validation against measurement. Blue marks the isothermal model, grey the lapse-rate model.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block" id="evidence" aria-labelledby="h-evidence">
+  <div class="wrap">
+    <h2 id="h-evidence">Explore the evidence</h2>
+    <p class="question"><strong>Question.</strong> Do the three vapour-pressure routes, <button type="button" class="term" data-term="Clausius-Clapeyron relation">Clausius-Clapeyron</button> with constant latent heat, Clausius-Clapeyron with temperature-dependent latent heat, and a refitted <button type="button" class="term" data-term="Antoine equation">Antoine equation</button>, differ in how far they miss the reference, and at which altitudes?</p>
+    <p class="answer">Compare the routes on the <button type="button" class="term" data-term="held-out points">held-out points</button>, which the Antoine fit did not see, or on all 81 grid points. The Antoine ranking is provisional, because its stability under a second fit range is untested.</p>
+
+    <div class="viewgrid two">
+      <div class="chartbox">
+        <div class="controls">
+          <fieldset>
+            <legend>Points</legend>
+            <div class="control-group">
+              <label class="radio"><input type="radio" name="route-subset" value="held_out" checked> Held-out points (60)</label>
+              <label class="radio"><input type="radio" name="route-subset" value="full_grid"> All grid points (81)</label>
+            </div>
+          </fieldset>
+          <div class="control-group">
+            <label for="route-metric" class="lbl">Error measure</label>
+            <select id="route-metric">
+              <option value="rms">RMS error</option>
+              <option value="max">Maximum absolute error</option>
+            </select>
+          </div>
+        </div>
+        <div class="legend" id="route-legend"></div>
+        <div id="route-chart"></div>
+        <p class="readout" id="route-readout" aria-live="polite">Select a bar to read its value.</p>
+        <p class="routes-key">Constant L: constant latent heat (L). Varying L: temperature-dependent latent heat. Antoine: three-parameter Antoine refit, constants fitted on 273.15 to 363.15 K.</p>
+        <div class="tablewrap" style="margin-top:8px">
+          <table>
+            <caption class="sr" id="route-table-caption">Values behind the route chart</caption>
+            <thead><tr><th scope="col">Route</th><th scope="col" class="num">RMS error (K)</th><th scope="col" class="num">Maximum absolute error (K)</th><th scope="col" class="num">Altitude of maximum (m)</th></tr></thead>
+            <tbody id="route-table"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <p class="takeaway" id="route-take" aria-live="polite"></p>
+        <p class="note">The <button type="button" class="term" data-term="RMS error">RMS error</button> and the <button type="button" class="term" data-term="maximum absolute error">maximum absolute error</button> are both taken over the chosen points. Held-out error is measured on the 60 grid points whose reference boiling temperature lies between 363.15 and 373.15 K. The Antoine constants were fitted on the other points, so this subset tests the fit on data it did not see.</p>
+      </div>
+    </div>
+
+    <h3>Item browser: grid points, reference against each route</h3>
+    <p class="answer">Each row is one altitude on the 50 m grid. Select a row to see its reference boiling temperature beside each route's prediction and error. Filter to the held-out points, or to the points where some route misses by more than 0.1 K.</p>
+    <div class="controls">
+      <div class="control-group">
+        <label for="item-split" class="lbl">Show</label>
+        <select id="item-split">
+          <option value="all">All points</option>
+          <option value="held_out">Held-out points</option>
+          <option value="in_sample">In-sample points</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="item-sort" class="lbl">Sort</label>
+        <select id="item-sort">
+          <option value="alt">Altitude, low to high</option>
+          <option value="err">Largest miss first</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" id="item-fail"> Only points where a route misses by more than 0.1 K</label>
+    </div>
+    <p class="note" id="item-count" aria-live="polite"></p>
+    <div class="viewgrid two">
+      <div class="tablewrap short">
+        <table>
+          <caption class="sr">Grid points. Select an altitude to show its detail.</caption>
+          <thead><tr><th scope="col">Altitude</th><th scope="col">Split</th><th scope="col" class="num">Reference (K)</th><th scope="col" class="num">Constant L error (K)</th><th scope="col" class="num">Varying L error (K)</th><th scope="col" class="num">Antoine error (K)</th></tr></thead>
+          <tbody id="item-body"></tbody>
+        </table>
+      </div>
+      <div>
+        <div class="detail" id="item-detail" aria-live="polite"></div>
+        <p class="takeaway" id="item-take"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="try" aria-labelledby="h-try">
+  <div class="wrap">
+    <h2 id="h-try">Try it: move the limit</h2>
+    <p class="question"><strong>Question.</strong> How many grid altitudes and route points would exceed a stricter or looser error limit, and where would the first exceedance be?</p>
+    <p class="answer">This view recomputes counts from the recorded values only: the 41 structural terms and the 81 route errors. It does not refit or resimulate anything. The 0.50 K setting is the paper's structural target.</p>
+    <div class="viewgrid two">
+      <div class="chartbox">
+        <div class="controls">
+          <div class="control-group">
+            <label for="thr" class="lbl">Limit</label>
+            <input type="range" id="thr" min="0.1" max="0.8" step="0.01" value="0.5" aria-describedby="thr-out">
+            <output id="thr-out" class="val" for="thr">0.50 K</output>
+          </div>
+        </div>
+        <div id="thr-chart"></div>
+        <p class="readout" id="thr-readout" aria-live="polite">Hover or select a point on the chart to read its value.</p>
+      </div>
+      <div>
+        <div class="detail">
+          <dl>
+            <dt>Structural term above the limit</dt><dd id="thr-struct">-</dd>
+            <dt>First altitude above the limit</dt><dd id="thr-first">-</dd>
+            <dt>Route errors above the limit (of 81 points)</dt><dd id="thr-routes">-</dd>
+          </dl>
+        </div>
+        <p class="takeaway" id="thr-take" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="fails" aria-labelledby="h-fails">
+  <div class="wrap">
+    <h2 id="h-fails">Where it fails</h2>
+    <p class="question"><strong>Question.</strong> Where do the formulas miss most, and why was no measured comparison possible?</p>
+    <p class="answer" id="fails-answer"></p>
+    <div class="viewgrid two">
+      <div>
+        <h3 style="margin-top:0.2rem">Measured candidates that were rejected</h3>
+        <div class="controls">
+          <label class="check"><input type="checkbox" id="fail-pressure"> Only sources that give station pressure</label>
+        </div>
+        <p class="note" id="cand-count" aria-live="polite"></p>
+        <div class="tablewrap short">
+          <table>
+            <caption class="sr">Candidate measured sources checked in the run, with the reason each was rejected</caption>
+            <thead><tr><th scope="col">Source</th><th scope="col">Type</th><th scope="col">Station pressure</th><th scope="col">Uncertainty</th><th scope="col">Reason rejected</th></tr></thead>
+            <tbody id="cand-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top:0.2rem">What the paper says it does not show</h3>
+        <ul class="plain failtext">
+          <li>No measured boiling record was accepted, so the comparison with published boiling points is not testable here. The verdict on the 0.6 K total error bound is absent.</li>
+          <li>The structural term is computed on one reference pressure model, and the primary Standard Atmosphere document was not read directly.</li>
+          <li>The Antoine ranking is provisional. Its in-sample value did not reproduce on repetition, and its stability under a second fit range is untested.</li>
+          <li>The Clapeyron check is close to an identity, because the same reference equations supply its inputs.</li>
+          <li>Humidity, weather-driven pressure changes and dissolved solutes are excluded. The range covers 0 to 4,000 m only.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site" id="sources">
+  <div class="wrap">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/paper.pdf">Read the paper (PDF)</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters@main/report.pdf">Read the full research report</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-afc680-barometric-formula-predicts-waters">Code repository</a></li>
+    </ul>
+
+    <h2>Data provenance</h2>
+    <ul>
+      <li>The finding, the structural term at each altitude, the stepper and the limit view: <code>gen_art_experiment_1/results/grid_values.csv</code> (41 rows, 100 m steps, 0 to 4,000 m).</li>
+      <li>The route chart, its table, the item browser and the route counts: <code>gen_art_experiment_4/full_method_out.json</code> (81 examples, with the held-out tag on each), and the summary values from <code>gen_art_experiment_4/results/summary.json</code>.</li>
+      <li>The rejected measured candidates and their drop reasons: <code>gen_art_experiment_3/data/candidates.csv</code>, with the accepted-site count from <code>gen_art_experiment_3/full_method_out.json</code>.</li>
+      <li>The method diagram: <code>figures/fig1_v0.jpg</code> from the paper.</li>
+    </ul>
+    <p class="note">The embedded data keeps the values as the files hold them. The page computes only sums, counts, filters and a structural term difference from those values, and it prints the paper's precision.</p>
+
+    <h2>Glossary</h2>
+    <dl class="gloss" id="glossary"></dl>
+
+    <h2>Citation</h2>
+    <p>The paper carries no citation block, so none is given here.</p>
+  </div>
+</footer>
+
+<div id="tip" role="tooltip"></div>
+
+<script type="application/json" id="data-grid" data-source="gen_art_experiment_1/results/grid_values.csv">[{"z_m":"0.0","p_isothermal_Pa":"101325.000","p_lapse_Pa":"101325.000","Tb_ref_C":"99.97430","Tb_isothermal_C":"99.97430","Tb_lapse_C":"99.97430","structural_s_K":"0.000000"},{"z_m":"100.0","p_isothermal_Pa":"100130.779","p_lapse_Pa":"100129.438","Tb_ref_C":"99.64208","Tb_isothermal_C":"99.64246","Tb_lapse_C":"99.64208","structural_s_K":"0.000374"},{"z_m":"200.0","p_isothermal_Pa":"98950.633","p_lapse_Pa":"98945.324","Tb_ref_C":"99.30979","Tb_isothermal_C":"99.31129","Tb_lapse_C":"99.30979","structural_s_K":"0.001497"},{"z_m":"300.0","p_isothermal_Pa":"97784.396","p_lapse_Pa":"97772.575","Tb_ref_C":"98.97743","Tb_isothermal_C":"98.98080","Tb_lapse_C":"98.97743","structural_s_K":"0.003367"},{"z_m":"400.0","p_isothermal_Pa":"96631.904","p_lapse_Pa":"96611.106","Tb_ref_C":"98.64500","Tb_isothermal_C":"98.65098","Tb_lapse_C":"98.64500","structural_s_K":"0.005982"},{"z_m":"500.0","p_isothermal_Pa":"95492.996","p_lapse_Pa":"95460.835","Tb_ref_C":"98.31248","Tb_isothermal_C":"98.32182","Tb_lapse_C":"98.31248","structural_s_K":"0.009342"},{"z_m":"600.0","p_isothermal_Pa":"94367.511","p_lapse_Pa":"94321.679","Tb_ref_C":"97.97989","Tb_isothermal_C":"97.99334","Tb_lapse_C":"97.97989","structural_s_K":"0.013445"},{"z_m":"700.0","p_isothermal_Pa":"93255.291","p_lapse_Pa":"93193.556","Tb_ref_C":"97.64723","Tb_isothermal_C":"97.66552","Tb_lapse_C":"97.64723","structural_s_K":"0.018291"},{"z_m":"800.0","p_isothermal_Pa":"92156.180","p_lapse_Pa":"92076.383","Tb_ref_C":"97.31448","Tb_isothermal_C":"97.33836","Tb_lapse_C":"97.31448","structural_s_K":"0.023878"},{"z_m":"900.0","p_isothermal_Pa":"91070.023","p_lapse_Pa":"90970.079","Tb_ref_C":"96.98166","Tb_isothermal_C":"97.01186","Tb_lapse_C":"96.98166","structural_s_K":"0.030205"},{"z_m":"1000.0","p_isothermal_Pa":"89996.667","p_lapse_Pa":"89874.563","Tb_ref_C":"96.64875","Tb_isothermal_C":"96.68602","Tb_lapse_C":"96.64875","structural_s_K":"0.037271"},{"z_m":"1100.0","p_isothermal_Pa":"88935.962","p_lapse_Pa":"88789.754","Tb_ref_C":"96.31576","Tb_isothermal_C":"96.36084","Tb_lapse_C":"96.31576","structural_s_K":"0.045075"},{"z_m":"1200.0","p_isothermal_Pa":"87887.758","p_lapse_Pa":"87715.573","Tb_ref_C":"95.98269","Tb_isothermal_C":"96.03631","Tb_lapse_C":"95.98269","structural_s_K":"0.053616"},{"z_m":"1300.0","p_isothermal_Pa":"86851.909","p_lapse_Pa":"86651.938","Tb_ref_C":"95.64954","Tb_isothermal_C":"95.71243","Tb_lapse_C":"95.64954","structural_s_K":"0.062893"},{"z_m":"1400.0","p_isothermal_Pa":"85828.268","p_lapse_Pa":"85598.772","Tb_ref_C":"95.31630","Tb_isothermal_C":"95.38921","Tb_lapse_C":"95.31630","structural_s_K":"0.072905"},{"z_m":"1500.0","p_isothermal_Pa":"84816.692","p_lapse_Pa":"84555.994","Tb_ref_C":"94.98298","Tb_isothermal_C":"95.06663","Tb_lapse_C":"94.98298","structural_s_K":"0.083651"},{"z_m":"1600.0","p_isothermal_Pa":"83817.039","p_lapse_Pa":"83523.527","Tb_ref_C":"94.64957","Tb_isothermal_C":"94.74470","Tb_lapse_C":"94.64957","structural_s_K":"0.095129"},{"z_m":"1700.0","p_isothermal_Pa":"82829.167","p_lapse_Pa":"82501.291","Tb_ref_C":"94.31607","Tb_isothermal_C":"94.42341","Tb_lapse_C":"94.31607","structural_s_K":"0.107340"},{"z_m":"1800.0","p_isothermal_Pa":"81852.939","p_lapse_Pa":"81489.210","Tb_ref_C":"93.98249","Tb_isothermal_C":"94.10277","Tb_lapse_C":"93.98249","structural_s_K":"0.120281"},{"z_m":"1900.0","p_isothermal_Pa":"80888.216","p_lapse_Pa":"80487.206","Tb_ref_C":"93.64881","Tb_isothermal_C":"93.78276","Tb_lapse_C":"93.64881","structural_s_K":"0.133952"},{"z_m":"2000.0","p_isothermal_Pa":"79934.864","p_lapse_Pa":"79495.202","Tb_ref_C":"93.31504","Tb_isothermal_C":"93.46340","Tb_lapse_C":"93.31504","structural_s_K":"0.148352"},{"z_m":"2100.0","p_isothermal_Pa":"78992.748","p_lapse_Pa":"78513.121","Tb_ref_C":"92.98119","Tb_isothermal_C":"93.14467","Tb_lapse_C":"92.98119","structural_s_K":"0.163480"},{"z_m":"2200.0","p_isothermal_Pa":"78061.735","p_lapse_Pa":"77540.888","Tb_ref_C":"92.64724","Tb_isothermal_C":"92.82657","Tb_lapse_C":"92.64724","structural_s_K":"0.179335"},{"z_m":"2300.0","p_isothermal_Pa":"77141.696","p_lapse_Pa":"76578.427","Tb_ref_C":"92.31319","Tb_isothermal_C":"92.50911","Tb_lapse_C":"92.31319","structural_s_K":"0.195917"},{"z_m":"2400.0","p_isothermal_Pa":"76232.500","p_lapse_Pa":"75625.661","Tb_ref_C":"91.97905","Tb_isothermal_C":"92.19228","Tb_lapse_C":"91.97905","structural_s_K":"0.213223"},{"z_m":"2500.0","p_isothermal_Pa":"75334.020","p_lapse_Pa":"74682.518","Tb_ref_C":"91.64482","Tb_isothermal_C":"91.87607","Tb_lapse_C":"91.64482","structural_s_K":"0.231254"},{"z_m":"2600.0","p_isothermal_Pa":"74446.130","p_lapse_Pa":"73748.921","Tb_ref_C":"91.31049","Tb_isothermal_C":"91.56050","Tb_lapse_C":"91.31049","structural_s_K":"0.250009"},{"z_m":"2700.0","p_isothermal_Pa":"73568.704","p_lapse_Pa":"72824.797","Tb_ref_C":"90.97606","Tb_isothermal_C":"91.24554","Tb_lapse_C":"90.97606","structural_s_K":"0.269487"},{"z_m":"2800.0","p_isothermal_Pa":"72701.620","p_lapse_Pa":"71910.072","Tb_ref_C":"90.64153","Tb_isothermal_C":"90.93121","Tb_lapse_C":"90.64153","structural_s_K":"0.289686"},{"z_m":"2900.0","p_isothermal_Pa":"71844.755","p_lapse_Pa":"71004.673","Tb_ref_C":"90.30690","Tb_isothermal_C":"90.61750","Tb_lapse_C":"90.30690","structural_s_K":"0.310606"},{"z_m":"3000.0","p_isothermal_Pa":"70997.990","p_lapse_Pa":"70108.526","Tb_ref_C":"89.97217","Tb_isothermal_C":"90.30442","Tb_lapse_C":"89.97217","structural_s_K":"0.332247"},{"z_m":"3100.0","p_isothermal_Pa":"70161.204","p_lapse_Pa":"69221.561","Tb_ref_C":"89.63734","Tb_isothermal_C":"89.99194","Tb_lapse_C":"89.63734","structural_s_K":"0.354607"},{"z_m":"3200.0","p_isothermal_Pa":"69334.281","p_lapse_Pa":"68343.703","Tb_ref_C":"89.30240","Tb_isothermal_C":"89.68009","Tb_lapse_C":"89.30240","structural_s_K":"0.377686"},{"z_m":"3300.0","p_isothermal_Pa":"68517.103","p_lapse_Pa":"67474.882","Tb_ref_C":"88.96736","Tb_isothermal_C":"89.36884","Tb_lapse_C":"88.96736","structural_s_K":"0.401483"},{"z_m":"3400.0","p_isothermal_Pa":"67709.558","p_lapse_Pa":"66615.026","Tb_ref_C":"88.63221","Tb_isothermal_C":"89.05821","Tb_lapse_C":"88.63221","structural_s_K":"0.425997"},{"z_m":"3500.0","p_isothermal_Pa":"66911.530","p_lapse_Pa":"65764.064","Tb_ref_C":"88.29696","Tb_isothermal_C":"88.74819","Tb_lapse_C":"88.29696","structural_s_K":"0.451227"},{"z_m":"3600.0","p_isothermal_Pa":"66122.907","p_lapse_Pa":"64921.926","Tb_ref_C":"87.96160","Tb_isothermal_C":"88.43877","Tb_lapse_C":"87.96160","structural_s_K":"0.477173"},{"z_m":"3700.0","p_isothermal_Pa":"65343.579","p_lapse_Pa":"64088.542","Tb_ref_C":"87.62613","Tb_isothermal_C":"88.12996","Tb_lapse_C":"87.62613","structural_s_K":"0.503835"},{"z_m":"3800.0","p_isothermal_Pa":"64573.437","p_lapse_Pa":"63263.841","Tb_ref_C":"87.29055","Tb_isothermal_C":"87.82176","Tb_lapse_C":"87.29055","structural_s_K":"0.531210"},{"z_m":"3900.0","p_isothermal_Pa":"63812.371","p_lapse_Pa":"62447.755","Tb_ref_C":"86.95485","Tb_isothermal_C":"87.51415","Tb_lapse_C":"86.95485","structural_s_K":"0.559299"},{"z_m":"4000.0","p_isothermal_Pa":"63060.276","p_lapse_Pa":"61640.214","Tb_ref_C":"86.61905","Tb_isothermal_C":"87.20715","Tb_lapse_C":"86.61905","structural_s_K":"0.588101"}]</script>
+<script type="application/json" id="data-routes" data-source="gen_art_experiment_4/full_method_out.json">{"points":[{"elevation_m":0.0,"split":"held_out","reference_K":"373.124300","pred":{"constant_L_clausius_clapeyron":"373.124000","td_L_clausius_clapeyron":"373.124000","antoine":"373.038675"},"err":{"constant_L_clausius_clapeyron":"-0.000300","td_L_clausius_clapeyron":"-0.000300","antoine":"-0.085625"}},{"elevation_m":50.0,"split":"held_out","reference_K":"372.958200","pred":{"constant_L_clausius_clapeyron":"372.955192","td_L_clausius_clapeyron":"372.955208","antoine":"372.873563"},"err":{"constant_L_clausius_clapeyron":"-0.003009","td_L_clausius_clapeyron":"-0.002992","antoine":"-0.084637"}},{"elevation_m":100.0,"split":"held_out","reference_K":"372.792083","pred":{"constant_L_clausius_clapeyron":"372.786346","td_L_clausius_clapeyron":"372.786412","antoine":"372.708428"},"err":{"constant_L_clausius_clapeyron":"-0.005737","td_L_clausius_clapeyron":"-0.005670","antoine":"-0.083655"}},{"elevation_m":150.0,"split":"held_out","reference_K":"372.625947","pred":{"constant_L_clausius_clapeyron":"372.617462","td_L_clausius_clapeyron":"372.617612","antoine":"372.543269"},"err":{"constant_L_clausius_clapeyron":"-0.008485","td_L_clausius_clapeyron":"-0.008335","antoine":"-0.082678"}},{"elevation_m":200.0,"split":"held_out","reference_K":"372.459793","pred":{"constant_L_clausius_clapeyron":"372.448540","td_L_clausius_clapeyron":"372.448806","antoine":"372.378086"},"err":{"constant_L_clausius_clapeyron":"-0.011253","td_L_clausius_clapeyron":"-0.010987","antoine":"-0.081707"}},{"elevation_m":250.0,"split":"held_out","reference_K":"372.293621","pred":{"constant_L_clausius_clapeyron":"372.279580","td_L_clausius_clapeyron":"372.279996","antoine":"372.212880"},"err":{"constant_L_clausius_clapeyron":"-0.014041","td_L_clausius_clapeyron":"-0.013625","antoine":"-0.080741"}},{"elevation_m":300.0,"split":"held_out","reference_K":"372.127430","pred":{"constant_L_clausius_clapeyron":"372.110582","td_L_clausius_clapeyron":"372.111180","antoine":"372.047650"},"err":{"constant_L_clausius_clapeyron":"-0.016848","td_L_clausius_clapeyron":"-0.016250","antoine":"-0.079780"}},{"elevation_m":350.0,"split":"held_out","reference_K":"371.961220","pred":{"constant_L_clausius_clapeyron":"371.941545","td_L_clausius_clapeyron":"371.942359","antoine":"371.882396"},"err":{"constant_L_clausius_clapeyron":"-0.019676","td_L_clausius_clapeyron":"-0.018861","antoine":"-0.078825"}},{"elevation_m":400.0,"split":"held_out","reference_K":"371.794992","pred":{"constant_L_clausius_clapeyron":"371.772470","td_L_clausius_clapeyron":"371.773533","antoine":"371.717117"},"err":{"constant_L_clausius_clapeyron":"-0.022523","td_L_clausius_clapeyron":"-0.021459","antoine":"-0.077875"}},{"elevation_m":450.0,"split":"held_out","reference_K":"371.628745","pred":{"constant_L_clausius_clapeyron":"371.603356","td_L_clausius_clapeyron":"371.604701","antoine":"371.551815"},"err":{"constant_L_clausius_clapeyron":"-0.025389","td_L_clausius_clapeyron":"-0.024044","antoine":"-0.076931"}},{"elevation_m":500.0,"split":"held_out","reference_K":"371.462479","pred":{"constant_L_clausius_clapeyron":"371.434203","td_L_clausius_clapeyron":"371.435863","antoine":"371.386488"},"err":{"constant_L_clausius_clapeyron":"-0.028276","td_L_clausius_clapeyron":"-0.026616","antoine":"-0.075992"}},{"elevation_m":550.0,"split":"held_out","reference_K":"371.296194","pred":{"constant_L_clausius_clapeyron":"371.265012","td_L_clausius_clapeyron":"371.267020","antoine":"371.221136"},"err":{"constant_L_clausius_clapeyron":"-0.031183","td_L_clausius_clapeyron":"-0.029175","antoine":"-0.075058"}},{"elevation_m":600.0,"split":"held_out","reference_K":"371.129890","pred":{"constant_L_clausius_clapeyron":"371.095781","td_L_clausius_clapeyron":"371.098170","antoine":"371.055760"},"err":{"constant_L_clausius_clapeyron":"-0.034109","td_L_clausius_clapeyron":"-0.031720","antoine":"-0.074130"}},{"elevation_m":650.0,"split":"held_out","reference_K":"370.963567","pred":{"constant_L_clausius_clapeyron":"370.926512","td_L_clausius_clapeyron":"370.929314","antoine":"370.890360"},"err":{"constant_L_clausius_clapeyron":"-0.037055","td_L_clausius_clapeyron":"-0.034253","antoine":"-0.073207"}},{"elevation_m":700.0,"split":"held_out","reference_K":"370.797224","pred":{"constant_L_clausius_clapeyron":"370.757203","td_L_clausius_clapeyron":"370.760451","antoine":"370.724934"},"err":{"constant_L_clausius_clapeyron":"-0.040021","td_L_clausius_clapeyron":"-0.036772","antoine":"-0.072289"}},{"elevation_m":750.0,"split":"held_out","reference_K":"370.630861","pred":{"constant_L_clausius_clapeyron":"370.587854","td_L_clausius_clapeyron":"370.591582","antoine":"370.559484"},"err":{"constant_L_clausius_clapeyron":"-0.043007","td_L_clausius_clapeyron":"-0.039279","antoine":"-0.071377"}},{"elevation_m":800.0,"split":"held_out","reference_K":"370.464479","pred":{"constant_L_clausius_clapeyron":"370.418467","td_L_clausius_clapeyron":"370.422706","antoine":"370.394009"},"err":{"constant_L_clausius_clapeyron":"-0.046012","td_L_clausius_clapeyron":"-0.041773","antoine":"-0.070470"}},{"elevation_m":850.0,"split":"held_out","reference_K":"370.298077","pred":{"constant_L_clausius_clapeyron":"370.249039","td_L_clausius_clapeyron":"370.253823","antoine":"370.228508"},"err":{"constant_L_clausius_clapeyron":"-0.049038","td_L_clausius_clapeyron":"-0.044253","antoine":"-0.069569"}},{"elevation_m":900.0,"split":"held_out","reference_K":"370.131655","pred":{"constant_L_clausius_clapeyron":"370.079572","td_L_clausius_clapeyron":"370.084933","antoine":"370.062982"},"err":{"constant_L_clausius_clapeyron":"-0.052083","td_L_clausius_clapeyron":"-0.046722","antoine":"-0.068672"}},{"elevation_m":950.0,"split":"held_out","reference_K":"369.965213","pred":{"constant_L_clausius_clapeyron":"369.910065","td_L_clausius_clapeyron":"369.916036","antoine":"369.897431"},"err":{"constant_L_clausius_clapeyron":"-0.055148","td_L_clausius_clapeyron":"-0.049177","antoine":"-0.067782"}},{"elevation_m":1000.0,"split":"held_out","reference_K":"369.798751","pred":{"constant_L_clausius_clapeyron":"369.740518","td_L_clausius_clapeyron":"369.747131","antoine":"369.731855"},"err":{"constant_L_clausius_clapeyron":"-0.058233","td_L_clausius_clapeyron":"-0.051619","antoine":"-0.066896"}},{"elevation_m":1050.0,"split":"held_out","reference_K":"369.632268","pred":{"constant_L_clausius_clapeyron":"369.570931","td_L_clausius_clapeyron":"369.578219","antoine":"369.566253"},"err":{"constant_L_clausius_clapeyron":"-0.061338","td_L_clausius_clapeyron":"-0.054049","antoine":"-0.066016"}},{"elevation_m":1100.0,"split":"held_out","reference_K":"369.465765","pred":{"constant_L_clausius_clapeyron":"369.401303","td_L_clausius_clapeyron":"369.409299","antoine":"369.400625"},"err":{"constant_L_clausius_clapeyron":"-0.064462","td_L_clausius_clapeyron":"-0.056467","antoine":"-0.065141"}},{"elevation_m":1150.0,"split":"held_out","reference_K":"369.299242","pred":{"constant_L_clausius_clapeyron":"369.231635","td_L_clausius_clapeyron":"369.240371","antoine":"369.234971"},"err":{"constant_L_clausius_clapeyron":"-0.067607","td_L_clausius_clapeyron":"-0.058871","antoine":"-0.064271"}},{"elevation_m":1200.0,"split":"held_out","reference_K":"369.132698","pred":{"constant_L_clausius_clapeyron":"369.061927","td_L_clausius_clapeyron":"369.071435","antoine":"369.069291"},"err":{"constant_L_clausius_clapeyron":"-0.070771","td_L_clausius_clapeyron":"-0.061263","antoine":"-0.063407"}},{"elevation_m":1250.0,"split":"held_out","reference_K":"368.966133","pred":{"constant_L_clausius_clapeyron":"368.892178","td_L_clausius_clapeyron":"368.902490","antoine":"368.903586"},"err":{"constant_L_clausius_clapeyron":"-0.073955","td_L_clausius_clapeyron":"-0.063643","antoine":"-0.062548"}},{"elevation_m":1300.0,"split":"held_out","reference_K":"368.799548","pred":{"constant_L_clausius_clapeyron":"368.722388","td_L_clausius_clapeyron":"368.733538","antoine":"368.737854"},"err":{"constant_L_clausius_clapeyron":"-0.077159","td_L_clausius_clapeyron":"-0.066010","antoine":"-0.061694"}},{"elevation_m":1350.0,"split":"held_out","reference_K":"368.632941","pred":{"constant_L_clausius_clapeyron":"368.552558","td_L_clausius_clapeyron":"368.564576","antoine":"368.572096"},"err":{"constant_L_clausius_clapeyron":"-0.080383","td_L_clausius_clapeyron":"-0.068365","antoine":"-0.060845"}},{"elevation_m":1400.0,"split":"held_out","reference_K":"368.466313","pred":{"constant_L_clausius_clapeyron":"368.382686","td_L_clausius_clapeyron":"368.395606","antoine":"368.406311"},"err":{"constant_L_clausius_clapeyron":"-0.083627","td_L_clausius_clapeyron":"-0.070707","antoine":"-0.060002"}},{"elevation_m":1450.0,"split":"held_out","reference_K":"368.299664","pred":{"constant_L_clausius_clapeyron":"368.212773","td_L_clausius_clapeyron":"368.226627","antoine":"368.240500"},"err":{"constant_L_clausius_clapeyron":"-0.086891","td_L_clausius_clapeyron":"-0.073037","antoine":"-0.059164"}},{"elevation_m":1500.0,"split":"held_out","reference_K":"368.132993","pred":{"constant_L_clausius_clapeyron":"368.042819","td_L_clausius_clapeyron":"368.057638","antoine":"368.074662"},"err":{"constant_L_clausius_clapeyron":"-0.090175","td_L_clausius_clapeyron":"-0.075355","antoine":"-0.058331"}},{"elevation_m":1550.0,"split":"held_out","reference_K":"367.966301","pred":{"constant_L_clausius_clapeyron":"367.872823","td_L_clausius_clapeyron":"367.888641","antoine":"367.908797"},"err":{"constant_L_clausius_clapeyron":"-0.093478","td_L_clausius_clapeyron":"-0.077661","antoine":"-0.057504"}},{"elevation_m":1600.0,"split":"held_out","reference_K":"367.799588","pred":{"constant_L_clausius_clapeyron":"367.702786","td_L_clausius_clapeyron":"367.719634","antoine":"367.742906"},"err":{"constant_L_clausius_clapeyron":"-0.096801","td_L_clausius_clapeyron":"-0.079954","antoine":"-0.056682"}},{"elevation_m":1650.0,"split":"held_out","reference_K":"367.632852","pred":{"constant_L_clausius_clapeyron":"367.532707","td_L_clausius_clapeyron":"367.550617","antoine":"367.576988"},"err":{"constant_L_clausius_clapeyron":"-0.100145","td_L_clausius_clapeyron":"-0.082235","antoine":"-0.055865"}},{"elevation_m":1700.0,"split":"held_out","reference_K":"367.466095","pred":{"constant_L_clausius_clapeyron":"367.362587","td_L_clausius_clapeyron":"367.381591","antoine":"367.411042"},"err":{"constant_L_clausius_clapeyron":"-0.103508","td_L_clausius_clapeyron":"-0.084504","antoine":"-0.055053"}},{"elevation_m":1750.0,"split":"held_out","reference_K":"367.299315","pred":{"constant_L_clausius_clapeyron":"367.192424","td_L_clausius_clapeyron":"367.212554","antoine":"367.245069"},"err":{"constant_L_clausius_clapeyron":"-0.106891","td_L_clausius_clapeyron":"-0.086761","antoine":"-0.054246"}},{"elevation_m":1800.0,"split":"held_out","reference_K":"367.132514","pred":{"constant_L_clausius_clapeyron":"367.022219","td_L_clausius_clapeyron":"367.043508","antoine":"367.079069"},"err":{"constant_L_clausius_clapeyron":"-0.110294","td_L_clausius_clapeyron":"-0.089006","antoine":"-0.053445"}},{"elevation_m":1850.0,"split":"held_out","reference_K":"366.965690","pred":{"constant_L_clausius_clapeyron":"366.851972","td_L_clausius_clapeyron":"366.874451","antoine":"366.913041"},"err":{"constant_L_clausius_clapeyron":"-0.113717","td_L_clausius_clapeyron":"-0.091239","antoine":"-0.052649"}},{"elevation_m":1900.0,"split":"held_out","reference_K":"366.798843","pred":{"constant_L_clausius_clapeyron":"366.681683","td_L_clausius_clapeyron":"366.705383","antoine":"366.746986"},"err":{"constant_L_clausius_clapeyron":"-0.117160","td_L_clausius_clapeyron":"-0.093460","antoine":"-0.051858"}},{"elevation_m":1950.0,"split":"held_out","reference_K":"366.631974","pred":{"constant_L_clausius_clapeyron":"366.511351","td_L_clausius_clapeyron":"366.536305","antoine":"366.580903"},"err":{"constant_L_clausius_clapeyron":"-0.120623","td_L_clausius_clapeyron":"-0.095669","antoine":"-0.051072"}},{"elevation_m":2000.0,"split":"held_out","reference_K":"366.465083","pred":{"constant_L_clausius_clapeyron":"366.340977","td_L_clausius_clapeyron":"366.367217","antoine":"366.414792"},"err":{"constant_L_clausius_clapeyron":"-0.124106","td_L_clausius_clapeyron":"-0.097866","antoine":"-0.050291"}},{"elevation_m":2050.0,"split":"held_out","reference_K":"366.298168","pred":{"constant_L_clausius_clapeyron":"366.170560","td_L_clausius_clapeyron":"366.198117","antoine":"366.248653"},"err":{"constant_L_clausius_clapeyron":"-0.127609","td_L_clausius_clapeyron":"-0.100052","antoine":"-0.049516"}},{"elevation_m":2100.0,"split":"held_out","reference_K":"366.131231","pred":{"constant_L_clausius_clapeyron":"366.000100","td_L_clausius_clapeyron":"366.029006","antoine":"366.082486"},"err":{"constant_L_clausius_clapeyron":"-0.131132","td_L_clausius_clapeyron":"-0.102225","antoine":"-0.048746"}},{"elevation_m":2150.0,"split":"held_out","reference_K":"365.964271","pred":{"constant_L_clausius_clapeyron":"365.829597","td_L_clausius_clapeyron":"365.859884","antoine":"365.916290"},"err":{"constant_L_clausius_clapeyron":"-0.134674","td_L_clausius_clapeyron":"-0.104387","antoine":"-0.047980"}},{"elevation_m":2200.0,"split":"held_out","reference_K":"365.797287","pred":{"constant_L_clausius_clapeyron":"365.659050","td_L_clausius_clapeyron":"365.690750","antoine":"365.750067"},"err":{"constant_L_clausius_clapeyron":"-0.138237","td_L_clausius_clapeyron":"-0.106537","antoine":"-0.047220"}},{"elevation_m":2250.0,"split":"held_out","reference_K":"365.630280","pred":{"constant_L_clausius_clapeyron":"365.488461","td_L_clausius_clapeyron":"365.521604","antoine":"365.583815"},"err":{"constant_L_clausius_clapeyron":"-0.141819","td_L_clausius_clapeyron":"-0.108676","antoine":"-0.046466"}},{"elevation_m":2300.0,"split":"held_out","reference_K":"365.463250","pred":{"constant_L_clausius_clapeyron":"365.317828","td_L_clausius_clapeyron":"365.352447","antoine":"365.417534"},"err":{"constant_L_clausius_clapeyron":"-0.145422","td_L_clausius_clapeyron":"-0.110803","antoine":"-0.045716"}},{"elevation_m":2350.0,"split":"held_out","reference_K":"365.296196","pred":{"constant_L_clausius_clapeyron":"365.147151","td_L_clausius_clapeyron":"365.183278","antoine":"365.251224"},"err":{"constant_L_clausius_clapeyron":"-0.149045","td_L_clausius_clapeyron":"-0.112918","antoine":"-0.044971"}},{"elevation_m":2400.0,"split":"held_out","reference_K":"365.129118","pred":{"constant_L_clausius_clapeyron":"364.976431","td_L_clausius_clapeyron":"365.014096","antoine":"365.084886"},"err":{"constant_L_clausius_clapeyron":"-0.152687","td_L_clausius_clapeyron":"-0.115022","antoine":"-0.044232"}},{"elevation_m":2450.0,"split":"held_out","reference_K":"364.962017","pred":{"constant_L_clausius_clapeyron":"364.805667","td_L_clausius_clapeyron":"364.844903","antoine":"364.918519"},"err":{"constant_L_clausius_clapeyron":"-0.156350","td_L_clausius_clapeyron":"-0.117114","antoine":"-0.043498"}},{"elevation_m":2500.0,"split":"held_out","reference_K":"364.794891","pred":{"constant_L_clausius_clapeyron":"364.634859","td_L_clausius_clapeyron":"364.675696","antoine":"364.752122"},"err":{"constant_L_clausius_clapeyron":"-0.160032","td_L_clausius_clapeyron":"-0.119195","antoine":"-0.042769"}},{"elevation_m":2550.0,"split":"held_out","reference_K":"364.627741","pred":{"constant_L_clausius_clapeyron":"364.464007","td_L_clausius_clapeyron":"364.506477","antoine":"364.585697"},"err":{"constant_L_clausius_clapeyron":"-0.163734","td_L_clausius_clapeyron":"-0.121264","antoine":"-0.042044"}},{"elevation_m":2600.0,"split":"held_out","reference_K":"364.460567","pred":{"constant_L_clausius_clapeyron":"364.293110","td_L_clausius_clapeyron":"364.337245","antoine":"364.419242"},"err":{"constant_L_clausius_clapeyron":"-0.167457","td_L_clausius_clapeyron":"-0.123322","antoine":"-0.041326"}},{"elevation_m":2650.0,"split":"held_out","reference_K":"364.293369","pred":{"constant_L_clausius_clapeyron":"364.122169","td_L_clausius_clapeyron":"364.168000","antoine":"364.252757"},"err":{"constant_L_clausius_clapeyron":"-0.171199","td_L_clausius_clapeyron":"-0.125369","antoine":"-0.040612"}},{"elevation_m":2700.0,"split":"held_out","reference_K":"364.126146","pred":{"constant_L_clausius_clapeyron":"363.951184","td_L_clausius_clapeyron":"363.998741","antoine":"364.086243"},"err":{"constant_L_clausius_clapeyron":"-0.174962","td_L_clausius_clapeyron":"-0.127404","antoine":"-0.039903"}},{"elevation_m":2750.0,"split":"held_out","reference_K":"363.958898","pred":{"constant_L_clausius_clapeyron":"363.780154","td_L_clausius_clapeyron":"363.829470","antoine":"363.919699"},"err":{"constant_L_clausius_clapeyron":"-0.178744","td_L_clausius_clapeyron":"-0.129429","antoine":"-0.039199"}},{"elevation_m":2800.0,"split":"held_out","reference_K":"363.791626","pred":{"constant_L_clausius_clapeyron":"363.609079","td_L_clausius_clapeyron":"363.660184","antoine":"363.753126"},"err":{"constant_L_clausius_clapeyron":"-0.182547","td_L_clausius_clapeyron":"-0.131442","antoine":"-0.038500"}},{"elevation_m":2850.0,"split":"held_out","reference_K":"363.624329","pred":{"constant_L_clausius_clapeyron":"363.437959","td_L_clausius_clapeyron":"363.490885","antoine":"363.586522"},"err":{"constant_L_clausius_clapeyron":"-0.186369","td_L_clausius_clapeyron":"-0.133443","antoine":"-0.037807"}},{"elevation_m":2900.0,"split":"held_out","reference_K":"363.457006","pred":{"constant_L_clausius_clapeyron":"363.266794","td_L_clausius_clapeyron":"363.321572","antoine":"363.419888"},"err":{"constant_L_clausius_clapeyron":"-0.190212","td_L_clausius_clapeyron":"-0.135434","antoine":"-0.037118"}},{"elevation_m":2950.0,"split":"held_out","reference_K":"363.289658","pred":{"constant_L_clausius_clapeyron":"363.095584","td_L_clausius_clapeyron":"363.152245","antoine":"363.253224"},"err":{"constant_L_clausius_clapeyron":"-0.194075","td_L_clausius_clapeyron":"-0.137413","antoine":"-0.036434"}},{"elevation_m":3000.0,"split":"in_sample","reference_K":"363.122285","pred":{"constant_L_clausius_clapeyron":"362.924328","td_L_clausius_clapeyron":"362.982903","antoine":"363.086529"},"err":{"constant_L_clausius_clapeyron":"-0.197957","td_L_clausius_clapeyron":"-0.139382","antoine":"-0.035756"}},{"elevation_m":3050.0,"split":"in_sample","reference_K":"362.954887","pred":{"constant_L_clausius_clapeyron":"362.753027","td_L_clausius_clapeyron":"362.813548","antoine":"362.919804"},"err":{"constant_L_clausius_clapeyron":"-0.201860","td_L_clausius_clapeyron":"-0.141339","antoine":"-0.035082"}},{"elevation_m":3100.0,"split":"in_sample","reference_K":"362.787463","pred":{"constant_L_clausius_clapeyron":"362.581680","td_L_clausius_clapeyron":"362.644177","antoine":"362.753049"},"err":{"constant_L_clausius_clapeyron":"-0.205783","td_L_clausius_clapeyron":"-0.143286","antoine":"-0.034414"}},{"elevation_m":3150.0,"split":"in_sample","reference_K":"362.620013","pred":{"constant_L_clausius_clapeyron":"362.410287","td_L_clausius_clapeyron":"362.474791","antoine":"362.586262"},"err":{"constant_L_clausius_clapeyron":"-0.209725","td_L_clausius_clapeyron":"-0.145221","antoine":"-0.033750"}},{"elevation_m":3200.0,"split":"in_sample","reference_K":"362.452537","pred":{"constant_L_clausius_clapeyron":"362.238849","td_L_clausius_clapeyron":"362.305391","antoine":"362.419445"},"err":{"constant_L_clausius_clapeyron":"-0.213688","td_L_clausius_clapeyron":"-0.147146","antoine":"-0.033092"}},{"elevation_m":3250.0,"split":"in_sample","reference_K":"362.285035","pred":{"constant_L_clausius_clapeyron":"362.067364","td_L_clausius_clapeyron":"362.135975","antoine":"362.252597"},"err":{"constant_L_clausius_clapeyron":"-0.217671","td_L_clausius_clapeyron":"-0.149060","antoine":"-0.032438"}},{"elevation_m":3300.0,"split":"in_sample","reference_K":"362.117507","pred":{"constant_L_clausius_clapeyron":"361.895833","td_L_clausius_clapeyron":"361.966544","antoine":"362.085717"},"err":{"constant_L_clausius_clapeyron":"-0.221674","td_L_clausius_clapeyron":"-0.150963","antoine":"-0.031790"}},{"elevation_m":3350.0,"split":"in_sample","reference_K":"361.949952","pred":{"constant_L_clausius_clapeyron":"361.724256","td_L_clausius_clapeyron":"361.797098","antoine":"361.918806"},"err":{"constant_L_clausius_clapeyron":"-0.225697","td_L_clausius_clapeyron":"-0.152855","antoine":"-0.031146"}},{"elevation_m":3400.0,"split":"in_sample","reference_K":"361.782372","pred":{"constant_L_clausius_clapeyron":"361.552632","td_L_clausius_clapeyron":"361.627635","antoine":"361.751864"},"err":{"constant_L_clausius_clapeyron":"-0.229740","td_L_clausius_clapeyron":"-0.154736","antoine":"-0.030508"}},{"elevation_m":3450.0,"split":"in_sample","reference_K":"361.614764","pred":{"constant_L_clausius_clapeyron":"361.380961","td_L_clausius_clapeyron":"361.458157","antoine":"361.584890"},"err":{"constant_L_clausius_clapeyron":"-0.233803","td_L_clausius_clapeyron":"-0.156607","antoine":"-0.029874"}},{"elevation_m":3500.0,"split":"in_sample","reference_K":"361.447130","pred":{"constant_L_clausius_clapeyron":"361.209243","td_L_clausius_clapeyron":"361.288663","antoine":"361.417884"},"err":{"constant_L_clausius_clapeyron":"-0.237887","td_L_clausius_clapeyron":"-0.158467","antoine":"-0.029245"}},{"elevation_m":3550.0,"split":"in_sample","reference_K":"361.279469","pred":{"constant_L_clausius_clapeyron":"361.037479","td_L_clausius_clapeyron":"361.119152","antoine":"361.250847"},"err":{"constant_L_clausius_clapeyron":"-0.241990","td_L_clausius_clapeyron":"-0.160316","antoine":"-0.028622"}},{"elevation_m":3600.0,"split":"in_sample","reference_K":"361.111780","pred":{"constant_L_clausius_clapeyron":"360.865667","td_L_clausius_clapeyron":"360.949625","antoine":"361.083778"},"err":{"constant_L_clausius_clapeyron":"-0.246113","td_L_clausius_clapeyron":"-0.162155","antoine":"-0.028003"}},{"elevation_m":3650.0,"split":"in_sample","reference_K":"360.944065","pred":{"constant_L_clausius_clapeyron":"360.693808","td_L_clausius_clapeyron":"360.780081","antoine":"360.916676"},"err":{"constant_L_clausius_clapeyron":"-0.250257","td_L_clausius_clapeyron":"-0.163983","antoine":"-0.027389"}},{"elevation_m":3700.0,"split":"in_sample","reference_K":"360.776322","pred":{"constant_L_clausius_clapeyron":"360.521902","td_L_clausius_clapeyron":"360.610521","antoine":"360.749542"},"err":{"constant_L_clausius_clapeyron":"-0.254421","td_L_clausius_clapeyron":"-0.165801","antoine":"-0.026780"}},{"elevation_m":3750.0,"split":"in_sample","reference_K":"360.608552","pred":{"constant_L_clausius_clapeyron":"360.349948","td_L_clausius_clapeyron":"360.440943","antoine":"360.582376"},"err":{"constant_L_clausius_clapeyron":"-0.258604","td_L_clausius_clapeyron":"-0.167608","antoine":"-0.026176"}},{"elevation_m":3800.0,"split":"in_sample","reference_K":"360.440754","pred":{"constant_L_clausius_clapeyron":"360.177946","td_L_clausius_clapeyron":"360.271349","antoine":"360.415177"},"err":{"constant_L_clausius_clapeyron":"-0.262808","td_L_clausius_clapeyron":"-0.169405","antoine":"-0.025577"}},{"elevation_m":3850.0,"split":"in_sample","reference_K":"360.272928","pred":{"constant_L_clausius_clapeyron":"360.005896","td_L_clausius_clapeyron":"360.101737","antoine":"360.247946"},"err":{"constant_L_clausius_clapeyron":"-0.267032","td_L_clausius_clapeyron":"-0.171192","antoine":"-0.024982"}},{"elevation_m":3900.0,"split":"in_sample","reference_K":"360.105075","pred":{"constant_L_clausius_clapeyron":"359.833798","td_L_clausius_clapeyron":"359.932107","antoine":"360.080682"},"err":{"constant_L_clausius_clapeyron":"-0.271276","td_L_clausius_clapeyron":"-0.172968","antoine":"-0.024393"}},{"elevation_m":3950.0,"split":"in_sample","reference_K":"359.937193","pred":{"constant_L_clausius_clapeyron":"359.661653","td_L_clausius_clapeyron":"359.762460","antoine":"359.913385"},"err":{"constant_L_clausius_clapeyron":"-0.275541","td_L_clausius_clapeyron":"-0.174733","antoine":"-0.023808"}},{"elevation_m":4000.0,"split":"in_sample","reference_K":"359.769283","pred":{"constant_L_clausius_clapeyron":"359.489458","td_L_clausius_clapeyron":"359.592795","antoine":"359.746055"},"err":{"constant_L_clausius_clapeyron":"-0.279825","td_L_clausius_clapeyron":"-0.176489","antoine":"-0.023228"}}]}</script>
+<script type="application/json" id="data-summary" data-source="gen_art_experiment_4/results/summary.json">{"route_errors":{"constant_L_clausius_clapeyron":{"held_out":{"n":60,"rms_K":0.10777978423116705,"max_abs_K":0.19407455644955007,"altitude_of_max_m":2950.0},"full_grid":{"n":81,"rms_K":0.1532353055447269,"max_abs_K":0.27982496115646427,"altitude_of_max_m":4000.0}},"td_L_clausius_clapeyron":{"held_out":{"n":60,"rms_K":0.08279387122167842,"max_abs_K":0.13741345090045343,"altitude_of_max_m":2950.0},"full_grid":{"n":81,"rms_K":0.10772569753405023,"max_abs_K":0.1764885898984403,"altitude_of_max_m":4000.0}},"antoine":{"held_out":{"n":60,"rms_K":0.06126224680411709,"max_abs_K":0.08562468817433455,"altitude_of_max_m":0.0},"full_grid":{"n":81,"rms_K":0.054835158030515765,"max_abs_K":0.08562468817433455,"altitude_of_max_m":0.0}}}}</script>
+<script type="application/json" id="data-measured" data-source="gen_art_experiment_3/data/candidates.csv and gen_art_experiment_3/full_method_out.json">{"accepted_sites":0,"candidates":[{"id":"C01","type":"handbook/calculator table","elevation_given":"yes","station_pressure_given":"no","boiling_temp_given":"yes","uncertainty_given":"no","status":"dropped","reason":"equation-derived (steam-table calculation; no measured origin stated)"},{"id":"C02","type":"calculator table","elevation_given":"yes","station_pressure_given":"yes (computed)","boiling_temp_given":"yes (computed)","uncertainty_given":"no","status":"dropped","reason":"equation-derived"},{"id":"C03","type":"infographic PDF","elevation_given":"yes","station_pressure_given":"no","boiling_temp_given":"yes","uncertainty_given":"no","status":"dropped","reason":"equation-derived; no station pressure"},{"id":"C04","type":"textbook table (Denver 633 mmHg)","elevation_given":"yes","station_pressure_given":"yes","boiling_temp_given":"yes","uncertainty_given":"no","status":"dropped","reason":"provenance not stated as measurement; no barometer uncertainty"},{"id":"C05","type":"extension-service empirical formula","elevation_given":"no","station_pressure_given":"no","boiling_temp_given":"no","uncertainty_given":"no","status":"dropped","reason":"empirical formula fit; no measured records"},{"id":"C06","type":"history essay (Lankford and Fox 2017)","elevation_given":"unknown","station_pressure_given":"unknown","boiling_temp_given":"unknown","uncertainty_given":"unknown","status":"dropped","reason":"secondary history essay not checked for measured records with all four fields; not verified"}]}</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var BLUE = '#0072B2', ORANGE = '#E69F00', GREEN = '#009E73', INK = '#1b1b1b';
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function $(s) { return document.querySelector(s); }
+  function load(id) { return JSON.parse(document.getElementById(id).textContent); }
+  function fmtInt(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function signed(v, d) { return (v < 0 ? '−' : '+') + Math.abs(v).toFixed(d); }
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(SVGNS, name);
+    Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  var mctx = document.createElement('canvas').getContext('2d');
+  function textW(s, px) {
+    mctx.font = (px || 14) + 'px system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
+    return mctx.measureText(s).width;
+  }
+  function ceilTo(v, step) { return Math.ceil(v / step - 1e-9) * step; }
+  function ticks(max, step) { var out = []; for (var t = 0; t <= max + 1e-9; t += step) out.push(Math.round(t * 1e6) / 1e6); return out; }
+
+  /* ---------- data (embedded from the run's output files) ---------- */
+  var GRID = load('data-grid').map(function (r) {
+    return { z: +r.z_m, pIso: +r.p_isothermal_Pa, pLapse: +r.p_lapse_Pa, ref: +r.Tb_ref_C,
+             iso: +r.Tb_isothermal_C, lapse: +r.Tb_lapse_C, s: +r.structural_s_K };
+  });
+  var ROUTES = [
+    { key: 'constant_L_clausius_clapeyron', name: 'Constant-latent-heat Clausius-Clapeyron', short: 'Constant L', color: BLUE },
+    { key: 'td_L_clausius_clapeyron', name: 'Temperature-dependent-latent-heat Clausius-Clapeyron', short: 'Varying L', color: ORANGE },
+    { key: 'antoine', name: 'Antoine refit (273.15 to 363.15 K)', short: 'Antoine', color: GREEN }
+  ];
+  var RP = load('data-routes');              /* {points:[{elevation_m, split, reference_K, pred:{}, err:{}}]} */
+  var POINTS = RP.points.map(function (p) {
+    var o = { z: +p.elevation_m, split: p.split, ref: +p.reference_K, pred: {}, err: {} };
+    ROUTES.forEach(function (r) { o.pred[r.key] = +p.pred[r.key]; o.err[r.key] = +p.err[r.key]; });
+    return o;
+  }).sort(function (a, b) { return a.z - b.z; });
+  var SUM = load('data-summary');            /* route_errors from the run's summary file */
+  var MEAS = load('data-measured');          /* {accepted_sites, candidates:[...]} */
+
+  function gridAt(z) { return GRID.filter(function (g) { return g.z === z; })[0]; }
+  function maxErr(p) { return Math.max.apply(null, ROUTES.map(function (r) { return Math.abs(p.err[r.key]); })); }
+  function splitLabel(s) { return s === 'held_out' ? 'held-out' : 'in-sample'; }
+
+  /* ---------- glossary and tooltips (paper wording) ---------- */
+  var GLOSS = {
+    'structural term': 'The isothermal boiling temperature minus the lapse-rate boiling temperature. It is the error the isothermal form adds to a boiling estimate. The saturation equation cancels in the difference.',
+    'isothermal model': 'The barometric formula that assumes a single scale height, 8434.5 m, so pressure falls exponentially with altitude.',
+    'lapse-rate model': 'The barometric formula that follows the troposphere temperature gradient of the U.S. Standard Atmosphere 1976. Its pressure is the reference pressure in this paper.',
+    'reference saturation curve': 'The IAPWS industrial formulation saturation curve, taken through the iapws package. It is a standard, not a measurement, so agreement with it shows internal consistency only.',
+    'held-out points': 'Grid points whose reference boiling temperature lies between 363.15 and 373.15 K. The Antoine fit does not use them, so error on them tests the fit on new points.',
+    'Antoine equation': 'An empirical fit of vapour pressure against temperature. Here its three constants are refitted to the reference curve on 273.15 to 363.15 K.',
+    'Clausius-Clapeyron relation': 'A relation between vapour pressure and temperature through the latent heat. The constant form holds the latent heat fixed, and the temperature-dependent form lets it vary.',
+    'RMS error': 'The root mean square of the errors over the points. Large errors weigh more than in a plain mean.',
+    'maximum absolute error': 'The largest error over the points, with the sign ignored.',
+    'structural target': 'The 0.5 K limit on the structural term, fixed before the calculation. The 0.6 K total error bound is a separate budget for measured residuals and is not tested here.',
+    'Standard Atmosphere': 'The U.S. Standard Atmosphere 1976, the pressure reference against which the lapse-rate model is checked.'
+  };
+  var tip = $('#tip');
+  var tipOwner = null;
+  function placeTip(trigger) {
+    var r = trigger.getBoundingClientRect();
+    tip.style.left = '0px'; tip.style.top = '0px';
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.min(Math.max(8, r.left), window.innerWidth - w - 8);
+    var top = r.bottom + 8;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 8);
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  }
+  function openTip(trigger) {
+    if (tipOwner && tipOwner !== trigger) tipOwner.removeAttribute('aria-describedby');
+    tipOwner = trigger;
+    tip.textContent = GLOSS[trigger.getAttribute('data-term')];
+    tip.classList.add('open');
+    trigger.setAttribute('aria-describedby', 'tip');
+    placeTip(trigger);
+  }
+  function closeTip() {
+    if (tipOwner) tipOwner.removeAttribute('aria-describedby');
+    tipOwner = null;
+    tip.classList.remove('open');
+  }
+  function bindTerms(root) {
+    root.querySelectorAll('button.term').forEach(function (b) {
+      b.addEventListener('pointerenter', function (e) { if (e.pointerType !== 'touch') openTip(b); });
+      b.addEventListener('pointerleave', function (e) { if (e.pointerType !== 'touch') closeTip(); });
+      b.addEventListener('focus', function () { openTip(b); });
+      b.addEventListener('blur', function () { if (tipOwner === b) closeTip(); });
+      b.addEventListener('click', function () { openTip(b); });
+    });
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTip(); });
+  document.addEventListener('pointerdown', function (e) {
+    if (tipOwner && !(e.target.closest && e.target.closest('button.term'))) closeTip();
+  });
+  window.addEventListener('resize', function () { if (tipOwner) placeTip(tipOwner); });
+  var gl = $('#glossary');
+  Object.keys(GLOSS).forEach(function (k) {
+    var dt = document.createElement('dt'); dt.textContent = k;
+    var dd = document.createElement('dd'); dd.textContent = GLOSS[k];
+    gl.appendChild(dt); gl.appendChild(dd);
+  });
+  bindTerms(document);
+
+  /* ---------- chart drawing (inline SVG, widths measured from the text) ---------- */
+  function drawLine(host, o) {
+    var W = Math.max(280, Math.min(host.clientWidth || 640, 920));
+    var H = o.height || 300;
+    var yW = Math.max.apply(null, o.yTicks.map(function (t) { return textW(o.fmtY(t), 14); }));
+    var left = Math.ceil(34 + yW), right = 22, top = 14, bottom = 52;
+    var pw = W - left - right, ph = H - top - bottom;
+    var sx = function (v) { return left + (v - o.xMin) / (o.xMax - o.xMin) * pw; };
+    var sy = function (v) { return top + ph - (v - o.yMin) / (o.yMax - o.yMin) * ph; };
+    var svg = el('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': o.label, 'class': 'chart' });
+    host.replaceChildren(svg);
+    o.yTicks.forEach(function (t) {
+      el('line', { x1: left, x2: W - right, y1: sy(t), y2: sy(t), 'class': 'grid' }, svg);
+      el('text', { x: left - 8, y: sy(t) + 5, 'text-anchor': 'end', 'class': 'tick' }, svg).textContent = o.fmtY(t);
+    });
+    o.xTicks.forEach(function (t) {
+      el('text', { x: sx(t), y: top + ph + 18, 'text-anchor': 'middle', 'class': 'tick' }, svg).textContent = o.fmtX(t);
+    });
+    el('line', { x1: left, x2: left, y1: top, y2: top + ph, 'class': 'axis' }, svg);
+    el('line', { x1: left, x2: W - right, y1: top + ph, y2: top + ph, 'class': 'axis' }, svg);
+    el('text', { x: left + pw / 2, y: H - 10, 'text-anchor': 'middle', 'class': 'axis-title' }, svg).textContent = o.xTitle;
+    el('text', { x: 16, y: top + ph / 2, 'text-anchor': 'middle', 'class': 'axis-title', transform: 'rotate(-90 16 ' + (top + ph / 2) + ')' }, svg).textContent = o.yTitle;
+    if (o.hline) {
+      var hy = sy(o.hline.y);
+      el('line', { x1: left, x2: W - right, y1: hy, y2: hy, 'class': 'target' }, svg);
+      el('text', { x: left + 8, y: hy - 7, 'text-anchor': 'start', 'class': 'label-note' }, svg).textContent = o.hline.label;
+    }
+    o.series.forEach(function (s) {
+      if (s.points.length > 1) {
+        var d = s.points.map(function (p, i) { return (i ? 'L' : 'M') + sx(p.x).toFixed(1) + ' ' + sy(p.y).toFixed(1); }).join(' ');
+        el('path', { d: d, fill: 'none', stroke: s.color, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
+      }
+      s.points.forEach(function (p) {
+        var cx = sx(p.x), cy = sy(p.y);
+        var g = el('g', {}, svg);
+        var hitR = Math.max(5, Math.min(14, pw / Math.max(1, o.series[0].points.length - 1) / 2));
+        var hit = el('circle', { cx: cx, cy: cy, r: hitR, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': p.label, 'class': 'hit' }, g);
+        var dot = el('circle', { cx: cx, cy: cy, r: 4, fill: s.color, 'class': 'dot', 'pointer-events': 'none' }, g);
+        hit.addEventListener('pointerenter', function () { o.onShow && o.onShow(p, s); });
+        hit.addEventListener('focus', function () { dot.classList.add('is-focus'); o.onShow && o.onShow(p, s); });
+        hit.addEventListener('blur', function () { dot.classList.remove('is-focus'); });
+        hit.addEventListener('click', function () { o.onShow && o.onShow(p, s); o.onSelect && o.onSelect(p, s); });
+        hit.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); o.onSelect && o.onSelect(p, s); }
+        });
+      });
+    });
+    svg._sx = sx; svg._sy = sy;
+    if (o.selectedX != null && o.series[0]) {
+      setSelRing(svg, o.series[0].points, o.selectedX);
+    }
+    return svg;
+  }
+  function setSelRing(svg, pts, x) {
+    svg.querySelectorAll('.sel').forEach(function (n) { n.parentNode.removeChild(n); });
+    var p = pts.filter(function (q) { return q.x === x; })[0];
+    if (!p) return;
+    var ring = el('circle', { cx: svg._sx(p.x), cy: svg._sy(p.y), r: 9, fill: 'none', 'class': 'sel', 'pointer-events': 'none' }, svg);
+  }
+  function drawBars(host, o) {
+    var W = Math.max(280, Math.min(host.clientWidth || 640, 920));
+    var H = 300;
+    var yMax = ceilTo(Math.max.apply(null, o.bars.map(function (b) { return b.value; })) * 1.15, 0.05);
+    var yTicks = ticks(yMax, 0.05);
+    var yW = Math.max.apply(null, yTicks.map(function (t) { return textW(t.toFixed(2), 14); }));
+    var left = Math.ceil(34 + yW), right = 22, top = 18, bottom = 52;
+    var pw = W - left - right, ph = H - top - bottom;
+    var sy = function (v) { return top + ph - v / yMax * ph; };
+    var svg = el('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': o.label, 'class': 'chart' });
+    host.replaceChildren(svg);
+    yTicks.forEach(function (t) {
+      el('line', { x1: left, x2: W - right, y1: sy(t), y2: sy(t), 'class': 'grid' }, svg);
+      el('text', { x: left - 8, y: sy(t) + 5, 'text-anchor': 'end', 'class': 'tick' }, svg).textContent = t.toFixed(2);
+    });
+    el('line', { x1: left, x2: left, y1: top, y2: top + ph, 'class': 'axis' }, svg);
+    el('line', { x1: left, x2: W - right, y1: top + ph, y2: top + ph, 'class': 'axis' }, svg);
+    var band = pw / o.bars.length;
+    o.bars.forEach(function (b, i) {
+      var bw = Math.min(90, band * 0.5);
+      var x = left + band * i + (band - bw) / 2;
+      var y = sy(b.value);
+      var rect = el('rect', { x: x, y: y, width: bw, height: top + ph - y, fill: b.color, tabindex: 0, role: 'img', 'aria-label': b.label + ': ' + b.value.toFixed(3) + ' K', 'class': 'bar' }, svg);
+      rect.addEventListener('pointerenter', function () { o.onShow(b); });
+      rect.addEventListener('focus', function () { rect.classList.add('is-focus'); o.onShow(b); });
+      rect.addEventListener('blur', function () { rect.classList.remove('is-focus'); });
+      rect.addEventListener('click', function () { o.onShow(b); });
+      el('text', { x: x + bw / 2, y: y - 7, 'text-anchor': 'middle', 'class': 'barlab' }, svg).textContent = b.value.toFixed(3);
+      el('text', { x: left + band * i + band / 2, y: top + ph + 20, 'text-anchor': 'middle', 'class': 'catlab' }, svg).textContent = b.short;
+    });
+    el('text', { x: left + pw / 2, y: H - 10, 'text-anchor': 'middle', 'class': 'axis-title' }, svg).textContent = o.xTitle;
+    el('text', { x: 16, y: top + ph / 2, 'text-anchor': 'middle', 'class': 'axis-title', transform: 'rotate(-90 16 ' + (top + ph / 2) + ')' }, svg).textContent = o.yTitle;
+    return svg;
+  }
+
+  /* ---------- finding ---------- */
+  var selZ = 4000;
+  var mode = 'structural';
+  var alt = $('#alt');
+  var findingHost = $('#finding-chart');
+  var findingSvg = null;
+  function renderFindingChart() {
+    var structural = mode === 'structural';
+    var series = structural ? [{
+      name: 'Structural term', color: BLUE,
+      points: GRID.map(function (g) { return { x: g.z, y: g.s, label: fmtInt(g.z) + ' m: structural term ' + g.s.toFixed(3) + ' K' }; })
+    }] : [{
+      name: 'Isothermal model', color: BLUE,
+      points: GRID.map(function (g) { return { x: g.z, y: g.iso, label: fmtInt(g.z) + ' m: isothermal model ' + g.iso.toFixed(2) + ' °C' }; })
+    }, {
+      name: 'Lapse-rate model (reference)', color: INK,
+      points: GRID.map(function (g) { return { x: g.z, y: g.lapse, label: fmtInt(g.z) + ' m: lapse-rate model ' + g.lapse.toFixed(2) + ' °C' }; })
+    }];
+    var lg = $('#finding-legend');
+    lg.replaceChildren();
+    series.forEach(function (s) {
+      var span = document.createElement('span');
+      var sw = document.createElement('i'); sw.className = 'swatch'; sw.style.background = s.color;
+      span.appendChild(sw); span.appendChild(document.createTextNode(s.name));
+      lg.appendChild(span);
+    });
+    findingSvg = drawLine(findingHost, {
+      label: structural ? 'Structural term against altitude, with the 0.5 K structural target' : 'Boiling temperature against altitude for the isothermal and lapse-rate models',
+      xMin: 0, xMax: 4000, xTicks: [0, 1000, 2000, 3000, 4000], fmtX: function (t) { return fmtInt(t); },
+      xTitle: 'Altitude (m)',
+      yMin: structural ? 0 : 84, yMax: structural ? 0.7 : 100,
+      yTicks: structural ? ticks(0.7, 0.1) : [84, 88, 92, 96, 100],
+      fmtY: structural ? function (t) { return t.toFixed(1); } : function (t) { return t.toFixed(0); },
+      yTitle: structural ? 'Structural term (K)' : 'Boiling temperature (°C)',
+      hline: structural ? { y: 0.5, label: '0.5 K structural target' } : null,
+      series: series, selectedX: selZ,
+      onShow: function (p) { $('#finding-readout').textContent = p.label; },
+      onSelect: function (p) { setSelZ(p.x); }
+    });
+    if (structural) $('#headline-label').textContent = 'Structural term at ' + fmtInt(selZ) + ' m';
+  }
+  function setSelZ(z) {
+    selZ = z; alt.value = String(z);
+    renderFindingText();
+    if (findingSvg) setSelRing(findingSvg, GRID.map(function (g) { return { x: g.z, y: mode === 'structural' ? g.s : g.iso }; }), selZ);
+  }
+  function renderFindingText() {
+    var g = gridAt(selZ);
+    $('#alt-out').textContent = fmtInt(selZ) + ' m';
+    $('#headline-num').textContent = g.s.toFixed(3) + ' K';
+    $('#headline-label').textContent = 'Structural term at ' + fmtInt(selZ) + ' m';
+    var d = g.s - 0.5;
+    $('#finding-take').textContent = 'At ' + fmtInt(selZ) + ' m the isothermal form adds ' + g.s.toFixed(3) + ' K to the boiling estimate, ' +
+      (d > 0 ? d.toFixed(3) + ' K above' : (-d).toFixed(3) + ' K below') + ' the 0.5 K structural target.';
+    $('#finding-readout').textContent = 'At ' + fmtInt(selZ) + ' m: isothermal model ' + g.iso.toFixed(2) + ' °C, lapse-rate model ' +
+      g.lapse.toFixed(2) + ' °C, pressures ' + fmtInt(g.pIso) + ' Pa and ' + fmtInt(g.pLapse) + ' Pa. Structural term ' + g.s.toFixed(3) + ' K.';
+  }
+  alt.addEventListener('input', function () { setSelZ(+alt.value); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="finding-mode"]'), function (r) {
+    r.addEventListener('change', function () { if (r.checked) { mode = r.value; renderFindingChart(); } });
+  });
+
+  /* ---------- how it works: stepper ---------- */
+  var stageIdx = 0;
+  var EX = gridAt(4000);
+  var STAGES = [
+    { t: 'Altitude in', sub: 'Input',
+      dl: [['Input', 'Altitude z = 4,000 m, the top of the 0 to 4,000 m grid'],
+           ['What is done', 'Nothing yet. The altitude is the only input both models share.'],
+           ['Why', 'The two barometric models differ only in how pressure falls with altitude, so the same altitude feeds both.']] },
+    { t: 'Altitude to pressure', sub: 'Barometric models',
+      dl: [['Input', 'Altitude 4,000 m'],
+           ['What is done', 'The isothermal model uses one scale height, H = 8434.5 m. The lapse-rate model follows the troposphere temperature gradient of 6.5 K per km.'],
+           ['Output, recorded', 'Isothermal pressure ' + fmtInt(EX.pIso) + ' Pa. Lapse-rate pressure ' + fmtInt(EX.pLapse) + ' Pa.'],
+           ['Why', 'The lapse-rate form reproduces the standard atmosphere, so its pressure is the reference pressure.']] },
+    { t: 'Pressure to boiling temperature', sub: 'Saturation inversion',
+      dl: [['Input', 'The two pressures from stage 2'],
+           ['What is done', 'Each pressure is inverted through the Wagner-Pruss (IAPWS-95) saturation equation by bisection, so each gives one boiling temperature.'],
+           ['Output, recorded', 'Isothermal model ' + EX.iso.toFixed(2) + ' °C. Lapse-rate model, the reference, ' + EX.lapse.toFixed(2) + ' °C.'],
+           ['Why', 'Both models use the same saturation equation, so it cancels in the difference that follows.']] },
+    { t: 'Structural term', sub: 'Difference',
+      dl: [['Input', 'The two boiling temperatures from stage 3'],
+           ['What is done', 'The lapse-rate value is subtracted from the isothermal value.'],
+           ['Output, recorded', 'Structural term ' + EX.s.toFixed(3) + ' K. Above the 0.5 K structural target by ' + (EX.s - 0.5).toFixed(3) + ' K.'],
+           ['Why', 'This is the error the isothermal form adds to a boiling estimate. It is a model-only quantity and says nothing about measured boiling points.']] }
+  ];
+  var pipeG = $('#pipe-g');
+  var PIPE_Y = [14, 102, 190, 278];
+  var PIPE_T = ['1  Altitude in', '2  Altitude to pressure', '3  Pressure to boiling temperature', '4  Structural term'];
+  var PIPE_S = ['4,000 m', 'Two barometric models', 'Saturation inversion', 'Isothermal minus lapse-rate'];
+  PIPE_Y.forEach(function (y, i) {
+    if (i < 3) el('path', { d: 'M150 ' + (y + 60) + ' L150 ' + (PIPE_Y[i + 1] - 2), 'class': 'arr', 'marker-end': 'url(#ah)' }, pipeG);
+    el('rect', { x: 10, y: y, width: 280, height: 60, rx: 8, 'class': 'box', 'data-i': i }, pipeG);
+    var tt = el('text', { x: 24, y: y + 26, 'class': 'bt', 'data-i': i }, pipeG); tt.textContent = PIPE_T[i];
+    var ss = el('text', { x: 24, y: y + 46, 'class': 'bs', 'data-i': i }, pipeG); ss.textContent = PIPE_S[i];
+  });
+  var markersHost = $('#st-markers');
+  STAGES.forEach(function (s, i) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'marker'; b.textContent = String(i + 1);
+    b.setAttribute('aria-label', 'Stage ' + (i + 1) + ': ' + s.t);
+    b.addEventListener('click', function () { setStage(i, true); });
+    markersHost.appendChild(b);
+  });
+  function setStage(i, announce) {
+    stageIdx = Math.max(0, Math.min(STAGES.length - 1, i));
+    var st = STAGES[stageIdx];
+    pipeG.querySelectorAll('.box').forEach(function (n) { n.classList.toggle('on', +n.getAttribute('data-i') === stageIdx); });
+    pipeG.querySelectorAll('.bt, .bs').forEach(function (n) { n.classList.toggle('on', +n.getAttribute('data-i') === stageIdx); });
+    var body = $('#stage-body');
+    body.replaceChildren();
+    var h = document.createElement('h4'); h.textContent = 'Stage ' + (stageIdx + 1) + ' of ' + STAGES.length + ': ' + st.t;
+    body.appendChild(h);
+    var dl = document.createElement('dl');
+    st.dl.forEach(function (pair) {
+      var dt = document.createElement('dt'); dt.textContent = pair[0];
+      var dd = document.createElement('dd'); dd.textContent = pair[1];
+      dl.appendChild(dt); dl.appendChild(dd);
+    });
+    body.appendChild(dl);
+    Array.prototype.forEach.call(markersHost.children, function (b, k) {
+      if (k === stageIdx) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+    });
+    $('#st-prev').disabled = stageIdx === 0;
+    $('#st-next').disabled = stageIdx === STAGES.length - 1;
+    if (announce) $('#stage-live').textContent = 'Stage ' + (stageIdx + 1) + ' of ' + STAGES.length + ': ' + st.t;
+  }
+  $('#st-prev').addEventListener('click', function () { setStage(stageIdx - 1, true); });
+  $('#st-next').addEventListener('click', function () { setStage(stageIdx + 1, true); });
+  document.getElementById('how').addEventListener('keydown', function (e) {
+    var tag = e.target.tagName;
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft') { setStage(stageIdx - 1, true); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { setStage(stageIdx + 1, true); e.preventDefault(); }
+  });
+
+  /* ---------- evidence: route chart ---------- */
+  var subset = 'held_out', metric = 'rms';
+  var routeHost = $('#route-chart');
+  function renderRoutes() {
+    var label = subset === 'held_out' ? '60 held-out points' : 'all 81 grid points';
+    var metLabel = metric === 'rms' ? 'RMS error' : 'maximum absolute error';
+    var bars = ROUTES.map(function (r) {
+      var st = SUM.route_errors[r.key][subset];
+      return { label: r.name, short: r.short, color: r.color, value: metric === 'rms' ? st.rms_K : st.max_abs_K, at: st.altitude_of_max_m };
+    });
+    var lg = $('#route-legend'); lg.replaceChildren();
+    ROUTES.forEach(function (r) {
+      var span = document.createElement('span');
+      var sw = document.createElement('i'); sw.className = 'swatch'; sw.style.background = r.color;
+      span.appendChild(sw); span.appendChild(document.createTextNode(r.short + ' (' + r.name.split(' (')[0] + ')'));
+      lg.appendChild(span);
+    });
+    drawBars(routeHost, {
+      label: metLabel + ' of three routes against the reference, ' + label,
+      bars: bars, xTitle: 'Vapour-pressure route', yTitle: metLabel + ' (K)',
+      onShow: function (b) {
+        $('#route-readout').textContent = b.label + ': ' + metLabel + ' ' + b.value.toFixed(3) + ' K, ' + label +
+          '. Maximum at ' + fmtInt(b.at) + ' m.';
+      }
+    });
+    var best = bars.reduce(function (a, b) { return b.value < a.value ? b : a; });
+    var worst = bars.reduce(function (a, b) { return b.value > a.value ? b : a; });
+    $('#route-take').textContent = 'On the ' + label + ', the lowest ' + metLabel + ' is ' + best.short + ' at ' + best.value.toFixed(3) +
+      ' K, and the highest is ' + worst.short + ' at ' + worst.value.toFixed(3) + ' K.';
+    var tb = $('#route-table'); tb.replaceChildren();
+    $('#route-table-caption').textContent = 'Values for the ' + label + ', from the run\'s summary file';
+    ROUTES.forEach(function (r) {
+      var st = SUM.route_errors[r.key][subset];
+      var tr = document.createElement('tr');
+      [r.name, st.rms_K.toFixed(3), st.max_abs_K.toFixed(3), fmtInt(st.altitude_of_max_m)].forEach(function (v, i) {
+        var td = document.createElement('td'); td.textContent = v; if (i) td.className = 'num'; tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="route-subset"]'), function (r) {
+    r.addEventListener('change', function () { if (r.checked) { subset = r.value; renderRoutes(); } });
+  });
+  $('#route-metric').addEventListener('change', function (e) { metric = e.target.value; renderRoutes(); });
+
+  /* ---------- evidence: item browser ---------- */
+  var itemSel = 4000, splitF = 'all', failOnly = false, sortMode = 'alt';
+  function renderItems() {
+    var list = POINTS.filter(function (p) {
+      return (splitF === 'all' || p.split === splitF) && (!failOnly || maxErr(p) > 0.1);
+    });
+    list = list.slice().sort(sortMode === 'alt' ? function (a, b) { return a.z - b.z; } : function (a, b) { return maxErr(b) - maxErr(a); });
+    $('#item-count').textContent = 'Showing ' + list.length + ' of ' + POINTS.length + ' grid points.';
+    var body = $('#item-body'); body.replaceChildren();
+    list.forEach(function (p) {
+      var tr = document.createElement('tr');
+      var td0 = document.createElement('td');
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'rowbtn';
+      b.textContent = fmtInt(p.z) + ' m';
+      b.setAttribute('aria-pressed', p.z === itemSel ? 'true' : 'false');
+      b.setAttribute('aria-label', fmtInt(p.z) + ' m, ' + splitLabel(p.split) + ', select to show detail');
+      b.addEventListener('click', function () { itemSel = p.z; renderItemDetail(); renderItems(); });
+      td0.appendChild(b); tr.appendChild(td0);
+      var td1 = document.createElement('td'); td1.textContent = splitLabel(p.split); tr.appendChild(td1);
+      var td2 = document.createElement('td'); td2.className = 'num'; td2.textContent = p.ref.toFixed(3); tr.appendChild(td2);
+      ROUTES.forEach(function (r) {
+        var td = document.createElement('td'); td.className = 'num'; td.textContent = signed(p.err[r.key], 3); tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+    if (list.length === 0) {
+      var tr = document.createElement('tr'); var td = document.createElement('td');
+      td.colSpan = 6; td.textContent = 'No grid point matches these filters.'; tr.appendChild(td); body.appendChild(tr);
+    }
+    var worst = list.reduce(function (a, p) { return (a === null || maxErr(p) > maxErr(a)) ? p : a; }, null);
+    if (worst) {
+      var wr = ROUTES.reduce(function (a, r) { return Math.abs(worst.err[r.key]) > Math.abs(worst.err[a.key]) ? r : a; });
+      $('#item-take').textContent = 'The largest miss in this view is ' + maxErr(worst).toFixed(3) + ' K, by ' + wr.short + ' at ' + fmtInt(worst.z) + ' m.';
+    } else {
+      $('#item-take').textContent = 'No point in this view matches the filters.';
+    }
+  }
+  function renderItemDetail() {
+    var p = POINTS.filter(function (q) { return q.z === itemSel; })[0];
+    var d = $('#item-detail'); d.replaceChildren();
+    var h = document.createElement('h4'); h.textContent = 'Altitude ' + fmtInt(p.z) + ' m (' + splitLabel(p.split) + ')';
+    d.appendChild(h);
+    var ba = document.createElement('div'); ba.className = 'ba';
+    var left = document.createElement('div');
+    left.innerHTML = '';
+    var hl = document.createElement('h4'); hl.textContent = 'Reference output (before)';
+    var pl = document.createElement('p'); pl.style.margin = '0'; pl.textContent = p.ref.toFixed(3) + ' K, boiling temperature from the saturation curve';
+    left.appendChild(hl); left.appendChild(pl);
+    var right = document.createElement('div');
+    var hr = document.createElement('h4'); hr.textContent = 'Route outputs (after)';
+    right.appendChild(hr);
+    var dl = document.createElement('dl');
+    ROUTES.forEach(function (r) {
+      var dt = document.createElement('dt'); dt.textContent = r.short;
+      var dd = document.createElement('dd'); dd.textContent = p.pred[r.key].toFixed(3) + ' K, error ' + signed(p.err[r.key], 3) + ' K';
+      dl.appendChild(dt); dl.appendChild(dd);
+    });
+    right.appendChild(dl);
+    ba.appendChild(left); ba.appendChild(right);
+    d.appendChild(ba);
+  }
+  $('#item-split').addEventListener('change', function (e) { splitF = e.target.value; renderItems(); });
+  $('#item-sort').addEventListener('change', function (e) { sortMode = e.target.value; renderItems(); });
+  $('#item-fail').addEventListener('change', function (e) { failOnly = e.target.checked; renderItems(); });
+
+  /* ---------- try it: limit sweep over recorded values ---------- */
+  var thr = 0.5;
+  var thrHost = $('#thr-chart');
+  var thrPrev = null;
+  function renderThr() {
+    $('#thr-out').textContent = thr.toFixed(2) + ' K';
+    var above = GRID.filter(function (g) { return g.s > thr; });
+    var first = above.length ? above[0].z : null;
+    $('#thr-struct').textContent = above.length + ' of ' + GRID.length + ' grid altitudes';
+    $('#thr-first').textContent = first === null ? 'None on the grid' : fmtInt(first) + ' m';
+    var rc = ROUTES.map(function (r) {
+      return { short: r.short, n: POINTS.filter(function (p) { return Math.abs(p.err[r.key]) > thr; }).length };
+    });
+    $('#thr-routes').textContent = rc.map(function (x) { return x.short + ' ' + x.n; }).join(', ') + ' (of 81 each)';
+    drawLine(thrHost, {
+      label: 'Structural term against altitude, with the chosen limit',
+      xMin: 0, xMax: 4000, xTicks: [0, 1000, 2000, 3000, 4000], fmtX: function (t) { return fmtInt(t); },
+      xTitle: 'Altitude (m)', yMin: 0, yMax: 0.7, yTicks: ticks(0.7, 0.1), fmtY: function (t) { return t.toFixed(1); },
+      yTitle: 'Structural term (K)',
+      hline: { y: thr, label: thr.toFixed(2) + ' K limit' },
+      series: [{ name: 'Structural term', color: BLUE, points: GRID.map(function (g) { return { x: g.z, y: g.s, label: fmtInt(g.z) + ' m: structural term ' + g.s.toFixed(3) + ' K' }; }) }],
+      onShow: function (p) { $('#thr-readout').textContent = p.label; }
+    });
+    $('#thr-take').textContent = 'At a limit of ' + thr.toFixed(2) + ' K, ' + above.length + ' of 41 structural terms exceed it' +
+      (first === null ? '.' : ', starting at ' + fmtInt(first) + ' m.') + ' Route errors above the limit: ' +
+      rc.map(function (x) { return x.short + ' ' + x.n; }).join(', ') + '.';
+  }
+  $('#thr').addEventListener('input', function (e) { thr = +e.target.value; renderThr(); });
+
+  /* ---------- where it fails ---------- */
+  function renderCands() {
+    var onlyP = $('#fail-pressure').checked;
+    var list = MEAS.candidates.filter(function (c) { return !onlyP || /^yes/i.test(c.station_pressure_given); });
+    $('#cand-count').textContent = 'Showing ' + list.length + ' of ' + MEAS.candidates.length + ' candidate sources. Accepted measured sites: ' + MEAS.accepted_sites + '.';
+    var body = $('#cand-body'); body.replaceChildren();
+    list.forEach(function (c) {
+      var tr = document.createElement('tr');
+      [c.id + ' (' + c.type + ')', c.station_pressure_given, c.uncertainty_given, c.reason].forEach(function (v, i) {
+        var td = document.createElement('td'); td.textContent = v; tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+    if (!list.length) {
+      var tr = document.createElement('tr'); var td = document.createElement('td'); td.colSpan = 4; td.textContent = 'No source matches.'; tr.appendChild(td); body.appendChild(tr);
+    }
+  }
+  $('#fail-pressure').addEventListener('change', renderCands);
+  var c4 = SUM.route_errors.constant_L_clausius_clapeyron.full_grid;
+  $('#fails-answer').textContent = 'The largest miss is the constant-latent-heat route at ' + fmtInt(c4.altitude_of_max_m) + ' m, ' +
+    c4.max_abs_K.toFixed(3) + ' K on the full grid. The structural term is largest at the top of the range. No measured record was accepted, so no published boiling point was compared.';
+
+  /* ---------- section navigation ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.sectnav a'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          navLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id ? 'true' : 'false'); });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ['finding', 'how', 'evidence', 'try', 'fails', 'sources'].forEach(function (id) { var e = document.getElementById(id); if (e) io.observe(e); });
+  }
+
+  /* ---------- init and redraw on width change ---------- */
+  function renderAll() {
+    renderFindingText();
+    renderFindingChart();
+    setStage(stageIdx, false);
+    renderRoutes();
+    renderItems();
+    renderItemDetail();
+    renderThr();
+    renderCands();
+  }
+  var lastW = 0, rt = null;
+  function onResize() {
+    var w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    clearTimeout(rt);
+    rt = setTimeout(function () { renderFindingChart(); renderRoutes(); renderThr(); }, 60);
+  }
+  renderAll();
+  lastW = document.documentElement.clientWidth;
+  window.addEventListener('resize', onResize);
+})();
+</script>
+</body></html>
