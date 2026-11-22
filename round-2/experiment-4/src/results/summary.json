@@ -1,0 +1,284 @@
+{
+  "title": "Held-out test of vapour-pressure routes and Clapeyron check",
+  "reference": "IAPWS-IF97 region 4 (iapws 1.5.5), saturation pressure",
+  "atmosphere": "U.S. Standard Atmosphere 1976 troposphere pressure, 0-4000 m, 50 m steps (81 points)",
+  "antoine_fit_main": {
+    "A": 10.22495610923297,
+    "B": 1746.8981913213588,
+    "C": -38.335086334568246,
+    "n_points": 91,
+    "T_range_K": [
+      273.15,
+      363.15
+    ],
+    "status": 3,
+    "success": true,
+    "nfev": 22,
+    "cost": 3.174417197996105e-06,
+    "cost_change_on_refit": 4.281751548370488e-19,
+    "param_change_on_refit": 3.5389525692153256e-06,
+    "converged": true,
+    "rms_log10_residual": 0.0002641352133755917
+  },
+  "antoine_fit_sensitivity": {
+    "A": 10.243683806580995,
+    "B": 1756.8562528651742,
+    "C": -37.58376670055394,
+    "n_points": 81,
+    "T_range_K": [
+      273.15,
+      353.15
+    ],
+    "status": 3,
+    "success": true,
+    "nfev": 17,
+    "cost": 1.628380331441667e-06,
+    "cost_change_on_refit": 0.0,
+    "param_change_on_refit": 0.0,
+    "converged": true,
+    "rms_log10_residual": 0.00020051663712518166
+  },
+  "sanity_checks": {
+    "Tb_ref_sea_level_K": 373.12430000070515,
+    "Tb_ref_sea_level_ok": true,
+    "Ps_triple_Pa": 611.6570000106653,
+    "Ps_triple_ok": true,
+    "p_std_4000m_Pa": 61640.20644405919,
+    "p_std_4000m_ok": true,
+    "Zv_373_15K": 0.9846000632619707,
+    "Zv_373_15K_ok": true,
+    "all_ok": true
+  },
+  "regression_against_prior_screen": {
+    "constant_L_max_K": {
+      "expected": 0.278,
+      "got": 0.27982496115646427,
+      "tol": 0.005,
+      "pass": true
+    },
+    "constant_L_rms_K": {
+      "expected": 0.152,
+      "got": 0.1532353055447269,
+      "tol": 0.005,
+      "pass": true
+    },
+    "td_L_max_K": {
+      "expected": 0.177,
+      "got": 0.1764885898984403,
+      "tol": 0.005,
+      "pass": true
+    },
+    "td_L_rms_K": {
+      "expected": 0.108,
+      "got": 0.10772569753405023,
+      "tol": 0.005,
+      "pass": true
+    },
+    "antoine_in_sample_max_K": {
+      "expected": 0.0042,
+      "got": 0.03575595810013965,
+      "tol": 0.005,
+      "pass": false
+    },
+    "antoine_in_sample_rms_K": {
+      "expected": 0.0022,
+      "got": 0.02958014620963365,
+      "tol": 0.005,
+      "pass": false
+    }
+  },
+  "regression_all_pass": false,
+  "grid_counts": {
+    "in_sample_tagged": 21,
+    "held_out": 60,
+    "full": 81
+  },
+  "route_errors": {
+    "constant_L_clausius_clapeyron": {
+      "full_grid": {
+        "n": 81,
+        "rms_K": 0.1532353055447269,
+        "max_abs_K": 0.27982496115646427,
+        "altitude_of_max_m": 4000.0,
+        "bias_K": -0.1295576922005163,
+        "err_at_4000m_K": -0.27982496115646427
+      },
+      "in_sample_tagged": {
+        "n": 21,
+        "rms_K": 0.23954091555875262,
+        "max_abs_K": 0.27982496115646427,
+        "altitude_of_max_m": 4000.0,
+        "bias_K": -0.23825484360744603,
+        "err_at_4000m_K": -0.27982496115646427
+      },
+      "held_out": {
+        "n": 60,
+        "rms_K": 0.10777978423116705,
+        "max_abs_K": 0.19407455644955007,
+        "altitude_of_max_m": 2950.0,
+        "bias_K": -0.09151368920809091,
+        "err_at_4000m_K": -0.27982496115646427
+      }
+    },
+    "td_L_clausius_clapeyron": {
+      "full_grid": {
+        "n": 81,
+        "rms_K": 0.10772569753405023,
+        "max_abs_K": 0.1764885898984403,
+        "altitude_of_max_m": 4000.0,
+        "bias_K": -0.0946316874424296,
+        "err_at_4000m_K": -0.1764885898984403
+      },
+      "in_sample_tagged": {
+        "n": 21,
+        "rms_K": 0.15867027685959326,
+        "max_abs_K": 0.1764885898984403,
+        "altitude_of_max_m": 4000.0,
+        "bias_K": -0.1582720421218829,
+        "err_at_4000m_K": -0.1764885898984403
+      },
+      "held_out": {
+        "n": 60,
+        "rms_K": 0.08279387122167842,
+        "max_abs_K": 0.13741345090045343,
+        "altitude_of_max_m": 2950.0,
+        "bias_K": -0.07235756330462095,
+        "err_at_4000m_K": -0.1764885898984403
+      }
+    },
+    "antoine": {
+      "full_grid": {
+        "n": 81,
+        "rms_K": 0.054835158030515765,
+        "max_abs_K": 0.08562468817433455,
+        "altitude_of_max_m": 0.0,
+        "bias_K": -0.051704758534576546,
+        "err_at_4000m_K": -0.023228468700153826
+      },
+      "in_sample_tagged": {
+        "n": 21,
+        "rms_K": 0.02958014620963365,
+        "max_abs_K": 0.03575595810013965,
+        "altitude_of_max_m": 3000.0,
+        "bias_K": -0.029335896571919443,
+        "err_at_4000m_K": -0.023228468700153826
+      },
+      "held_out": {
+        "n": 60,
+        "rms_K": 0.06126224680411709,
+        "max_abs_K": 0.08562468817433455,
+        "altitude_of_max_m": 0.0,
+        "bias_K": -0.05953386022150653,
+        "err_at_4000m_K": -0.023228468700153826
+      },
+      "fit_range_inversion_residual": {
+        "n": 21,
+        "rms_K": 0.02958014620963365,
+        "max_abs_K": 0.03575595810013965,
+        "altitude_of_max_m": 3000.0,
+        "bias_K": -0.029335896571919443,
+        "err_at_4000m_K": -0.023228468700153826
+      }
+    }
+  },
+  "sensitivity_antoine_273_353_fit": {
+    "fit_range_K": [
+      273.15,
+      353.15
+    ],
+    "held_out_range_K": [
+      353.15,
+      373.15
+    ],
+    "antoine_params": {
+      "A": 10.243683806580995,
+      "B": 1756.8562528651742,
+      "C": -37.58376670055394
+    },
+    "held_out": {
+      "n": 81,
+      "rms_K": 0.09243609319653145,
+      "max_abs_K": 0.13250424214913892,
+      "altitude_of_max_m": 0.0,
+      "bias_K": -0.08941146733086582,
+      "err_at_4000m_K": -0.05234340893866829
+    },
+    "not_ranked": true
+  },
+  "ranking_held_out_rms_survivors": [
+    {
+      "rank": 1,
+      "route": "antoine",
+      "held_out_rms_K": 0.06126224680411709,
+      "full_grid_max_abs_K": 0.08562468817433455,
+      "survives_0_6K_rule": true
+    },
+    {
+      "rank": 2,
+      "route": "td_L_clausius_clapeyron",
+      "held_out_rms_K": 0.08279387122167842,
+      "full_grid_max_abs_K": 0.1764885898984403,
+      "survives_0_6K_rule": true
+    },
+    {
+      "rank": 3,
+      "route": "constant_L_clausius_clapeyron",
+      "held_out_rms_K": 0.10777978423116705,
+      "full_grid_max_abs_K": 0.27982496115646427,
+      "survives_0_6K_rule": true
+    }
+  ],
+  "all_routes_survival": [
+    {
+      "route": "constant_L_clausius_clapeyron",
+      "held_out_rms_K": 0.10777978423116705,
+      "full_grid_max_abs_K": 0.27982496115646427,
+      "survives_0_6K_rule": true
+    },
+    {
+      "route": "td_L_clausius_clapeyron",
+      "held_out_rms_K": 0.08279387122167842,
+      "full_grid_max_abs_K": 0.1764885898984403,
+      "survives_0_6K_rule": true
+    },
+    {
+      "route": "antoine",
+      "held_out_rms_K": 0.06126224680411709,
+      "full_grid_max_abs_K": 0.08562468817433455,
+      "survives_0_6K_rule": true
+    }
+  ],
+  "constant_L_bisection_vs_closed_form_max_gap_K": 3.566924533515703e-10,
+  "clapeyron": {
+    "n_points_grid_T_356_373K": 81,
+    "n_points_sweep_273_373K": 101,
+    "max_abs_rA_ideal_vapour": 0.016260704972725692,
+    "max_abs_rB_Zv_corrected": 0.0006103544068007949,
+    "max_abs_rC_Zv_plus_liquid": 0.00036119135321199813,
+    "max_abs_rB_Antoine_derivative": 0.00920426388320239,
+    "max_abs_rB_IAPWS95_derivative": 0.0006245679525684888,
+    "max_abs_rC_IAPWS95_derivative": 0.0003221451823760546,
+    "rA_minus_rB_max_abs": 0.015650350565924898,
+    "rA_exceeds_1pct_tolerance": true,
+    "identity_pass_Zv_corrected_IF97": true,
+    "independent_curve_pass": true,
+    "verdict": "holds (largely an identity; the independent-curve residuals also pass)",
+    "identity_caveat": "dP/dT, L and Z_v come from the same IF97 equations, and Dv_B = 1/rho_v exactly, so the Z_v-corrected IF97 residual is near zero by construction. The independent-curve residuals (Antoine and IAPWS-95 derivatives) carry the test.",
+    "tolerance_relative": 0.01
+  },
+  "interpretation_status": "PROVISIONAL: the Antoine regression target (0.0042 K in-sample) did not reproduce; the executed value is reported, and rankings and verdicts are not interpreted until it is resolved.",
+  "dataset_cross_check": {
+    "file": "data/full_data_out.json",
+    "status": "ok",
+    "n_rows": 41,
+    "dataset_unit_note": "dataset output is in degrees C (metadata_formula_boiling_C column); converted +273.15 to K",
+    "max_abs_diff_K": 0.0625372860985749,
+    "mean_diff_K": -0.018142803069811014,
+    "interpretation": "consistency between two reference calculations, not validity against measurements"
+  },
+  "runtime_s": 3.8110549449920654,
+  "provenance": {
+    "fallback_used": "none (iapws package used as reference)",
+    "measured_data_used": false
+  }
+}

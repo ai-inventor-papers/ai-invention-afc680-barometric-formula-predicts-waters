@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "method_name": "Vapour-pressure routes for water boiling temperature vs altitude",
+    "description": "Model-to-reference comparison against IAPWS-IF97 saturation; one example per 50 m altitude.",
+    "reference": "IAPWS-IF97 region 4 (iapws package)",
+    "units": {
+      "output": "boiling temperature, K",
+      "predict_*": "boiling temperature, K"
+    },
+    "routes": [
+      "constant_L_clausius_clapeyron",
+      "td_L_clausius_clapeyron",
+      "antoine"
+    ],
+    "antoine_fit_range_K": [
+      273.15,
+      363.15
+    ],
+    "held_out_range_K": [
+      363.15,
+      373.15
+    ],
+    "runtime_s": 3.8113927841186523
+  },
+  "datasets": [
+    {
+      "dataset": "altitude_grid_0_4000m_50m_IF97_reference",
+      "examples": [
+        {
+          "input": "{\"elevation_m\": 0.0}",
+          "output": "373.124300",
+          "metadata_p_std_Pa": "101325.0000",
+          "metadata_split": "held_out",
+          "metadata_err_constant_L_K": "-0.000300",
+          "metadata_err_td_L_K": "-0.000300",
+          "metadata_err_antoine_K": "-0.085625",
+          "predict_constant_L_clausius_clapeyron": "373.124000",
+          "predict_td_L_clausius_clapeyron": "373.124000",
+          "predict_antoine": "373.038675"
+        },
+        {
+          "input": "{\"elevation_m\": 50.0}",
+          "output": "372.958200",
+          "metadata_p_std_Pa": "100725.7824",
+          "metadata_split": "held_out",
+          "metadata_err_constant_L_K": "-0.003009",
+          "metadata_err_td_L_K": "-0.002992",
+          "metadata_err_antoine_K": "-0.084637",
+          "predict_constant_L_clausius_clapeyron": "372.955192",
+          "predict_td_L_clausius_clapeyron": "372.955208",
+          "predict_antoine": "372.873563"
+        },
+        {
+          "input": "{\"elevation_m\": 100.0}",
+          "output": "372.792083",
+          "metadata_p_std_Pa": "100129.4375",
+          "metadata_split": "held_out",
+          "metadata_err_constant_L_K": "-0.005737",
+          "metadata_err_td_L_K": "-0.005670",
+          "metadata_err_antoine_K": "-0.083655",
+          "predict_constant_L_clausius_clapeyron": "372.786346",
+          "predict_td_L_clausius_clapeyron": "372.786412",
+          "predict_antoine": "372.708428"
+        }
+      ]
+    }
+  ]
+}

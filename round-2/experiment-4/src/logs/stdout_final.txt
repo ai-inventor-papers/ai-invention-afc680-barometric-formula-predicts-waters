@@ -1,0 +1,31 @@
+warning: `VIRTUAL_ENV=/opt/aii/venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+13:34:31|INFO   |=== Held-out test of vapour-pressure routes + Clapeyron check ===
+13:34:31|INFO   |Sanity: {"Tb_ref_sea_level_K": 373.12430000070515, "Tb_ref_sea_level_ok": true, "Ps_triple_Pa": 611.6570000106653, "Ps_triple_ok": true, "p_std_4000m_Pa": 61640.20644405919, "p_std_4000m_ok": true, "Zv_373_15K": 0.9846000632619707, "Zv_373_15K_ok": true, "all_ok": true}
+13:34:31|INFO   |Constant latent heat at 373.124 K: L = 2256541.5 J/kg
+13:34:31|INFO   |Building temperature-dependent-L table (0.01 K grid, IF97)
+13:34:33|INFO   |TD-L table built in 1.8 s, 10081 points
+13:34:33|INFO   |Antoine fit [273.15-363.15 K, 1 K steps] n=91 status=3 success=True A=10.224956 B=1746.8982 C=-38.3351 rms_log10=2.641e-04 cost_change_refit=4.28e-19 param_change_refit=3.54e-06 converged=True
+13:34:33|INFO   |Antoine fit [273.15-353.15 K, 1 K steps (sensitivity)] n=81 status=3 success=True A=10.243684 B=1756.8563 C=-37.5838 rms_log10=2.005e-04 cost_change_refit=0.00e+00 param_change_refit=0.00e+00 converged=True
+13:34:33|INFO   |Constant-L bisection vs closed form: max gap 3.57e-10 K
+13:34:33|INFO   |Grid: 81 points; in_sample=21, held_out=60 (Tb_ref 363.15-373.15 K), held_out altitude range 0-2950 m
+13:34:33|INFO   |constant_L_clausius_clapeyron: full max=0.2798 K rms=0.1532 K | held-out rms=0.10778 K max=0.19407 K
+13:34:33|INFO   |td_L_clausius_clapeyron: full max=0.1765 K rms=0.1077 K | held-out rms=0.08279 K max=0.13741 K
+13:34:33|INFO   |antoine: full max=0.0856 K rms=0.0548 K | held-out rms=0.06126 K max=0.08562 K
+13:34:33|INFO   |Sensitivity (Antoine fit 273.15-353.15 K): held-out [353.15,373.15] n=81 rms=0.09244 K max=0.13250 K
+13:34:33|INFO   |Regression constant_L_max_K: expected 0.278 got 0.27982 pass=True
+13:34:33|INFO   |Regression constant_L_rms_K: expected 0.152 got 0.15324 pass=True
+13:34:33|INFO   |Regression td_L_max_K: expected 0.177 got 0.17649 pass=True
+13:34:33|INFO   |Regression td_L_rms_K: expected 0.108 got 0.10773 pass=True
+13:34:33|INFO   |Regression antoine_in_sample_max_K: expected 0.0042 got 0.03576 pass=False
+13:34:33|INFO   |Regression antoine_in_sample_rms_K: expected 0.0022 got 0.02958 pass=False
+13:34:33|INFO   |Ranking (survivors, by held-out RMS): ['antoine', 'td_L_clausius_clapeyron', 'constant_L_clausius_clapeyron']
+13:34:33|INFO   |Clapeyron: 81 grid saturation temperatures (356-373 K), 101 sweep points (273.15-373.15 K)
+13:34:34|INFO   |Clapeyron points computed in 1.6 s
+13:34:34|INFO   |Clapeyron: max|rA|=0.01626 max|rB|=6.10e-04 max|rB_ant|=0.00920 max|rB_95|=0.00062 verdict: holds (largely an identity; the independent-curve residuals also pass)
+13:34:35|INFO   |Dataset cross-check: n=41 max|diff|=0.0625 K mean=-0.0181 K
+13:34:35|INFO   |Wrote results/grid_values.csv
+13:34:35|INFO   |Wrote results/clapeyron.json
+13:34:35|INFO   |Wrote results/summary.json
+13:34:35|INFO   |Wrote full_method_out.json (full, 81 examples)
+13:34:35|INFO   |Wrote method_out.json with 81 examples
+13:34:35|INFO   |Done in 3.8 s
